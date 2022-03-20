@@ -1,0 +1,982 @@
+/* CSS is organized by component top to bottom*/
+/* Global CSS */
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  max-width: 100%;
+  font-family: "Prompt";
+  color: white;
+  background: #0d1332;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+/* Headers */
+h1 {
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Prompt";
+  font-size: 3vw;
+  transform: translateX(-1.5vw);
+  transform: scale(0.75);
+}
+/* h1 effects */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+/*  h1 Animation */
+.anim-typewriter {
+  animation: typewriter 5s steps(44) 1s 1 normal both,
+    blinkTextCursor 1000ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18.5em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(250, 114, 104, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+h2 {
+  text-align: center;
+  font-size: 2vw;
+  max-height: max-content;
+  min-height: min-content;
+  position: relative;
+  font-family: "Prompt";
+  border-radius: 1%;
+  color: #001220;
+  transform: scale(0.65);
+  padding: 2vw;
+}
+h3 {
+  font-family: "Prompt";
+  text-align: left;
+  position: relative;
+  font-size: 2.25vw;
+  min-width: fit-content;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-decoration: underline;
+  padding-left: 2vw;
+  padding-right: 1vw;
+  border-radius: 1%;
+  transform: scale(0.75);
+  backdrop-filter: blur(20px);
+  width: 25.5%;
+  cursor: pointer;
+}
+
+h3:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  color: #eee;
+  text-shadow: 0 0 10px #c6236783;
+}
+
+h3:active {
+  transform: scale(0.74);
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.fa-user {
+  float: right;
+}
+.fa-briefcase {
+  float: right;
+}
+.fa-clock {
+  float: right;
+}
+
+h4 {
+  text-align: center;
+  font-size: 3vw;
+  position: relative;
+  margin-top: -1.5vh;
+  font-family: "Prompt";
+  transform: scale(0.75);
+  color: #001220;
+}
+p {
+  font-family: "Prompt";
+  font-size: 1.75vw;
+  text-align: left;
+  width: 70%;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-top: -1.5vh;
+  /* padding-bottom: 3vh;
+  padding-top: 3vh; */
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  z-index: 1;
+  border-radius: 1%;
+  transform: scale(0.75);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;
+}
+p:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.text_link {
+  inherits: none;
+  margin: none;
+  padding: none;
+}
+
+/* Icons */
+i {
+  padding: 1vw;
+  padding-left: 2vw;
+  justify-content: space-between;
+  display: flex;
+  transform: scale(0.85);
+}
+/* Section seperation lines */
+hr {
+  border: 0;
+  border-top: 3px solid #eee;
+  margin: 0px 0;
+}
+/* Links */
+a {
+  font-size: 2vw;
+  height: fit-content;
+  font-family: "Prompt";
+}
+
+.nav_link {
+  font-size: 2vw;
+  transform: scale(0.65);
+  padding: 1vw;
+  padding-top: 3vh;
+  float: left;
+}
+
+.paragraph_link {
+  font-size: 1.75vw;
+  transform: scale(0.65);
+  inherits: unset;
+}
+
+a:link {
+  color: rgb(255, 254, 254);
+  font-family: "Prompt";
+}
+/* visited link */
+a:visited {
+  color: rgb(255, 255, 255);
+}
+/* mouse over link */
+a:hover {
+  color: #c62368;
+}
+/* selected link */
+a:active {
+  transform: scale(0.55);
+}
+
+.click-me {
+  animation: clickMeBounce 7s infinite linear;
+}
+
+@keyframes clickMeBounce {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.4em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.25em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 400px) and (min-width: 1px) {
+  h4,
+  .banner__content,
+  a,
+  button,
+  .jokeButton,
+  .banner__text {
+    font-size: small;
+  }
+  .material-icons,
+  .fab fa-github fa-2x {
+    transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 401px) {
+  h4,
+  .banner__content,
+  a,
+  button,
+  .jokeButton,
+  .banner__text {
+    font-size: medium;
+  }
+  .material-icons,
+  .fab {
+    transform: scale(0.75);
+  }
+}
+@media screen and (min-width: 801px) {
+  h4,
+  .banner__content,
+  a,
+  button,
+  .jokeButton,
+  .banner__text {
+    font-size: larger;
+  }
+  .material-icons,
+  .fab {
+    transform: scale(0.85);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .dispay-blobs {
+    display: none;
+  }
+}
+
+/* Attention Banner */
+.banner {
+  background: #eb5967;
+  border-bottom: white;
+}
+
+.bannerbg {
+  background-image: url("../backgroundImages/portfoliobg.png");
+}
+
+.banner__content {
+  max-width: 65%;
+  margin: 0 auto;
+  font-size: larger;
+  display: flex;
+  transform: scale(0.75);
+  align-items: center;
+}
+
+.banner__text {
+  flex-grow: 1;
+  font-size: 2vw;
+  text-align: center;
+  line-height: 1.4;
+  transform: scale(0.75);
+
+  font-family: "Prompt";
+
+  align-items: center;
+}
+
+.banner__close {
+  inherits: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transform: scale(1);
+}
+
+/* Banner Background */
+/* Banner Text */
+/* Banner Close Button */
+
+/* Top Nav */
+.topnav {
+  display: inline-block;
+  width: 100%;
+  background-image: url("../backgroundImages/portfoliobg.png");
+  padding-left: 1vw;
+  padding-bottom: 1vh;
+}
+/* Title Background */
+.bg {
+  background-image: url("../backgroundImages/portfoliobg.png");
+  width: 100%;
+  margin-top: -2vh;
+}
+/* Line Divider */
+.topborderAngle {
+  width: 115%;
+}
+/* Top Nav Links */
+
+/* Joke API */
+.jokeButton {
+  font-size: 2vw;
+  color: rgb(255, 254, 254);
+  padding: 1vw;
+  padding-top: 3vh;
+  font-family: "Prompt";
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  transform: scale(0.65);
+  width: auto;
+}
+.jokeButton:hover {
+  color: #c62368;
+}
+
+.jokeButton:active {
+  transform: scale(0.55);
+}
+
+.swal-button {
+  border-radius: 2px;
+  background-color: #c62368;
+  font-size: 2vw;
+  transform: scale(0.65);
+}
+.glow-on-hover {
+  position: relative;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff00009b,
+    #ff73009b,
+    #fffb009b,
+    #48ff009b,
+    #00ffd59b,
+    #002bff9b,
+    #7a00ff9b,
+    #ff00c89b,
+    #ff00009b
+  );
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(80% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 2vh;
+  /* border-radius: 10px; */
+}
+.glow-on-hover:active:after {
+  transform: scale(0.95);
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  margin-top: 2vh;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Joke Modal */
+.swal-modal {
+  background-image: url("../backgroundImages/portfoliobg.png");
+  border: 3px solid white;
+  width: 40vw;
+}
+
+.swal-overlay {
+  background-color: rgb(0, 18, 32, 0.75);
+}
+
+.swal-title {
+  margin: 2vw;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+  font-family: "Prompt";
+}
+
+.swal-text {
+  background-color: rgba(235, 89, 103, 0.9);
+  line-height: auto;
+  padding: 3vw, 3.5vh;
+  margin: 1vw;
+  font-size: 2vw;
+  text-align: center;
+  width: 35vw;
+  color: white;
+  font-family: "Prompt";
+}
+/* Version */
+#version {
+  color: rgb(255, 254, 254);
+  padding: 1vw;
+  padding-top: 3vh;
+  font-family: "Prompt";
+  float: right;
+  cursor: pointer;
+  transform: scale(0.65);
+}
+#version:active {
+  transform: scale(0.55);
+}
+
+/* Title */
+/* Main */
+.layer2 {
+  background-image: url("../backgroundImages/layer2.svg");
+}
+.spacer {
+  aspect-ratio: 900/700;
+
+  width: 100%;
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+  background-size: cover;
+}
+/* paragraph tabs */
+.tab {
+  text-indent: 40px;
+}
+/* Background */
+/* About Me */
+/* Career Path */
+/* Counting Down */
+
+#clock {
+  font-family: "Share Tech Mono", monospace;
+  color: #ffffff;
+  text-align: center;
+}
+.time {
+  letter-spacing: 0.05vw;
+  font-size: 2vw;
+}
+.date {
+  letter-spacing: 0.05vw;
+  font-size: 1.25vw;
+}
+.text {
+  letter-spacing: 0.05vw;
+  font-size: 1.25vw;
+}
+
+.float-container {
+  padding: 0.5vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 0.75%;
+  width: 55vw;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  align-items: center;
+}
+
+#countdownTimer {
+  font-size: 2vw;
+  letter-spacing: 0.05vw;
+
+  color: white;
+  /* background-image: url("portfoliobg.png"); */
+  backdrop-filter: blur(5px);
+  font-family: "Share Tech Mono", monospace;
+  text-align: center;
+}
+/* Project Section */
+#projectWrapper {
+  color: #001220;
+  font-size: 1.5vw;
+  padding: 1vh;
+}
+#projectWrapper:hover {
+  color: #ffff;
+}
+
+.myProjects {
+  text-align: center;
+
+  font-size: 3vw;
+
+  line-height: 2vh;
+
+  position: relative;
+
+  top: -4.5vw;
+  font-family: "Prompt";
+}
+
+.scrollMyProjects {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 0.5%;
+  font-weight: bold;
+}
+
+/* Carousel */
+/* ----- container stylings:
+          -> centers the whole content of the page
+          -> defines width and height for container ----- */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 75%;
+  height: 75%;
+  position: relative;
+  padding-top: 25%;
+  padding-bottom: 2.5vh;
+  transform: scale(0.85);
+}
+/* ----- end of container stylings ----- */
+
+/* provides padding to main heading */
+.main-heading {
+  padding: 2rem 0 2rem 0;
+}
+
+.content {
+  position: relative;
+  border: 2px solid #001220;
+}
+
+/* ----- carousel content stylings ----- */
+/* places the carousel content on center of the carousel */
+.carousel-content {
+  position: absolute;
+  /*to center the content horizontally and vertically*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 50;
+  transform: scale(0.5);
+}
+.carousel-heading {
+  font-size: 3rem;
+  color: #c62368;
+  margin-bottom: 1rem;
+}
+/*----- end of carousel content stylings ----- */
+
+/* ----- slideshow stylings ----- */
+.slideshow {
+  height: 100%;
+  overflow: hidden; /* to hide slides in x-direction */
+  position: relative;
+}
+/* wrapper which wraps all the slideshow images stylings */
+.slideshow-wrapper {
+  display: flex;
+
+  /* We give it width as 400% because we are making a
+                           4 image carousel. If you want to make for example,
+                           5 images carousel, then give width as 500%. */
+  width: 500%;
+  height: 100%;
+  position: relative;
+  /* you can change the animation settings from below */
+  animation: slideshow 20s infinite;
+}
+/* define width and height for images*/
+.slide {
+  width: 100%;
+  height: 100%;
+}
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: 20s infinite alternate;
+}
+/* .slideshow-wrapper:hover {
+            animation-play-state: paused;
+          } */
+/* @keyframes are used to provide animations
+                       We make these settings for 4 image carousel.
+                       Make modification accourding to your needs. */
+
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 0;
+  }
+  20% {
+    left: -100%;
+  }
+  30% {
+    left: -100%;
+  }
+  40% {
+    left: -200%;
+  }
+  50% {
+    left: -200%;
+  }
+  60% {
+    left: -300%;
+  }
+  70% {
+    left: -300%;
+  }
+  80% {
+    left: -400%;
+  }
+  90% {
+    left: -400%;
+  }
+  100% {
+    left: 0;
+  }
+}
+/* ----- end of slideshow stylings ----- */
+
+/* ----- carousel control buttons stylings ----- */
+
+.slide-btn {
+  background-color: #b9b9b9;
+  border-radius: 50%;
+  border: solid white;
+  opacity: 0.9;
+  height: 2rem;
+  width: 2rem;
+  min-width: fit-content;
+  transform: scale(0.65);
+  cursor: pointer;
+  /* stylings for positioning the buttons at
+                           the bottom of the carousel */
+  position: absolute;
+  align-items: center;
+  bottom: 2.5%;
+  transition: all 0.5s;
+  z-index: 70;
+}
+/* As we provide position as absolute,
+                    the buttons places one over the other.
+                    So, we have to place them individually
+                    at their correct positions. */
+.slide-btn-1 {
+  left: 25%;
+}
+.slide-btn-2 {
+  left: 35%;
+}
+.slide-btn-3 {
+  left: 45%;
+}
+.slide-btn-4 {
+  left: 55%;
+}
+.slide-btn-5 {
+  left: 65%;
+}
+/* When we focus on the particular button,
+                    the animation stops to that particular image
+                    to which the button is associated. */
+.slide-btn-1:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+.slide-btn-2:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+.slide-btn-3:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -200%;
+}
+.slide-btn-4:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -300%;
+}
+.slide-btn-5:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -400%;
+}
+/* when we focus on the button, the background color changes */
+.slide-btn:focus {
+  background-color: #888;
+  opacity: 1;
+}
+/* ----- end of carousel control buttons stylings ----- */
+
+/* Footer */
+.footer {
+  background-image: url("../backgroundImages/portfoliobg.png");
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+/* Animated Blobs */
+.blob {
+  background-image: url("../backgroundImages/blob.svg");
+}
+
+.blob2 {
+  background-image: url("../backgroundImages/blob2.svg");
+}
+
+.path1 {
+  /* This one goes top left to bottom right */
+  offset-path: path("M0 300 0 -600");
+  width: 100vw;
+  height: 100vh;
+  right: 50%;
+  left: 50%;
+  position: relative;
+  background-repeat: no-repeat;
+  animation-delay: 1s;
+  animation: blob 65s both infinite;
+}
+.path1a {
+  /* bottom right to top left */
+  offset-path: path("M100 0  400 -700");
+  width: 30vw;
+  height: 30vh;
+  right: 50%;
+  left: 50%;
+  position: relative;
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  animation-delay: 3s;
+  animation: blob 45s both infinite;
+}
+
+.path2 {
+  /* bottom right to top left */
+  offset-path: path("M1000 200  1100 -1500");
+  width: 10vw;
+  height: 10vh;
+  max-width: 100%;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: blob 35s both infinite;
+}
+.path2a {
+  /* bottom right to top left */
+  offset-path: path("M1300 400  1000 -1200");
+  width: 25vw;
+  height: 25vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation-delay: 2s;
+  animation: blob 30s both infinite;
+}
+
+.path3 {
+  offset-path: path("M1000 -1200  900 800");
+  width: 100vw;
+  height: 100vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation: blob 100s both infinite;
+}
+.path3a {
+  offset-path: path("M1100 -1000  1200 1000");
+  width: 60vw;
+  height: 60vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation: blob 60s both infinite;
+}
+
+.path4 {
+  /* bottom right to top left */
+  offset-path: path("M900 400  800 -1000");
+  width: 17vw;
+  height: 17vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation: blob 35s both infinite;
+}
+.path4a {
+  /* bottom right to top left */
+  offset-path: path("M400 400  400 -1000");
+  width: 7vw;
+  height: 7vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation-delay: 2s;
+  animation: blob 25s both infinite;
+}
+
+.path5 {
+  /* bottom right to top left */
+  offset-path: path("M100 400  200 -1000");
+  width: 15vw;
+  height: 15vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation: blob 40s both infinite;
+}
+.path5a {
+  /* bottom right to top left */
+  offset-path: path("M700 400  600 -1000");
+  width: 7vw;
+  height: 7vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation-delay: 2s;
+
+  animation: blob 40s both infinite;
+}
+
+.path6 {
+  offset-path: path("M1,2 M4,4");
+  width: 70vw;
+  height: 70vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation-delay: 4s;
+  animation: blob 30s both infinite;
+}
+.path6a {
+  offset-path: path("M1,2 M4,4");
+  width: 35vw;
+  height: 35vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation-delay: 2s;
+  animation: blob 25s both infinite;
+}
+
+.path7 {
+  offset-path: path("M1,2 M4,4");
+  width: 7.5vw;
+  height: 7.5vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation: blob 60s both infinite;
+}
+.path7a {
+  offset-path: path("M1,2 M4,4");
+  width: 5vw;
+  height: 5vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation: blob 15s both infinite;
+}
+.path8 {
+  offset-path: path("M1,2 M4,4");
+  width: 7.5vw;
+  height: 7.5vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation: blob 19s both infinite;
+}
+.path8a {
+  offset-path: path("M1,2 M4,4");
+  width: 4vw;
+  height: 4vh;
+  margin-left: 5vw;
+  background-repeat: no-repeat;
+  position: fixed;
+  animation-delay: 4s;
+  animation: blob 20s both infinite;
+}
+
+.spacer_blob {
+  position: absolute;
+  opacity: 0.7;
+  z-index: -1;
+}
+.spacer_blob2 {
+  position: absolute;
+  max-width: 100vw;
+  z-index: -1;
+}
+
+@keyframes blob {
+  to {
+    offset-distance: 100%;
+  }
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 85%;
+  }
+  75% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

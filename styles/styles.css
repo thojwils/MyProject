@@ -3,8 +3,10 @@
 
 body {
   overflow-x: hidden;
-  min-height: 100vh;
-  max-width: 100%;
+  min-height: fit-content;
+  min-width: fit-content;
+  /* min-height: 100vh; */
+  /* max-width: 100%; */
   font-family: "Prompt";
   color: white;
   background: #0d1332;
@@ -24,14 +26,14 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   font-family: "Prompt";
-  font-size: 3vw;
   transform: translateX(-1.5vw);
-  transform: scale(0.75);
 }
 /* h1 effects */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 /*  h1 Animation */
 .anim-typewriter {
+  padding-top: 1vh;
+  font-size: 3vh;
   animation: typewriter 5s steps(44) 1s 1 normal both,
     blinkTextCursor 1000ms steps(44) infinite normal;
 }
@@ -53,7 +55,6 @@ h1 {
 }
 h2 {
   text-align: center;
-  font-size: 2vw;
   max-height: max-content;
   min-height: min-content;
   position: relative;
@@ -191,7 +192,7 @@ a:hover {
 }
 /* selected link */
 a:active {
-  transform: scale(0.55);
+  transform: scale(0.7);
 }
 
 .click-me {
@@ -224,13 +225,26 @@ a:active {
 
 /* Media Queries */
 @media screen and (max-width: 400px) and (min-width: 1px) {
+  h1,
+  h2,
+  h3,
   h4,
   .banner__content,
-  a,
+  .float-container,
   button,
+  p,
+  .paragraph_link,
   .jokeButton,
-  .banner__text {
-    font-size: small;
+  .banner__text,
+  .material-icons {
+    transform: scale(0.6);
+  }
+  a,
+  #version,
+  button,
+  .glow-on-hover,
+  .nav_link {
+    transform: scale(0.4);
   }
   .material-icons,
   .fab fa-github fa-2x {
@@ -238,31 +252,55 @@ a:active {
   }
 }
 @media screen and (max-width: 800px) and (min-width: 401px) {
+  h1,
+  h2,
+  h3,
   h4,
   .banner__content,
-  a,
-  button,
+  .banner__text,
+  .float-container,
+  p,
+  .paragraph_link,
   .jokeButton,
-  .banner__text {
-    font-size: medium;
+  .banner__text,
+  .material-icons {
+    transform: scale(0.7);
+  }
+  a,
+  #version,
+  button,
+  .glow-on-hover,
+  .nav_link {
+    transform: scale(0.5);
   }
   .material-icons,
-  .fab {
-    transform: scale(0.75);
+  .fab fa-github fa-2x {
+    transform: scale(0.6);
   }
 }
 @media screen and (min-width: 801px) {
+  h1,
+  h2,
+  h3,
   h4,
   .banner__content,
-  a,
-  button,
+  .float-container,
+  p,
+  .paragraph_link,
   .jokeButton,
-  .banner__text {
-    font-size: larger;
+  .banner__text,
+  .material-icons {
+    transform: scale(0.8);
   }
-  .material-icons,
-  .fab {
-    transform: scale(0.85);
+  a,
+  #version,
+  button,
+  .glow-on-hover,
+  .nav_link {
+    transform: scale(0.6);
+  }
+  .fab fa-github fa-2x {
+    transform: scale(0.7);
   }
 }
 
@@ -293,14 +331,11 @@ a:active {
 
 .banner__text {
   flex-grow: 1;
-  font-size: 2vw;
   text-align: center;
   line-height: 1.4;
-  transform: scale(0.75);
-
   font-family: "Prompt";
-
   align-items: center;
+  font-size: 2vh;
 }
 
 .banner__close {
@@ -338,7 +373,6 @@ a:active {
 
 /* Joke API */
 .jokeButton {
-  font-size: 2vw;
   color: rgb(255, 254, 254);
   padding: 1vw;
   padding-top: 3vh;
@@ -347,7 +381,6 @@ a:active {
   background: none;
   border: none;
   text-decoration: underline;
-  transform: scale(0.65);
   width: auto;
 }
 .jokeButton:hover {
@@ -355,7 +388,7 @@ a:active {
 }
 
 .jokeButton:active {
-  transform: scale(0.55);
+  transform: scale(0.65);
 }
 
 .swal-button {
@@ -468,10 +501,9 @@ a:active {
   font-family: "Prompt";
   float: right;
   cursor: pointer;
-  transform: scale(0.65);
 }
 #version:active {
-  transform: scale(0.55);
+  transform: scale(0.75);
 }
 
 /* Title */
@@ -543,7 +575,6 @@ a:active {
 /* Project Section */
 #projectWrapper {
   color: #001220;
-  font-size: 1.5vw;
   padding: 1vh;
 }
 #projectWrapper:hover {
@@ -552,13 +583,8 @@ a:active {
 
 .myProjects {
   text-align: center;
-
-  font-size: 3vw;
-
   line-height: 2vh;
-
   position: relative;
-
   top: -4.5vw;
   font-family: "Prompt";
 }

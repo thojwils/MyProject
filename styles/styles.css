@@ -391,6 +391,7 @@ a:active {
 /* ----- carousel control buttons stylings ----- */
 
 .slide-btn {
+  margin-left: -10px;
   background-color: #b9b9b9;
   border-radius: 50%;
   border: solid white;
@@ -398,7 +399,7 @@ a:active {
   height: 2rem;
   width: 2rem;
   min-width: fit-content;
-  transform: scale(0.65);
+  transform: scale(0.75);
   cursor: pointer;
   /* stylings for positioning the buttons at
                            the bottom of the carousel */

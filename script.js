@@ -1,5 +1,6 @@
 // Selecting elements
 const bannerClose = document.querySelector(".material-icons");
+const bannerCloseAll = document.querySelector(".bannerbg");
 const mainButtonShape = document.querySelector(`.shape`);
 const mainH1 = document.querySelector(`.h1`);
 const myProjects = document.querySelector(`.myProjects`);
@@ -14,8 +15,12 @@ const path1 = document.querySelector(`.path1`);
 console.log(path1);
 // Functionality
 // Closing the banner (X)
+console.log(bannerCloseAll);
 bannerClose.addEventListener(`click`, function () {
   this.closest(".banner").remove();
+});
+bannerCloseAll.addEventListener(`click`, function () {
+  this.remove();
 });
 
 // Changing the Version color
@@ -133,6 +138,7 @@ function zeroPadding(num, digit) {
   return (zero + num).slice(-digit);
 }
 
+// H3 Collapse Toggle
 document.querySelectorAll(`h3`).forEach((h3) => {
   h3.addEventListener(`click`, () => {
     const arrow = document.getElementsByClassName("h3--active--after");

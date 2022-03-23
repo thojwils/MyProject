@@ -1,0 +1,272 @@
+/* Headers */
+h1 {
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Prompt";
+  transform: translateX(-1.5vw);
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  max-width: 100%;
+}
+/* h1 effects */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+/*  h1 Animation */
+.anim-typewriter {
+  padding-top: 1vh;
+  animation: typewriter 5s steps(44) 1s 1 normal both,
+    blinkTextCursor 1000ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18.5em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(250, 114, 104, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Buttons (In the Top Nav) */
+/* Links */
+a {
+  font-size: clamp(0.4rem, 1.1rem, 10rem);
+  font-family: "Prompt";
+}
+
+.nav_link {
+  font-size: clamp(0.4rem, 1.1rem, 10rem);
+  padding: 1vw;
+  padding-top: 3vh;
+  float: left;
+}
+
+.click-me {
+  animation: clickMeBounce 7s infinite linear;
+}
+
+@keyframes clickMeBounce {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.4em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.25em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+/* Attention Banner */
+.banner {
+  background: #eb5967;
+  border-bottom: white;
+}
+
+.bannerbg {
+  background-image: url("../backgroundImages/portfoliobg.png");
+}
+
+.banner__content {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+}
+
+.banner__text {
+  font-size: clamp(0.1rem, 1.25rem, 10rem);
+  flex-grow: 1;
+  text-align: center;
+  line-height: 1.5;
+  font-family: "Prompt";
+  align-items: center;
+}
+
+.banner__close {
+  inherits: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  min-height: 2.5rem;
+}
+
+/* Banner Background */
+/* Banner Text */
+/* Banner Close Button */
+
+/* Top Nav */
+.topnav {
+  display: inline-block;
+  width: 100%;
+  background-image: url("../backgroundImages/portfoliobg.png");
+  padding-left: 1vw;
+  padding-bottom: 1vh;
+}
+/* Title Background */
+.bg {
+  background-image: url("../backgroundImages/portfoliobg.png");
+  width: 100%;
+  margin-top: -2vh;
+}
+/* Line Divider */
+.topborderAngle {
+  width: 115%;
+}
+/* Top Nav Links */
+
+/* Joke API */
+.jokeButton {
+  color: rgb(255, 254, 254);
+  padding: 1vw;
+  padding-top: 3vh;
+  font-family: "Prompt";
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  width: auto;
+}
+.jokeButton:hover {
+  color: #c62368;
+}
+
+.jokeButton:active {
+  transform: scale(0.65);
+}
+
+.swal-button {
+  border-radius: 2px;
+  background-color: #c62368;
+  font-size: 2vw;
+  transform: scale(0.65);
+}
+.glow-on-hover {
+  position: relative;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff00009b,
+    #ff73009b,
+    #fffb009b,
+    #48ff009b,
+    #00ffd59b,
+    #002bff9b,
+    #7a00ff9b,
+    #ff00c89b,
+    #ff00009b
+  );
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(80% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 2vh;
+  /* border-radius: 10px; */
+}
+.glow-on-hover:active:after {
+  transform: scale(0.95);
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  margin-top: 2vh;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Joke Modal */
+.swal-modal {
+  background-image: url("../backgroundImages/portfoliobg.png");
+  border: 3px solid white;
+  width: 40vw;
+}
+
+.swal-overlay {
+  background-color: rgb(0, 18, 32, 0.75);
+}
+
+.swal-title {
+  margin: 2vw;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+  font-family: "Prompt";
+}
+
+.swal-text {
+  background-color: rgba(235, 89, 103, 0.9);
+  line-height: auto;
+  padding: 3vw, 3.5vh;
+  margin: 1vw;
+  font-size: 2vw;
+  text-align: center;
+  width: 35vw;
+  color: white;
+  font-family: "Prompt";
+}
+/* Version */
+#version {
+  color: rgb(255, 254, 254);
+  padding: 1vw;
+  padding-top: 3vh;
+  font-family: "Prompt";
+  float: right;
+  cursor: pointer;
+}
+#version:active {
+  transform: scale(0.75);
+}

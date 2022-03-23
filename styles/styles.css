@@ -4,7 +4,6 @@
 body {
   overflow-x: hidden;
   min-height: fit-content;
-  min-width: fit-content;
   /* min-height: 100vh; */
   /* max-width: 100%; */
   font-family: "Prompt";
@@ -19,56 +18,24 @@ section {
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
-/* Headers */
-h1 {
-  margin: 0 auto;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  white-space: nowrap;
-  overflow: hidden;
-  font-family: "Prompt";
-  transform: translateX(-1.5vw);
-}
-/* h1 effects */
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-/*  h1 Animation */
-.anim-typewriter {
-  padding-top: 1vh;
-  font-size: 3vh;
-  animation: typewriter 5s steps(44) 1s 1 normal both,
-    blinkTextCursor 1000ms steps(44) infinite normal;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 18.5em;
-  }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(250, 114, 104, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
+
 h2 {
   text-align: center;
-  max-height: max-content;
   min-height: min-content;
+  min-width: 50vw;
   position: relative;
   font-family: "Prompt";
   border-radius: 1%;
   color: #001220;
-  transform: scale(0.65);
-  padding: 2vw;
+  transform: scale(0.7);
+  padding: 1.5vw;
+  font-size: clamp(0.9rem, 2rem, 5rem);
 }
 h3 {
   font-family: "Prompt";
   text-align: left;
   position: relative;
-  font-size: 2.25vw;
+  font-size: clamp(1rem, 1.5rem, 3rem);
   min-width: fit-content;
   background-color: rgba(0, 0, 0, 0.7);
   text-decoration: underline;
@@ -106,21 +73,19 @@ h3:active {
 
 h4 {
   text-align: center;
-  font-size: 3vw;
+  font-size: clamp(1rem, 1.5rem, 3rem);
   position: relative;
-  margin-top: -1.5vh;
   font-family: "Prompt";
   transform: scale(0.75);
   color: #001220;
 }
 p {
   font-family: "Prompt";
-  font-size: 1.75vw;
+  font-size: clamp(0.75rem, 1.5rem, 3rem);
   text-align: left;
-  width: 70%;
-  padding-left: 3vw;
-  padding-right: 3vw;
-  margin-top: -1.5vh;
+  width: 100%;
+  padding-left: 1vw;
+  padding-right: 1vw;
   /* padding-bottom: 3vh;
   padding-top: 3vh; */
   background-color: rgba(0, 0, 0, 0.1);
@@ -131,6 +96,7 @@ p {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.2s;
+  margin-top: -2rem;
 }
 p:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -157,25 +123,10 @@ hr {
   border-top: 3px solid #eee;
   margin: 0px 0;
 }
-/* Links */
-a {
-  font-size: 2vw;
-  height: fit-content;
-  font-family: "Prompt";
-}
-
-.nav_link {
-  font-size: 2vw;
-  transform: scale(0.65);
-  padding: 1vw;
-  padding-top: 3vh;
-  float: left;
-}
 
 .paragraph_link {
-  font-size: 1.75vw;
-  transform: scale(0.65);
   inherits: unset;
+  font-size: clamp(0.75rem, 1.5rem, 3rem);
 }
 
 a:link {
@@ -195,317 +146,6 @@ a:active {
   transform: scale(0.7);
 }
 
-.click-me {
-  animation: clickMeBounce 7s infinite linear;
-}
-
-@keyframes clickMeBounce {
-  0% {
-    top: 0em;
-  }
-  40% {
-    top: 0em;
-  }
-  43% {
-    top: -0.4em;
-  }
-  46% {
-    top: 0em;
-  }
-  48% {
-    top: -0.25em;
-  }
-  50% {
-    top: 0em;
-  }
-  100% {
-    top: 0em;
-  }
-}
-
-/* Media Queries */
-@media screen and (max-width: 400px) and (min-width: 1px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  .banner__content,
-  .float-container,
-  button,
-  p,
-  .paragraph_link,
-  .jokeButton,
-  .banner__text,
-  .material-icons {
-    transform: scale(0.6);
-  }
-  a,
-  #version,
-  button,
-  .glow-on-hover,
-  .nav_link {
-    transform: scale(0.4);
-  }
-  .material-icons,
-  .fab fa-github fa-2x {
-    transform: scale(0.5);
-  }
-}
-@media screen and (max-width: 800px) and (min-width: 401px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  .banner__content,
-  .banner__text,
-  .float-container,
-  p,
-  .paragraph_link,
-  .jokeButton,
-  .banner__text,
-  .material-icons {
-    transform: scale(0.7);
-  }
-  a,
-  #version,
-  button,
-  .glow-on-hover,
-  .nav_link {
-    transform: scale(0.5);
-  }
-  .material-icons,
-  .fab fa-github fa-2x {
-    transform: scale(0.6);
-  }
-}
-@media screen and (min-width: 801px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  .banner__content,
-  .float-container,
-  p,
-  .paragraph_link,
-  .jokeButton,
-  .banner__text,
-  .material-icons {
-    transform: scale(0.8);
-  }
-  a,
-  #version,
-  button,
-  .glow-on-hover,
-  .nav_link {
-    transform: scale(0.6);
-  }
-  .fab fa-github fa-2x {
-    transform: scale(0.7);
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  .dispay-blobs {
-    display: none;
-  }
-}
-
-/* Attention Banner */
-.banner {
-  background: #eb5967;
-  border-bottom: white;
-}
-
-.bannerbg {
-  background-image: url("../backgroundImages/portfoliobg.png");
-}
-
-.banner__content {
-  max-width: 65%;
-  margin: 0 auto;
-  font-size: larger;
-  display: flex;
-  transform: scale(0.75);
-  align-items: center;
-}
-
-.banner__text {
-  flex-grow: 1;
-  text-align: center;
-  line-height: 1.4;
-  font-family: "Prompt";
-  align-items: center;
-  font-size: 2vh;
-}
-
-.banner__close {
-  inherits: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transform: scale(1);
-}
-
-/* Banner Background */
-/* Banner Text */
-/* Banner Close Button */
-
-/* Top Nav */
-.topnav {
-  display: inline-block;
-  width: 100%;
-  background-image: url("../backgroundImages/portfoliobg.png");
-  padding-left: 1vw;
-  padding-bottom: 1vh;
-}
-/* Title Background */
-.bg {
-  background-image: url("../backgroundImages/portfoliobg.png");
-  width: 100%;
-  margin-top: -2vh;
-}
-/* Line Divider */
-.topborderAngle {
-  width: 115%;
-}
-/* Top Nav Links */
-
-/* Joke API */
-.jokeButton {
-  color: rgb(255, 254, 254);
-  padding: 1vw;
-  padding-top: 3vh;
-  font-family: "Prompt";
-  cursor: pointer;
-  background: none;
-  border: none;
-  text-decoration: underline;
-  width: auto;
-}
-.jokeButton:hover {
-  color: #c62368;
-}
-
-.jokeButton:active {
-  transform: scale(0.65);
-}
-
-.swal-button {
-  border-radius: 2px;
-  background-color: #c62368;
-  font-size: 2vw;
-  transform: scale(0.65);
-}
-.glow-on-hover {
-  position: relative;
-}
-
-.glow-on-hover:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff00009b,
-    #ff73009b,
-    #fffb009b,
-    #48ff009b,
-    #00ffd59b,
-    #002bff9b,
-    #7a00ff9b,
-    #ff00c89b,
-    #ff00009b
-  );
-  opacity: 0.4;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(80% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0.2;
-  transition: opacity 0.3s ease-in-out;
-  margin-top: 2vh;
-  /* border-radius: 10px; */
-}
-.glow-on-hover:active:after {
-  transform: scale(0.95);
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 80%;
-  background: #111;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-  margin-top: 2vh;
-}
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-/* Joke Modal */
-.swal-modal {
-  background-image: url("../backgroundImages/portfoliobg.png");
-  border: 3px solid white;
-  width: 40vw;
-}
-
-.swal-overlay {
-  background-color: rgb(0, 18, 32, 0.75);
-}
-
-.swal-title {
-  margin: 2vw;
-  font-size: 3vw;
-  text-align: center;
-  color: white;
-  font-family: "Prompt";
-}
-
-.swal-text {
-  background-color: rgba(235, 89, 103, 0.9);
-  line-height: auto;
-  padding: 3vw, 3.5vh;
-  margin: 1vw;
-  font-size: 2vw;
-  text-align: center;
-  width: 35vw;
-  color: white;
-  font-family: "Prompt";
-}
-/* Version */
-#version {
-  color: rgb(255, 254, 254);
-  padding: 1vw;
-  padding-top: 3vh;
-  font-family: "Prompt";
-  float: right;
-  cursor: pointer;
-}
-#version:active {
-  transform: scale(0.75);
-}
-
 /* Title */
 /* Main */
 .layer2 {
@@ -513,17 +153,16 @@ a:active {
 }
 .spacer {
   aspect-ratio: 900/700;
-
   width: 100%;
-
   background-repeat: no-repeat;
-
   background-position: center;
   background-size: cover;
+  padding-bottom: 13vh;
 }
 /* paragraph tabs */
 .tab {
   text-indent: 40px;
+  width: clamp(50%, 95%, 25%);
 }
 /* Background */
 /* About Me */
@@ -553,7 +192,7 @@ a:active {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   border-radius: 0.75%;
-  width: 55vw;
+  width: clamp(10vw, 55vw, 100vw);
 }
 
 .float-child {
@@ -576,6 +215,7 @@ a:active {
 #projectWrapper {
   color: #001220;
   padding: 1vh;
+  font-size: clamp(1rem, 2vh, 4rem);
 }
 #projectWrapper:hover {
   color: #ffff;
@@ -593,6 +233,7 @@ a:active {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   padding: 0.5%;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   font-weight: bold;
 }
 
@@ -607,10 +248,10 @@ a:active {
   margin: auto;
   width: 75%;
   height: 75%;
+  min-height: 500px;
   position: relative;
   padding-top: 25%;
   padding-bottom: 2.5vh;
-  transform: scale(0.85);
 }
 /* ----- end of container stylings ----- */
 
@@ -790,8 +431,9 @@ a:active {
 .footer {
   background-image: url("../backgroundImages/portfoliobg.png");
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
+
   width: 100%;
 }
 /* Animated Blobs */

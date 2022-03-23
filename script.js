@@ -12,10 +12,8 @@ const jokeButton = document.querySelector(".jokeButton");
 const refreshButton = document.querySelector(".glow-on-hover");
 const bannerRemove = document.getElementById("removeBanner");
 const path1 = document.querySelector(`.path1`);
-console.log(path1);
 // Functionality
 // Closing the banner (X)
-console.log(bannerCloseAll);
 bannerClose.addEventListener(`click`, function () {
   this.closest(".banner").remove();
 });
@@ -141,7 +139,6 @@ function zeroPadding(num, digit) {
 // H3 Collapse Toggle
 document.querySelectorAll(`h3`).forEach((h3) => {
   h3.addEventListener(`click`, () => {
-    const arrow = document.getElementsByClassName("h3--active--after");
     // console.log(arrow);
     // console.log(`Clicked`);
     const accordionContent = h3.nextElementSibling;

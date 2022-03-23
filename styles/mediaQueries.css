@@ -23,6 +23,9 @@
   .fab fa-github fa-2x {
     transform: scale(0.8);
   }
+  .float-container {
+    transform: scale(1.2);
+  }
 }
 @media screen and (min-width: 801px) {
   h1,
@@ -63,5 +66,11 @@
   #projectWrapper,
   .paragraph_link {
     font-size: 1.25vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .tab {
+    max-width: 97.5%;
   }
 }

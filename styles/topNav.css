@@ -80,6 +80,7 @@ a {
 .banner {
   background: #eb5967;
   border-bottom: white;
+  cursor: pointer;
 }
 
 .bannerbg {

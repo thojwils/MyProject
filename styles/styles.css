@@ -9,6 +9,7 @@ body {
   font-family: "Prompt";
   color: white;
   background: #0d1332;
+  background-image: linear-gradient(180deg, #0d1332, black);
 }
 
 section {
@@ -249,6 +250,7 @@ a:active {
   width: 75%;
   height: 75%;
   min-height: 500px;
+  max-width: 1300px;
   position: relative;
   padding-top: 25%;
   padding-bottom: 4vw;
@@ -511,7 +513,7 @@ a:active {
 
 .path2 {
   /* bottom right to top left */
-  offset-path: path("M1000 200  1100 -1500");
+  offset-path: path("M800 200  800 -950");
   width: 10vw;
   height: 10vh;
   max-width: 100%;
@@ -522,7 +524,7 @@ a:active {
 }
 .path2a {
   /* bottom right to top left */
-  offset-path: path("M1300 400  1000 -1200");
+  offset-path: path("M1000 400  1000 -950");
   width: 25vw;
   height: 25vh;
   margin-left: 5vw;
@@ -533,7 +535,7 @@ a:active {
 }
 
 .path3 {
-  offset-path: path("M1000 -1200  900 800");
+  offset-path: path("M1000 -900  900 800");
   width: 100vw;
   height: 100vh;
   margin-left: 5vw;
@@ -542,7 +544,7 @@ a:active {
   animation: blob 100s both infinite;
 }
 .path3a {
-  offset-path: path("M1100 -1000  1200 1000");
+  offset-path: path("M900 -700  975 950");
   width: 60vw;
   height: 60vh;
   margin-left: 5vw;
@@ -553,7 +555,7 @@ a:active {
 
 .path4 {
   /* bottom right to top left */
-  offset-path: path("M900 400  800 -1000");
+  offset-path: path("M900 400  800 -800");
   width: 17vw;
   height: 17vh;
   margin-left: 5vw;
@@ -563,7 +565,7 @@ a:active {
 }
 .path4a {
   /* bottom right to top left */
-  offset-path: path("M400 400  400 -1000");
+  offset-path: path("M400 400  400 -800");
   width: 7vw;
   height: 7vh;
   margin-left: 5vw;
@@ -581,11 +583,12 @@ a:active {
   margin-left: 5vw;
   background-repeat: no-repeat;
   position: fixed;
+  animation-delay: 15s;
   animation: blob 40s both infinite;
 }
 .path5a {
   /* bottom right to top left */
-  offset-path: path("M700 400  600 -1000");
+  offset-path: path("M700 400  900 -1000");
   width: 7vw;
   height: 7vh;
   margin-left: 5vw;
@@ -597,7 +600,7 @@ a:active {
 }
 
 .path6 {
-  offset-path: path("M1,2 M4,4");
+  offset-path: path("M600 400  800 -800");
   width: 70vw;
   height: 70vh;
   margin-left: 5vw;
@@ -607,7 +610,7 @@ a:active {
   animation: blob 30s both infinite;
 }
 .path6a {
-  offset-path: path("M1,2 M4,4");
+  offset-path: path("M700 600 -800 800");
   width: 35vw;
   height: 35vh;
   margin-left: 5vw;
@@ -618,7 +621,7 @@ a:active {
 }
 
 .path7 {
-  offset-path: path("M1,2 M4,4");
+  offset-path: path("M1000 0  400 -700");
   width: 7.5vw;
   height: 7.5vh;
   margin-left: 5vw;
@@ -627,31 +630,33 @@ a:active {
   animation: blob 60s both infinite;
 }
 .path7a {
-  offset-path: path("M1,2 M4,4");
+  offset-path: path("M850 100  -400 700");
   width: 5vw;
   height: 5vh;
   margin-left: 5vw;
   background-repeat: no-repeat;
   position: fixed;
+  animation-delay: 10s;
   animation: blob 15s both infinite;
 }
 .path8 {
-  offset-path: path("M1,2 M4,4");
+  offset-path: path("M700 400  -800 800");
   width: 7.5vw;
   height: 7.5vh;
   margin-left: 5vw;
   background-repeat: no-repeat;
   position: fixed;
+  animation-delay: 13s;
   animation: blob 19s both infinite;
 }
 .path8a {
-  offset-path: path("M1,2 M4,4");
+  offset-path: path("M1000 400  500 -500");
   width: 4vw;
   height: 4vh;
   margin-left: 5vw;
   background-repeat: no-repeat;
   position: fixed;
-  animation-delay: 4s;
+  animation-delay: 15s;
   animation: blob 20s both infinite;
 }
 

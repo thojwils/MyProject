@@ -118,6 +118,10 @@ a {
 /* Banner Close Button */
 
 /* Top Nav */
+.sticky {
+  position: sticky;
+}
+
 .topnav {
   display: inline-block;
   width: 100%;

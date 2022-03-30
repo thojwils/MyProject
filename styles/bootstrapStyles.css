@@ -1,3 +1,15 @@
 .jumbotron {
   background-image: url(/backgroundImages/midtownbg.jpg);
 }
+
+.hero {
+  width: 100%;
+  max-width: 30vw;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    display: none;
+  }
+}

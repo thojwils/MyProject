@@ -19,13 +19,13 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Bootstrapped Page</title>
+    <title>Simba's World</title>
   </head>
   <body>
     <div class="container-fluid p-3">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Simba's World</a>
+          <a class="navbar-brand">Simba's World</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -40,10 +40,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="https://twilson.io/"
+                  >twilson.io</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a
+                  class="nav-link"
+                  href="https://www.google.com/search?q=cat+rescue+shelters+near+me"
+                  >Want to rescue a cat?</a
+                >
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -54,14 +63,29 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Popular Cats
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.instagram.com/iamlilbub/"
+                      >Lil Bub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.instagram.com/kingduncan__/?hl=en"
+                      >King Duncan</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.instagram.com/princessmonstertruck/"
+                      >Princess Monster Truck</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -69,7 +93,8 @@
           </div>
         </div>
       </nav>
-      <div class="row bg-light p-5 rounded-lg m-4 p-3">
+      <br />
+      <div class="row main_section mx-auto bg-light p-5 rounded-lg m-4 p-3">
         <div class="col">
           <h1 class="display-4">Simba's World</h1>
           <p class="lead">My parents have a cat named Simba.</p>
@@ -81,6 +106,8 @@
           <img src="/simbaPics/main.png" class="hero m-5" alt="..." />
         </div>
       </div>
+      <br />
+
       <div
         id="carouselExampleIndicators"
         class="carousel slide mb-4"
@@ -106,6 +133,24 @@
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="2"
             aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
           ></button>
         </div>
         <div class="row carousel-inner">
@@ -139,6 +184,36 @@
               />
             </div>
           </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/simba_cold.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/nala_table.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/Leo_counter.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
         </div>
         <button
           class="carousel-control-prev"
@@ -159,9 +234,14 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <br />
       <div class="row justify-content-center">
         <div class="card mx-1" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
+          <img
+            src="/simbaPics/simba_bottlecap.jpg"
+            class="card-img-top"
+            alt="..."
+          />
           <div class="card-body">
             <h5 class="card-title">Simba</h5>
             <p class="card-text">
@@ -172,7 +252,7 @@
           </div>
         </div>
         <div class="card mx-1" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
+          <img src="/simbaPics/nala_tree.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Nala</h5>
             <p class="card-text">
@@ -183,7 +263,11 @@
           </div>
         </div>
         <div class="card mx-1" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
+          <img
+            src="/simbaPics/Leo_counter.jpg"
+            class="card-img-top"
+            alt="..."
+          />
           <div class="card-body">
             <h5 class="card-title">Leo</h5>
             <p class="card-text">
@@ -194,27 +278,9 @@
           </div>
         </div>
       </div>
+      <br />
       <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">About</a>
-          </li>
-        </ul>
-        <p class="text-center text-muted">
-          2022 - Created by TJ Wilson using Bootstrap
-        </p>
+        <p class="text-center text-muted">2022 - Created with Bootstrap</p>
       </footer>
     </div>
   </body>

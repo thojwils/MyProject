@@ -18,6 +18,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
 
     <title>Simba's World</title>
   </head>
@@ -96,7 +98,14 @@
           <p class="lead">My parents have a cat named Simba.</p>
           <hr class="my-4" />
           <p>There are 3 cats in the household: Simba, Nala, and Leo.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Cat Video</a>
+          <div class="toggle" type="button">
+            <h6>Toggle Gif</h6>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <div class="catGif hide" id="toggle"></div>
+          </div>
         </div>
         <div class="col-sm">
           <img src="/simbaPics/main.png" class="hero m-5" alt="..." />
@@ -147,6 +156,36 @@
             data-bs-slide-to="5"
             aria-label="Slide 6"
           ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="6"
+            aria-label="Slide 7"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="7"
+            aria-label="Slide 8"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="8"
+            aria-label="Slide 9"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="9"
+            aria-label="Slide 10"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="10"
+            aria-label="Slide 11"
+          ></button>
         </div>
         <div class="row carousel-inner">
           <div class="carousel-item active">
@@ -183,7 +222,47 @@
             <div class="d-flex justify-content-center">
               <img
                 class="img-fluid"
-                src="/simbaPics/simba_cold.jpg"
+                src="/simbaPics/Leo_counter.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/simba-touch.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/simba_mermaidtail.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/leo_table.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/simba_couch_tv.jpg"
                 class="d-block"
                 alt="..."
               />
@@ -203,7 +282,17 @@
             <div class="d-flex justify-content-center">
               <img
                 class="img-fluid"
-                src="/simbaPics/Leo_counter.jpg"
+                src="/simbaPics/simba_stare.jpg"
+                class="d-block"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-fluid"
+                src="/simbaPics/leo_sit.jpg"
                 class="d-block"
                 alt="..."
               />
@@ -240,10 +329,9 @@
           <div class="card-body">
             <h5 class="card-title">Simba</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Internal clock is military grade so he never forgets when it is
+              time to eat.
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
         <div class="card mx-1" style="width: 18rem">
@@ -251,10 +339,8 @@
           <div class="card-body">
             <h5 class="card-title">Nala</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              There is a 5% chance that she wants to be held.
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
         <div class="card mx-1" style="width: 18rem">
@@ -266,10 +352,8 @@
           <div class="card-body">
             <h5 class="card-title">Leo</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Unable to enter a room without bringing a toy.
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>

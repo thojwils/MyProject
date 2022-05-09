@@ -536,8 +536,8 @@ a:active {
 
 .path3 {
   offset-path: path("M1000 -900  900 800");
-  width: 100vw;
-  height: 100vh;
+  width: 20vw;
+  height: 10vh;
   margin-left: 5vw;
   background-repeat: no-repeat;
   position: fixed;
@@ -545,8 +545,8 @@ a:active {
 }
 .path3a {
   offset-path: path("M900 -700  975 950");
-  width: 60vw;
-  height: 60vh;
+  width: 20vw;
+  height: 10vh;
   margin-left: 5vw;
   background-repeat: no-repeat;
   position: fixed;

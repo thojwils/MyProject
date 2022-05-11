@@ -35,9 +35,18 @@ catRescue.addEventListener(`click`, simbaApproved);
 
 // Gif toggle
 const catGif = document.querySelector(`.catGif`);
-const toggleSwitch = document.querySelector(`.switch`);
-function toggle() {
-  if (document.getElementById("MyId").className == "hide")
-    document.getElementById("MyId").className = "show";
-  else document.getElementById("MyId").className = "hide";
-}
+
+//Show Gif
+const toggleSwitch = document.querySelector(`.slider`);
+let num = 0;
+toggleSwitch.addEventListener(`click`, function () {
+  num++;
+  console.log(num);
+  if (num % 2 == 0) {
+    catGif.classList.remove(`show`);
+    catGif.classList.add(`hide`);
+  } else {
+    catGif.classList.add(`show`);
+    catGif.classList.remove(`hide`);
+  }
+});

@@ -29,7 +29,7 @@
   background-image: url(/simbaPics/simba_leo_playing.gif);
   height: 640px;
   width: 480px;
-  transform: scale(0.75);
+  margin-top: 10px;
   border: #333;
   border-radius: 5px;
   border-width: 5px;
@@ -150,6 +150,12 @@ input:checked + .slider:before {
 @media screen and (max-width: 600px) {
   .hero {
     display: none;
+  }
+  .catGif {
+    transform: scale(0.5);
+    margin-left: -150px;
+    margin-top: -125px;
+    margin-bottom: -150px;
   }
 }
 

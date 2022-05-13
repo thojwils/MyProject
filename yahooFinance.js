@@ -22,7 +22,7 @@
 
 // Generate new Date to plug into the fetch so that it is always pulling current news
 const dateToday = new Date();
-const tech = "Elon";
+const tech = "Apple";
 //Need to create an input field to plug into the q="term&" query
 const todaysNews =
   "https://newsapi.org/v2/everything?" +

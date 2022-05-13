@@ -147,9 +147,16 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 600px) {
+.mini_hero {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
   .hero {
     display: none;
+  }
+  .mini_hero {
+    display: block;
   }
   .catGif {
     transform: scale(0.5);
@@ -168,9 +175,9 @@ input:checked + .slider:before {
     min-height: 800px;
     max-width: 400px;
   }
-  .hero {
+  /* .hero {
     width: 60%;
     max-width: 30vw;
     height: auto;
-  }
+  } */
 }

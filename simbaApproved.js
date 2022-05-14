@@ -50,3 +50,12 @@ toggleSwitch.addEventListener(`click`, function () {
     catGif.classList.remove(`hide`);
   }
 });
+
+// Swap out if conditional contains classlist
+// if (num % 2 == 0) {
+//   catGif.classList.remove(`show`);
+//   catGif.classList.add(`hide`);
+// } else {
+//   catGif.classList.add(`show`);
+//   catGif.classList.remove(`hide`);
+// }

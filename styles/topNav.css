@@ -275,15 +275,3 @@ a {
 #version:active {
   transform: scale(0.75);
 }
-
-.news-input {
-  color: rgb(255, 254, 254);
-  padding: 1vw;
-  padding-top: 3vh;
-  font-family: "Prompt";
-  float: right;
-  cursor: pointer;
-  color: black;
-  text-align: center;
-  transform: scale(0.8);
-}

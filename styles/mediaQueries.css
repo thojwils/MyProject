@@ -26,6 +26,23 @@
   .float-container {
     transform: scale(1.2);
   }
+  .news-input {
+    transform: scale(0.65);
+    margin-top: -5px;
+  }
+  .news_feed_start {
+    transform: scale(0.85);
+    margin-left: 2.5px;
+  }
+  .news_container {
+    margin-top: 0.5vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-bottom: 0.5vw;
+  }
+  input[type="text"] {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 801px) {
   h1,
@@ -48,6 +65,14 @@
   }
   .fab fa-github fa-2x {
     transform: scale(0.9);
+  }
+  .news_feed_start {
+    transform: scale(0.95);
+    margin-left: 1px;
+    overflow-x: scroll;
+  }
+  input[type="text"] {
+    font-size: 20px;
   }
 }
 

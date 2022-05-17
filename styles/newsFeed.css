@@ -1,6 +1,14 @@
+.news-input {
+  font-family: "Prompt";
+  float: right;
+  color: black;
+  margin-top: 15px;
+  text-align: center;
+  min-height: 50px;
+}
+
 .news_feed_start {
   display: flex;
-  align-items: flex-start;
   width: auto;
   height: auto;
   overflow-x: auto;
@@ -10,17 +18,21 @@
 .news_container {
   display: flex;
   justify-content: left;
+  align-items: stretch;
   min-width: clamp(300px, 350px, 500px);
   margin-top: 1vh;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 1vw;
+  min-height: 207px;
+  cursor: pointer;
 }
 
 img {
   max-width: 100%;
   /* display: block; */
   object-fit: cover;
+  height: 250px;
 }
 
 .card {
@@ -55,18 +67,8 @@ img {
 .tag-blue {
   background: #56ccf2;
   background: linear-gradient(to bottom, #2f80ed, #56ccf2);
-  color: #fafafa;
-}
-
-.tag-brown {
-  background: #d1913c;
-  background: linear-gradient(to bottom, #ffd194, #d1913c);
-  color: #fafafa;
-}
-
-.tag-red {
-  background: #cb2d3e;
-  background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  text-align: center;
+  min-width: 5vw;
   color: #fafafa;
 }
 
@@ -100,14 +102,21 @@ img {
   max-width: 500px;
 }
 
-/* h4 {
+h5 {
   text-align: center;
-  min-height: min-content;
-  min-width: 45vw;
+  height: 40px;
   position: relative;
   font-family: "Prompt";
-  border-radius: 1%;
-  color: white;
-  transform: scale(0.7);
-  font-size: clamp(0.9rem, 2rem, 5rem);
-} */
+  color: black;
+  font-size: clamp(0.5rem, 1rem, 2rem);
+}
+
+h6 {
+  text-align: center;
+  height: 50px;
+  line-height: normal;
+  position: relative;
+  font-family: "Prompt";
+  color: black;
+  font-size: clamp(0.9rem, 1.5rem, 3rem);
+}

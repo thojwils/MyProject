@@ -35,12 +35,13 @@ const todaysNews =
 // Attach to button attached to an input form.
 let articles = "";
 // Request to the api.
-async function getResponse() {
-  const response = await fetch(
-    "https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromCarTravel?distance=100&vehicle=SmallDieselCar"
-  );
-}
-
+// async function getResponse() {
+//   const response = await fetch(todaysNews);
+//   const data = await response.json();
+//   const articles = data.articles;
+//   console.log(response);
+// }
+// getResponse();
 const fetchNews = async () => {
   try {
     const res = await fetch(todaysNews);
@@ -48,8 +49,45 @@ const fetchNews = async () => {
     const data = await res.json();
     const articles = data.articles;
     console.log(articles);
-    for (let i = 0; i < articles.length; i++) {}
-    return data;
+    for (let i = 0; i < 6; i++) {
+      console.log([articles[i].title, articles[i].url]);
+      const news = [articles[i].title, articles[i].url];
+      const newsFeed = document.querySelector(`#newsFeedStart`);
+      newsFeed.insertAdjacentHTML(
+        `afterbegin`,
+        // Swap out with actual news references once styling is in place
+        // `<div onclick="location.href = '${articles[i].url}'" class="news_feed" id="${i}" >
+        // <h4>
+        // ${articles[i].title}
+        // </h4>
+        // <img src="${articles[i].urlToImage}" class="news_hero">
+        // </div>`
+        `<div onclick="location.href = '${articles[i].url}'" class="news_container" id="${i}">
+  <div class="card">
+    <div class="card__header">
+      <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span class="tag tag-blue">Search Term</span>
+      <h4>${articles[i].title}</h4>
+      <p>Description?</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+        <div class="author__info">
+          <h4>${articles[i].author}</h4>
+          <small>${articles[i].publishedAt}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+<hr class="topborderAngle"></hr>
+</div>`
+      );
+    }
+    return articles;
   } catch (err) {
     console.error(err);
     // .then((data) => data.json())

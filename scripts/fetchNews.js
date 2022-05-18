@@ -23,8 +23,6 @@ const fetchNews = async () => {
     for (let i = 0; i < 20; i++) {
       // console.log([articles[i].title, articles[i].url]);
       // const news = [articles[i].title, articles[i].url];
-      const today = new Date();
-      const todayISO = today.toISOString();
       const start = new Date(dateToday).getTime();
       const endDate = data.articles[i].publishedAt;
       const end = new Date(endDate).getTime();
@@ -33,7 +31,7 @@ const fetchNews = async () => {
       const minutes = parseInt(seconds / 60);
       const hours = parseInt(minutes / 60);
       const time = (hours % 24) + " hour's ago";
-      console.log(time);
+      // console.log(time);
       // let timeDif = today - articles[i].publishedAt;
       const newsFeed = document.querySelector(`#newsFeedStart`);
       newsFeed.insertAdjacentHTML(
@@ -45,7 +43,7 @@ const fetchNews = async () => {
         // </h4>
         // <img src="${articles[i].urlToImage}" class="news_hero">
         // </div>`
-        `<div onclick="location.href = '${articles[i].url}'" class="news_container" id="${i}">
+        `<div onclick="window.open('${articles[i].url}')" class="news_container" id="${i}">
   <div class="card">
     <div class="card__header">
       <img src="${articles[i].urlToImage}" alt="" class="card__image" width="600">

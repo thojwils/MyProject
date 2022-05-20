@@ -5,34 +5,52 @@ const dateToday = new Date();
 let searchTerm = ""; // How should I capture this parameter from the input of the searchInput field? I need this to read from the event listener (enter submit).
 let articles = "";
 // API URL Request
+// Bing News API
+const options = {
+  method: "GET",
+  headers: {
+    "X-BingApis-SDK": "true",
+    "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
+    "X-RapidAPI-Key": "882f8ea9a8msh2a1982cd5a5a8b3p124b8ajsncc453bc41177",
+  },
+};
 const fetchNews = async () => {
   try {
     const res = await fetch(
-      "https://newsapi.org/v2/everything?" +
-        `q=${searchTerm}&` +
-        `from=${dateToday}&` +
-        "sortBy=popularity&" +
-        "apiKey=7b1e6e2a55ea4718b0451d26964d3e38"
+      "https://bing-news-search1.p.rapidapi.com/news/search?" +
+        `q=Tech` +
+        `&freshness=Day&textFormat=Raw&safeSearch=Strict`,
+      options
     );
-    console.log(res.ok);
+    // News API Version
+    // const fetchNews = async () => {
+    //   try {
+    //     const res = await fetch(
+    //       "https://newsapi.org/v2/everything?" +
+    //         `q=${searchTerm}&` +
+    //         `from=${dateToday}&` +
+    //         "sortBy=popularity&" +
+    //         "apiKey=7b1e6e2a55ea4718b0451d26964d3e38"
+    //     );
     const data = await res.json();
-    const articles = data.articles;
-    console.log(articles);
+    const articles = data.value;
     //Time for calc hours since post
 
     for (let i = 0; i < 20; i++) {
+      console.log(articles[i]);
       // console.log([articles[i].title, articles[i].url]);
       // const news = [articles[i].title, articles[i].url];
       const start = new Date(dateToday).getTime();
-      const endDate = data.articles[i].publishedAt;
+      const endDate = articles[i].datePublished;
       const end = new Date(endDate).getTime();
       const milliseconds = Math.abs(end - start).toString();
       const seconds = parseInt(milliseconds / 1000);
       const minutes = parseInt(seconds / 60);
       const hours = parseInt(minutes / 60);
-      const time = (hours % 24) + " hour's ago";
-      // console.log(time);
-      // let timeDif = today - articles[i].publishedAt;
+      const time =
+        hours > 0
+          ? (hours % 24) + " hour's ago"
+          : (minutes % 60) + " minute's ago";
       const newsFeed = document.querySelector(`#newsFeedStart`);
       newsFeed.insertAdjacentHTML(
         `afterbegin`,
@@ -43,19 +61,30 @@ const fetchNews = async () => {
         // </h4>
         // <img src="${articles[i].urlToImage}" class="news_hero">
         // </div>`
-        `<div onclick="window.open('${articles[i].url}')" class="news_container" id="${i}">
+        `<div onclick="window.open('${
+          articles[i].url
+        }')" class="news_container" id="${i}">
   <div class="card">
     <div class="card__header">
-      <img src="${articles[i].urlToImage}" alt="" class="card__image" width="600">
+      <img src="${
+        articles[i].image.thumbnail.contentUrl
+      }" alt="" class="card__image" width="600">
     </div>
     <div class="card__body">
-      <span class="tag tag-blue">${searchTerm}</span>
-      <h6>${articles[i].title}</h6>
+    <div>
+    <span id="left" class="tag tag-blue">${articles[i].category}</span>
+    <span id="right" class="tag tag-red">${searchTerm}</span>
+    </div>  
+      <h6>${
+        articles[i].name.length > 80
+          ? articles[i].name.substring(0, 80) + "..."
+          : articles[i].name
+      }</h6>
     </div>
     <div class="card__footer">
       <div class="user">
         <div class="author__info">
-          <h5>Written by: ${articles[i].author}</h5>
+          <h5>Source: <strong>${articles[i].provider[0].name}</strong></h5>
           <small>${time}</small>
         </div>
       </div>
@@ -76,7 +105,6 @@ const fetchNews = async () => {
     // });
   }
 };
-
 searchInput.addEventListener(`keypress`, function (e) {
   if (e.key === "Enter") {
     searchTerm = searchInput.value;

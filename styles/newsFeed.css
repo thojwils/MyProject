@@ -24,7 +24,7 @@
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 1vw;
-  min-height: 207px;
+  min-height: 100px;
   cursor: pointer;
 }
 
@@ -32,7 +32,7 @@ img {
   max-width: 100%;
   /* display: block; */
   object-fit: cover;
-  height: 250px;
+  height: 200px;
 }
 
 .card {
@@ -54,10 +54,20 @@ img {
 }
 
 .tag {
-  align-self: flex-start;
+  /* align-self: flex-end; */
   padding: 0.25em 0.75em;
   border-radius: 1em;
   font-size: 0.75rem;
+}
+
+#left {
+  align-self: flex-start;
+  float: left;
+}
+
+#right {
+  align-self: flex-end;
+  float: right;
 }
 
 .tag + .tag {
@@ -65,8 +75,13 @@ img {
 }
 
 .tag-blue {
-  background: #56ccf2;
-  background: linear-gradient(to bottom, #2f80ed, #56ccf2);
+  background: #070a1c;
+  text-align: center;
+  min-width: 5vw;
+  color: #fafafa;
+}
+.tag-red {
+  background: red;
   text-align: center;
   min-width: 5vw;
   color: #fafafa;

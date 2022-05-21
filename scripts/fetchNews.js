@@ -6,6 +6,8 @@ let searchTerm = ""; // How should I capture this parameter from the input of th
 let articles = "";
 // API URL Request
 // Bing News API
+const imageQualityWarning = function () {};
+
 const options = {
   method: "GET",
   headers: {
@@ -18,7 +20,7 @@ const fetchNews = async () => {
   try {
     const res = await fetch(
       "https://bing-news-search1.p.rapidapi.com/news/search?" +
-        `q=Tech` +
+        `q=${searchTerm}` +
         `&freshness=Day&textFormat=Raw&safeSearch=Strict`,
       options
     );
@@ -66,13 +68,18 @@ const fetchNews = async () => {
         }')" class="news_container" id="${i}">
   <div class="card">
     <div class="card__header">
-      <img src="${
-        articles[i].image.thumbnail.contentUrl
-      }" alt="" class="card__image" width="600">
+     <div class="tooltip">
+     <span class="tooltiptext">Images appear blurry from API. There is a better API that is premium and has high quality images. Using this as a way to show hover text :)</span>
+     <img src="${
+       articles[i].image.thumbnail.contentUrl
+     }" alt="" onmousehover="imageQualityWarning" class="card__image" width="600">
+     </div>  
     </div>
     <div class="card__body">
     <div>
-    <span id="left" class="tag tag-blue">${articles[i].category}</span>
+    <span id="left" class="tag tag-blue">${
+      articles[i].category ? articles[i].category : "Uncategorized"
+    }</span>
     <span id="right" class="tag tag-red">${searchTerm}</span>
     </div>  
       <h6>${

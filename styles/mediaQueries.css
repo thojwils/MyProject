@@ -99,3 +99,38 @@
     max-width: 97.5%;
   }
 }
+.fa-search {
+  display: none;
+}
+/* Media Query for swapping out text input for search icon */
+@media only screen and (max-width: 710px) {
+  .news-input {
+    display: none;
+  }
+  .fa-search {
+    display: inline-block;
+    position: relative;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .nav_link .jokeButton #version {
+    font-size: smaller;
+    padding: none;
+  }
+  #version {
+    display: none;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .fa-search {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 381px) {
+  .jokeButton {
+    display: none;
+  }
+}

@@ -2,9 +2,12 @@
   font-family: "Prompt";
   float: right;
   color: black;
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
-  min-height: 50px;
+  font-size: 1.25vw;
+}
+.fa-magnifying-glass {
+  display: none;
 }
 
 .news_feed_start {

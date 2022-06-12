@@ -144,11 +144,6 @@ a:hover {
 a:active {
   transform: scale(0.7);
 }
-
-.undernav {
-  z-index: -10;
-}
-
 /* Title */
 /* Main */
 .layer2 {

@@ -10,7 +10,6 @@ h1 {
   transform: translateX(-1.5vw);
   font-size: clamp(1rem, 2.5vw, 5rem);
   min-width: fit-content;
-  background-color: rgba(144, 144, 144, 0.13);
 }
 /* h1 effects */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
@@ -119,6 +118,7 @@ a {
 /* Top Nav */
 .sticky {
   position: sticky;
+  z-index: 9999;
 }
 
 .topnav {
@@ -127,6 +127,7 @@ a {
   padding-left: 1vw;
   padding-bottom: 5px;
   justify-content: space-around;
+  top: 0;
 }
 /* Title Background */
 .bg {
@@ -145,6 +146,9 @@ a {
 /* Line Divider */
 .topborderAngle {
   width: 115%;
+}
+.topborder {
+  position: relative;
 }
 /* Top Nav Links */
 
@@ -302,4 +306,5 @@ a {
 .flex {
   display: flex;
   margin-top: min(17vw);
+  z-index: -1000;
 }

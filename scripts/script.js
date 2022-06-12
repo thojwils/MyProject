@@ -13,6 +13,7 @@ const refreshButton = document.querySelector(".glow-on-hover");
 const bannerRemove = document.getElementById("removeBanner");
 const path1 = document.querySelector(`.path1`);
 const topnav = document.querySelector(`.topnav`);
+const cloudbg = document.querySelector(`.cloudbg`);
 // Functionality
 // Closing the banner (X)
 bannerClose.addEventListener(`click`, function () {
@@ -138,6 +139,8 @@ function zeroPadding(num, digit) {
 }
 
 // H3 Collapse Toggle
+// h1[0] should start open
+
 document.querySelectorAll(`h3`).forEach((h3) => {
   h3.addEventListener(`click`, () => {
     // console.log(arrow);
@@ -145,7 +148,6 @@ document.querySelectorAll(`h3`).forEach((h3) => {
     const accordionContent = h3.nextElementSibling;
     // console.log(accordionContent);
     h3.classList.toggle(`h3--active--after`);
-
     if (h3.classList.contains(`h3--active--after`)) {
       accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
     } else {
@@ -153,10 +155,22 @@ document.querySelectorAll(`h3`).forEach((h3) => {
       // h3.classList.toggle(`h3--active--after`);
     }
   });
+  console.log(h3);
 });
 
-document.addEventListener(`scroll`, function () {
-  document.querySelector(`.bannerbg`).remove();
+if (bannerCloseAll)
+  document.addEventListener(`scroll`, function () {
+    bannerCloseAll.remove();
+  });
+
+window.addEventListener("scroll", (event) => {
+  let scrollY = this.scrollY;
+  console.log(scrollY);
+  if (this.scrollY > 700) {
+    cloudbg.classList.remove(`sticky`);
+  } else {
+    cloudbg.classList.add(`sticky`);
+  }
 });
 
 // Carousel onclicks

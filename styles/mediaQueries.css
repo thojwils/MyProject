@@ -134,3 +134,8 @@
     display: none;
   }
 }
+@media only screen and (max-width: 600px) {
+  .flex {
+    margin-top: max(10vh);
+  }
+}

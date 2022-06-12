@@ -1,7 +1,6 @@
 "use strict";
 
 const e = React.createElement;
-
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
@@ -10,9 +9,13 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.liked) {
-      return console.log(`Liked`);
+      // If state is liked, then we show "unlike" button
+      return e(
+        "button",
+        { onClick: () => this.setState({ liked: false }) },
+        "Unlike"
+      );
     }
-
     return e(
       "button",
       { onClick: () => this.setState({ liked: true }) },
@@ -20,7 +23,6 @@ class LikeButton extends React.Component {
     );
   }
 }
-
 const domContainer = document.querySelector("#like_button_container");
 const root = ReactDOM.createRoot(domContainer);
 root.render(e(LikeButton));

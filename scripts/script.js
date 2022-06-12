@@ -12,6 +12,7 @@ const jokeButton = document.querySelector(".jokeButton");
 const refreshButton = document.querySelector(".glow-on-hover");
 const bannerRemove = document.getElementById("removeBanner");
 const path1 = document.querySelector(`.path1`);
+const topnav = document.querySelector(`.topnav`);
 // Functionality
 // Closing the banner (X)
 bannerClose.addEventListener(`click`, function () {
@@ -152,6 +153,10 @@ document.querySelectorAll(`h3`).forEach((h3) => {
       // h3.classList.toggle(`h3--active--after`);
     }
   });
+});
+
+document.addEventListener(`scroll`, function () {
+  document.querySelector(`.bannerbg`).remove();
 });
 
 // Carousel onclicks

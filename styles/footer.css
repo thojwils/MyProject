@@ -1,0 +1,14 @@
+/* ----- Footer ----- */
+.footer {
+  background-image: url("../backgroundImages/bgclouds.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  min-height: 150px;
+}

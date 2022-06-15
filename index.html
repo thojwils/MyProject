@@ -13,13 +13,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>twilson.io</title>
-<!-- Linking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<!-- Linking -->    
+<!-- Font  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -27,15 +27,17 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <!-- Scripts -->
     <script src="https://kit.fontawesome.com/86267a3736.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <link rel="stylesheet" type="text/css" href="/styles/styles.css">
     <link rel="stylesheet" type="text/css" href="/styles/topNav.css">
     <link rel="stylesheet" type="text/css" href="/styles/mediaQueries.css">
     <link rel="stylesheet" type="text/css" href="/styles/newsFeed.css">
-
-
+    <link rel="stylesheet" type="text/css" href="/styles/animatedBlobs.css">
+    <link rel="stylesheet" type="text/css" href="/styles/jokeAPI.css">
+    <link rel="stylesheet" type="text/css" href="/styles/projectCarousel.css">
+    <link rel="stylesheet" type="text/css" href="/styles/footer.css">
   </head>
   <!-- Content -->
   <body>
@@ -45,7 +47,6 @@
         <div class="banner__text">
           <strong>Attention:</strong> This portfolio is a work in progress! If you have feedback or questions please reach out via Signal, Gmail, or LinkedIn.
         </div>
-
         <button class="banner__close" type="button">
           <span class="material-icons"> close </span>
         </button>
@@ -74,7 +75,7 @@
         >
       <button class="jokeButton glow-on-hover" >Get a Joke! </button>
       <a id="version" class="glow-on-hover nav_link">
-          Version 2.1
+          Version 2.2
       </a>
         
       <input class="news-input" id="newsFeed" id="textfield" name="textfield" type="text" placeholder="Search for News"/>
@@ -161,12 +162,12 @@
       <div class="container">
         <h2 class="scrollMyProjects" id="scrollMyProjects">Projects
           <div class="projectWrapper">
-          <a href="projects/pigGame/index.html" class="project_link" target="_blank" id="projectWrapper">Pig Game</a>
-          <a href="projects/todoList/index.html" target="_blank" id="projectWrapper">To Do List</a>
-          <a href="projects/bankistMarketing/index.html" target="_blank" id="projectWrapper">Bankist Marketing</a>
-          <a href="projects/bankistApp/index.html" target="_blank" id="projectWrapper">Bankist App</a>
-          <a href="projects/maptyApp/index.html" target="_blank" id="projectWrapper">Mapty App</a>
-          <a href="https://forkify-v2.netlify.app/" target="_blank" id="projectWrapper">Forkify App</a>
+          <a href="projects/pigGame/index.html" target="_blank" id="projectWrapper_1">Pig Game</a>
+          <a href="projects/todoList/index.html" target="_blank" id="projectWrapper_2">To Do List</a>
+          <a href="projects/bankistMarketing/index.html" target="_blank" id="projectWrapper_3">Bankist Marketing</a>
+          <a href="projects/bankistApp/index.html" target="_blank" id="projectWrapper_4">Bankist App</a>
+          <a href="projects/maptyApp/index.html" target="_blank" id="projectWrapper_5">Mapty App</a>
+          <a href="https://forkify-v2.netlify.app/" target="_blank" id="projectWrapper_6">Forkify App</a>
         </div>
         </h2>
       
@@ -175,48 +176,48 @@
           <div class="carousel-content"></div>
           <div class="slideshow">
             <!-- carousel control buttons -->
-            <button class="slide-btn slide-btn-1"></button>
-            <button class="slide-btn slide-btn-2"></button>
-            <button class="slide-btn slide-btn-3"></button>
-            <button class="slide-btn slide-btn-4"></button>
-            <button class="slide-btn slide-btn-5"></button>
-            <button class="slide-btn slide-btn-6"></button>
+            <button class="slide-btn slide-btn-1" alt="Go to Pig Game image"></button>
+            <button class="slide-btn slide-btn-2" alt="Go to To Do List image"></button>
+            <button class="slide-btn slide-btn-3" alt="Go to Bankist Marketing image"></button>
+            <button class="slide-btn slide-btn-4" alt="Go to Bankist App image"></button>
+            <button class="slide-btn slide-btn-5" alt="Go to Mapty App image"></button>
+            <button class="slide-btn slide-btn-6" alt="Go to Forkify App image"></button>
             <!-- carousel wrapper which contains all images -->
             <div class="slideshow-wrapper">
               <div class="slide">
                 <img
-                  class="slide-img" id="pigGame"
-                  src="projectSnips/pigGame.JPG" crossorigin
+                  class="slide-img" id="pigGame" alt="Pig Game image" loading="lazy"
+                  src="projectSnips/pigGame.webp" crossorigin
                 />
               </div>
               <div class="slide">
                 <img
-                  class="slide-img" id="todoList"
-                  src="projectSnips/todoList.JPG" crossorigin
+                  class="slide-img" id="todoList" alt="To Do List image" loading="lazy"
+                  src="projectSnips/todoList.webp" crossorigin
                 />
               </div>
               <div class="slide">
                 <img
-                  class="slide-img" id="bankistMarketing"
-                  src="projectSnips/bankistMarketing.JPG" crossorigin
+                  class="slide-img" id="bankistMarketing" alt="Bankist Marketing image" loading="lazy"
+                  src="projectSnips/bankistMarketing.webp" crossorigin
                 />
               </div>
               <div class="slide">
                 <img
-                  class="slide-img" id="bankistApp"
-                  src="projectSnips/bankistApp.JPG" crossorigin
+                  class="slide-img" id="bankistApp" alt="Bankist App image" loading="lazy"
+                  src="projectSnips/bankistApp.webp" crossorigin
                 />
               </div>
               <div class="slide">
                 <img
-                  class="slide-img" id="maptyApp"
-                  src="projectSnips/maptyApp.JPG" crossorigin
+                  class="slide-img" id="maptyApp" alt="Mapty App image" loading="lazy"
+                  src="projectSnips/maptyApp.webp" crossorigin
                 />
               </div>
               <div class="slide">
                 <img
-                  class="slide-img" id="forkifyApp"
-                  src="projectSnips/forkifyApp.JPG" crossorigin
+                  class="slide-img" id="forkifyApp" alt="Forkify App image" loading="lazy"
+                  src="projectSnips/forkifyApp.webp" crossorigin
                 />
               </div>
             </div>
@@ -226,12 +227,15 @@
     </div>
     <hr class="topborder"></hr>
     <div class="footer">
-      <a href="https://signal.group/#CjQKICSkKZuB-BXHnPvEMzdE7baZ-MyK6Gq9P177qkdy0L81EhDM3El0ZgdZo2OTbB_-xYJu"><i class="far fa-comments fa-2x"></i></a>
-      <a href="mailto:tj4wilson@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
-      <a href="https://www.linkedin.com/in/thojwils/"><i class="fab fa-linkedin fa-2x"></i></a>
-      <a href="https://github.com/thojwils"><i class="fab fa-github fa-2x"></i></a>
+      <a href="https://signal.group/#CjQKICSkKZuB-BXHnPvEMzdE7baZ-MyK6Gq9P177qkdy0L81EhDM3El0ZgdZo2OTbB_-xYJu" alt="Open Signal"><i class="far fa-comments fa-2x"></i></a>
+      <a href="mailto:tj4wilson@gmail.com" alt="Open Gmail"><i class="far fa-envelope fa-2x" ></i></a>
+      <a href="https://www.linkedin.com/in/thojwils/" alt="Open LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="https://github.com/thojwils" alt="Open Github"><i class="fab fa-github fa-2x"></i></a>
     </div>
-    <script src="/scripts/script.js"></script>
+    <script src="/scripts/mainBody.js"></script>
     <script src="/scripts/fetchNews.js"></script>
+    <script src="/scripts/fetchJoke.js"></script>
+    <script src="/scripts/countdownTimer.js"></script>
+    <script src="/scripts/topNav.js"></script>
   </body>
 </html>

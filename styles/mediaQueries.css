@@ -1,5 +1,6 @@
-/* Media Queries */
-@media screen and (min-width: 375px) {
+/* ----- Media Queries ----- */
+/* Ordered from smallest to largest screen size */
+@media screen and (min-width: 360px) {
   h1,
   h2,
   h3,
@@ -40,10 +41,51 @@
     padding-right: 0.5vw;
     padding-bottom: 0.5vw;
   }
+  .float-container {
+    transform: scale(1.5);
+  }
   input[type="text"] {
     font-size: 16px;
   }
 }
+
+@media only screen and (max-width: 381px) {
+  .jokeButton {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .nav_link .jokeButton #version {
+    font-size: smaller;
+    padding: none;
+  }
+  #version {
+    display: none;
+  }
+  .fa-search {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .flex {
+    margin-top: max(15vh);
+  }
+}
+
+/* Media Query for swapping out text input for search icon */
+@media only screen and (max-width: 710px) {
+  .news-input {
+    display: none;
+  }
+  .fa-search {
+    display: inline-block;
+    position: relative;
+    justify-content: space-around;
+  }
+}
+
 @media screen and (min-width: 801px) {
   h1,
   h2,
@@ -74,6 +116,15 @@
   input[type="text"] {
     font-size: 20px;
   }
+  .float-container {
+    transform: scale(1.35);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .tab {
+    max-width: 97.5%;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -91,51 +142,5 @@
   #projectWrapper,
   .paragraph_link {
     font-size: 1.25vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .tab {
-    max-width: 97.5%;
-  }
-}
-.fa-search {
-  display: none;
-}
-/* Media Query for swapping out text input for search icon */
-@media only screen and (max-width: 710px) {
-  .news-input {
-    display: none;
-  }
-  .fa-search {
-    display: inline-block;
-    position: relative;
-    justify-content: space-around;
-  }
-}
-
-@media only screen and (max-width: 530px) {
-  .nav_link .jokeButton #version {
-    font-size: smaller;
-    padding: none;
-  }
-  #version {
-    display: none;
-  }
-}
-@media only screen and (max-width: 530px) {
-  .fa-search {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 381px) {
-  .jokeButton {
-    display: none;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .flex {
-    margin-top: max(15vh);
   }
 }

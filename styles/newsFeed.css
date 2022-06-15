@@ -1,14 +1,19 @@
+/* ----- News Text Input Field ----- */
 .news-input {
   font-family: "Prompt";
   color: black;
-  margin-top: 15px;
   text-align: center;
+  top: 50;
+  bottom: 50;
   font-size: 1.25vw;
+  float: right;
 }
+/* Magnifying Glass icon */
 .fa-magnifying-glass {
   display: none;
 }
 
+/* ----- Rendered Newsfeed ----- */
 .news_feed_start {
   display: flex;
   width: auto;
@@ -17,6 +22,7 @@
   overflow-y: hidden;
 }
 
+/* Individual News Cards */
 .news_container {
   display: flex;
   justify-content: left;
@@ -176,4 +182,8 @@ h6 {
   border-width: 2px;
   border-style: solid;
   border-color: #0b112d transparent transparent transparent;
+}
+
+.fa-search {
+  display: none;
 }

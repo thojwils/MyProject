@@ -1,0 +1,31 @@
+/* ----- Joke Modal ----- */
+/* This is rendered when user clicks "Get a Joke" button (connected to JokeAPI) */
+.swal-modal {
+  background-image: url("../backgroundImages/portfoliobg.png");
+  border: 3px solid white;
+  width: 50vw;
+}
+
+.swal-overlay {
+  background-color: rgb(0, 18, 32, 0.75);
+}
+
+.swal-title {
+  margin: 2vw;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+  font-family: "Prompt";
+}
+
+.swal-text {
+  background-color: rgba(235, 89, 103, 0.9);
+  line-height: auto;
+  padding: 3vw, 3.5vh;
+  margin: 1vw;
+  font-size: 2vw;
+  text-align: center;
+  width: 35vw;
+  color: white;
+  font-family: "Prompt";
+}

@@ -1,0 +1,208 @@
+/* Carousel */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 75%;
+  height: 75%;
+  min-height: 500px;
+  max-width: 1300px;
+  position: relative;
+  padding-top: 25%;
+  padding-bottom: 4vw;
+}
+
+/* ----- carousel content stylings ----- */
+.content {
+  position: relative;
+  border: 4px solid #ffffff7d;
+}
+
+/* places the carousel content on center of the carousel */
+.carousel-content {
+  position: absolute;
+  /*to center the content horizontally and vertically*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 50;
+  transform: scale(0.5);
+}
+
+/*----- end of carousel content stylings ----- */
+
+/* ----- slideshow stylings ----- */
+.slideshow {
+  height: 100%;
+  overflow: hidden; /* to hide slides in x-direction */
+  position: relative;
+}
+/* wrapper which wraps all the slideshow images stylings */
+.slideshow-wrapper {
+  display: flex;
+
+  /* We give it width as 400% because we are making a
+                           4 image carousel. If you want to make for example,
+                           6 images carousel, then give width as 600%. */
+  width: 600%;
+  height: 100%;
+  position: relative;
+  /* you can change the animation settings from below */
+  animation: slideshow 20s infinite;
+}
+/* define width and height for images*/
+.slide {
+  width: 100%;
+  height: 100%;
+}
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: 20s infinite alternate;
+}
+
+/* carousel @keyframes are used to provide animations */
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+  5% {
+    left: 0;
+  }
+  10% {
+    left: -100%;
+  }
+  15% {
+    left: -100%;
+  }
+  20% {
+    left: -100%;
+  }
+  25% {
+    left: -200%;
+  }
+  30% {
+    left: -200%;
+  }
+  35% {
+    left: -200%;
+  }
+  40% {
+    left: -300%;
+  }
+  45% {
+    left: -300%;
+  }
+  50% {
+    left: -300%;
+  }
+  55% {
+    left: -400%;
+  }
+  60% {
+    left: -400%;
+  }
+  65% {
+    left: -400%;
+  }
+  70% {
+    left: -500%;
+  }
+  75% {
+    left: -500%;
+  }
+  80% {
+    left: -500%;
+  }
+  85% {
+    left: -500%;
+  }
+  90% {
+    left: 0;
+  }
+  95% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}
+/* ----- end of slideshow stylings ----- */
+
+/* ----- carousel control buttons stylings ----- */
+
+.slide-btn {
+  margin-left: -10px;
+  background-color: #b9b9b9;
+  border-radius: 50%;
+  border: solid white;
+  opacity: 0.9;
+  height: 2rem;
+  width: 2rem;
+  min-width: fit-content;
+  transform: scale(0.65);
+  cursor: pointer;
+  position: absolute;
+  align-items: center;
+  bottom: 2.5%;
+  transition: all 0.5s;
+  z-index: 70;
+}
+/* As we provide position as absolute,
+                    the buttons places one over the other.
+                    So, we have to place them individually
+                    at their correct positions. */
+.slide-btn-1 {
+  left: 25%;
+}
+.slide-btn-2 {
+  left: 35%;
+}
+.slide-btn-3 {
+  left: 45%;
+}
+.slide-btn-4 {
+  left: 55%;
+}
+.slide-btn-5 {
+  left: 65%;
+}
+.slide-btn-6 {
+  left: 75%;
+}
+/* When we focus on the particular button,
+                    the animation stops to that particular image
+                    to which the button is associated. */
+.slide-btn-1:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+.slide-btn-2:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+.slide-btn-3:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -200%;
+}
+.slide-btn-4:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -300%;
+}
+.slide-btn-5:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -400%;
+}
+.slide-btn-6:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -500%;
+}
+/* when we focus on the button, the background color changes */
+.slide-btn:focus {
+  background-color: #888;
+  opacity: 1;
+}
+/* ----- end of carousel control buttons stylings ----- */

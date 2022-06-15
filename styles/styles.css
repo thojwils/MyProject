@@ -1,11 +1,13 @@
-/* CSS is organized by component top to bottom*/
-/* Global CSS */
+/* Body CSS */
+* {
+  font-family: "Prompt";
+}
 
 body {
   overflow-x: hidden;
   min-height: fit-content;
-  /* min-height: 100vh; */
-  /* max-width: 100%; */
+  font-style: normal;
+  font-weight: 300;
   font-family: "Prompt";
   color: white;
   background: #0d1332;
@@ -16,24 +18,19 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding-top: 1vh; */
-  /* padding-bottom: 1vh; */
 }
 
-h2 {
-  text-align: center;
-  min-height: min-content;
-  min-width: 50vw;
-  position: relative;
-  font-family: "Prompt";
-  border-radius: 1%;
-  color: #ffffff;
-  transform: scale(0.7);
-  padding: 1.5vw;
-  font-size: clamp(0.9rem, 2rem, 5rem);
+/* Icons */
+i {
+  padding: 0.5vw;
+  padding-left: 2vw;
+  justify-content: space-between;
+  display: flex;
+  transform: scale(0.85);
 }
+
+/* Paragraph Headers */
 h3 {
-  font-family: "Prompt";
   text-align: left;
   position: relative;
   font-size: clamp(1rem, 1.5rem, 3rem);
@@ -60,6 +57,7 @@ h3:active {
   transform: scale(0.74);
 }
 
+/* Icons to right of h3  */
 .fa-user {
   float: right;
 }
@@ -70,16 +68,34 @@ h3:active {
   float: right;
 }
 
-h4 {
-  text-align: center;
-  font-size: clamp(1rem, 1.5rem, 3rem);
-  position: relative;
-  font-family: "Prompt";
-  transform: scale(0.75);
-  color: #001220;
+/* ----- Paragraph Section ----- */
+.layer2 {
+  background-image: url("../backgroundImages/layer2.svg");
 }
+
+.paragraph_link {
+  inherits: unset;
+  font-size: clamp(0.75rem, 1.5rem, 3rem);
+}
+
+.spacer {
+  aspect-ratio: 900/700;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 13vh;
+}
+
+/* paragraph tabs */
+.tab {
+  text-indent: 40px;
+  max-width: 70%;
+  text-align: center;
+}
+
+/* Paragraph text */
 p {
-  font-family: "Prompt";
   font-size: clamp(0.75rem, 1.5rem, 3rem);
   text-align: left;
   width: 100%;
@@ -102,35 +118,15 @@ p:hover {
   backdrop-filter: blur(5px);
 }
 
+/* Text Links */
 .text_link {
   inherits: none;
   margin: none;
   padding: none;
 }
 
-/* Icons */
-i {
-  padding: 1vw;
-  padding-left: 2vw;
-  justify-content: space-between;
-  display: flex;
-  transform: scale(0.85);
-}
-/* Section seperation lines */
-hr {
-  border: 0;
-  border-top: 3px solid #eee;
-  margin: 0px 0;
-}
-
-.paragraph_link {
-  inherits: unset;
-  font-size: clamp(0.75rem, 1.5rem, 3rem);
-}
-
 a:link {
   color: rgb(255, 254, 254);
-  font-family: "Prompt";
 }
 /* visited link */
 a:visited {
@@ -144,38 +140,22 @@ a:hover {
 a:active {
   transform: scale(0.7);
 }
-/* Title */
-/* Main */
-.layer2 {
-  background-image: url("../backgroundImages/layer2.svg");
-}
-.spacer {
-  aspect-ratio: 900/700;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 13vh;
-}
-/* paragraph tabs */
-.tab {
-  text-indent: 40px;
-  max-width: 70%;
-  text-align: center;
-}
-/* Background */
-/* About Me */
-/* Career Path */
-/* Counting Down */
 
+/* ----- Section seperation lines ----- */
+hr {
+  border: 0;
+  border-top: 3px solid #eee;
+  margin: 0px 0;
+}
+
+/* ----- Counting Down ----- */
 #clock {
-  font-family: "Share Tech Mono", monospace;
-  color: #ffffff;
   text-align: center;
 }
 .time {
   letter-spacing: 0.05vw;
   font-size: 2.25vw;
+  font-weight: bold;
 }
 .date {
   letter-spacing: 0.05vw;
@@ -204,14 +184,27 @@ a:active {
 #countdownTimer {
   font-size: 2vw;
   letter-spacing: 0.05vw;
-
+  font-weight: bold;
   color: white;
   /* background-image: url("portfoliobg.png"); */
   backdrop-filter: blur(5px);
-  font-family: "Share Tech Mono", monospace;
   text-align: center;
 }
-/* Project Section */
+
+/* ----- Project Section ----- */
+h2 {
+  font-family: "Prompt";
+  text-align: center;
+  min-height: min-content;
+  min-width: 50vw;
+  position: relative;
+  border-radius: 1%;
+  color: #ffffff;
+  transform: scale(0.7);
+  padding: 1.5vw;
+  font-size: clamp(0.9rem, 2rem, 5rem);
+}
+
 #projectWrapper {
   color: #ffffff;
   padding: 1.25vh;
@@ -236,458 +229,4 @@ a:active {
   font-size: clamp(1.5rem, 3vw, 3rem);
   font-weight: bold;
   width: auto;
-}
-
-/* Carousel */
-/* ----- container stylings:
-          -> centers the whole content of the page
-          -> defines width and height for container ----- */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  width: 75%;
-  height: 75%;
-  min-height: 500px;
-  max-width: 1300px;
-  position: relative;
-  padding-top: 25%;
-  padding-bottom: 4vw;
-}
-/* ----- end of container stylings ----- */
-
-/* provides padding to main heading */
-.main-heading {
-  padding: 2rem 0 2rem 0;
-}
-
-.content {
-  position: relative;
-  border: 2px solid #001220;
-}
-
-/* ----- carousel content stylings ----- */
-/* places the carousel content on center of the carousel */
-.carousel-content {
-  position: absolute;
-  /*to center the content horizontally and vertically*/
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 50;
-  transform: scale(0.5);
-}
-.carousel-heading {
-  font-size: 3rem;
-  color: #c62368;
-  margin-bottom: 1rem;
-}
-/*----- end of carousel content stylings ----- */
-
-/* ----- slideshow stylings ----- */
-.slideshow {
-  height: 100%;
-  overflow: hidden; /* to hide slides in x-direction */
-  position: relative;
-}
-/* wrapper which wraps all the slideshow images stylings */
-.slideshow-wrapper {
-  display: flex;
-
-  /* We give it width as 400% because we are making a
-                           4 image carousel. If you want to make for example,
-                           5 images carousel, then give width as 500%. */
-  width: 600%;
-  height: 100%;
-  position: relative;
-  /* you can change the animation settings from below */
-  animation: slideshow 20s infinite;
-}
-/* define width and height for images*/
-.slide {
-  width: 100%;
-  height: 100%;
-}
-.slide-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: 20s infinite alternate;
-}
-/* .slideshow-wrapper:hover {
-            animation-play-state: paused;
-          } */
-/* @keyframes are used to provide animations
-                       We make these settings for 4 image carousel.
-                       Make modification accourding to your needs. */
-
-@keyframes slideshow {
-  0% {
-    left: 0;
-  }
-  5% {
-    left: 0;
-  }
-  10% {
-    left: -100%;
-  }
-  15% {
-    left: -100%;
-  }
-  20% {
-    left: -100%;
-  }
-  25% {
-    left: -200%;
-  }
-  30% {
-    left: -200%;
-  }
-  35% {
-    left: -200%;
-  }
-  40% {
-    left: -300%;
-  }
-  45% {
-    left: -300%;
-  }
-  50% {
-    left: -300%;
-  }
-  55% {
-    left: -400%;
-  }
-  60% {
-    left: -400%;
-  }
-  65% {
-    left: -400%;
-  }
-  70% {
-    left: -500%;
-  }
-  75% {
-    left: -500%;
-  }
-  80% {
-    left: -500%;
-  }
-  85% {
-    left: -500%;
-  }
-  90% {
-    left: 0;
-  }
-  95% {
-    left: 0;
-  }
-  100% {
-    left: 0;
-  }
-}
-/* ----- end of slideshow stylings ----- */
-
-/* ----- carousel control buttons stylings ----- */
-
-.slide-btn {
-  margin-left: -10px;
-  background-color: #b9b9b9;
-  border-radius: 50%;
-  border: solid white;
-  opacity: 0.9;
-  height: 2rem;
-  width: 2rem;
-  min-width: fit-content;
-  transform: scale(0.75);
-  cursor: pointer;
-  /* stylings for positioning the buttons at
-                           the bottom of the carousel */
-  position: absolute;
-  align-items: center;
-  bottom: 2.5%;
-  transition: all 0.5s;
-  z-index: 70;
-}
-/* As we provide position as absolute,
-                    the buttons places one over the other.
-                    So, we have to place them individually
-                    at their correct positions. */
-.slide-btn-1 {
-  left: 25%;
-}
-.slide-btn-2 {
-  left: 35%;
-}
-.slide-btn-3 {
-  left: 45%;
-}
-.slide-btn-4 {
-  left: 55%;
-}
-.slide-btn-5 {
-  left: 65%;
-}
-.slide-btn-6 {
-  left: 75%;
-}
-/* When we focus on the particular button,
-                    the animation stops to that particular image
-                    to which the button is associated. */
-.slide-btn-1:focus ~ .slideshow-wrapper {
-  animation: none;
-  left: 0;
-}
-.slide-btn-2:focus ~ .slideshow-wrapper {
-  animation: none;
-  left: -100%;
-}
-.slide-btn-3:focus ~ .slideshow-wrapper {
-  animation: none;
-  left: -200%;
-}
-.slide-btn-4:focus ~ .slideshow-wrapper {
-  animation: none;
-  left: -300%;
-}
-.slide-btn-5:focus ~ .slideshow-wrapper {
-  animation: none;
-  left: -400%;
-}
-.slide-btn-6:focus ~ .slideshow-wrapper {
-  animation: none;
-  left: -500%;
-}
-/* when we focus on the button, the background color changes */
-.slide-btn:focus {
-  background-color: #888;
-  opacity: 1;
-}
-/* ----- end of carousel control buttons stylings ----- */
-
-/* Footer */
-.footer {
-  background-image: url("../backgroundImages/portfoliobg.png");
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-
-  width: 100%;
-}
-/* Animated Blobs */
-.blob {
-  background-image: url("../backgroundImages/blob.svg");
-}
-
-.blob2 {
-  background-image: url("../backgroundImages/blob2.svg");
-}
-
-.path1 {
-  /* This one goes top left to bottom right */
-  offset-path: path("M0 300 0 -600");
-  width: 100vw;
-  height: 100vh;
-  right: 50%;
-  left: 50%;
-  position: relative;
-  background-repeat: no-repeat;
-  animation-delay: 1s;
-  animation: blob 65s both infinite;
-}
-.path1a {
-  /* bottom right to top left */
-  offset-path: path("M100 0  400 -700");
-  width: 30vw;
-  height: 30vh;
-  right: 50%;
-  left: 50%;
-  position: relative;
-  opacity: 0.5;
-  background-repeat: no-repeat;
-  animation-delay: 3s;
-  animation: blob 45s both infinite;
-}
-
-.path2 {
-  /* bottom right to top left */
-  offset-path: path("M800 200  800 -950");
-  width: 10vw;
-  height: 10vh;
-  max-width: 100%;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: relative;
-  animation: blob 35s both infinite;
-}
-.path2a {
-  /* bottom right to top left */
-  offset-path: path("M1000 400  1000 -950");
-  width: 25vw;
-  height: 25vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 2s;
-  animation: blob 30s both infinite;
-}
-
-.path3 {
-  offset-path: path("M1000 -900  900 800");
-  width: 20vw;
-  height: 10vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation: blob 100s both infinite;
-}
-.path3a {
-  offset-path: path("M900 -700  975 950");
-  width: 20vw;
-  height: 10vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation: blob 60s both infinite;
-}
-
-.path4 {
-  /* bottom right to top left */
-  offset-path: path("M900 400  800 -800");
-  width: 17vw;
-  height: 17vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation: blob 35s both infinite;
-}
-.path4a {
-  /* bottom right to top left */
-  offset-path: path("M400 400  400 -800");
-  width: 7vw;
-  height: 7vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 2s;
-  animation: blob 25s both infinite;
-}
-
-.path5 {
-  /* bottom right to top left */
-  offset-path: path("M100 400  200 -1000");
-  width: 15vw;
-  height: 15vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 15s;
-  animation: blob 40s both infinite;
-}
-.path5a {
-  /* bottom right to top left */
-  offset-path: path("M700 400  900 -1000");
-  width: 7vw;
-  height: 7vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 2s;
-
-  animation: blob 40s both infinite;
-}
-
-.path6 {
-  offset-path: path("M600 400  800 -800");
-  width: 70vw;
-  height: 70vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 4s;
-  animation: blob 30s both infinite;
-}
-.path6a {
-  offset-path: path("M700 600 -800 800");
-  width: 35vw;
-  height: 35vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 2s;
-  animation: blob 25s both infinite;
-}
-
-.path7 {
-  offset-path: path("M1000 0  400 -700");
-  width: 7.5vw;
-  height: 7.5vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation: blob 60s both infinite;
-}
-.path7a {
-  offset-path: path("M850 100  -400 700");
-  width: 5vw;
-  height: 5vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 10s;
-  animation: blob 15s both infinite;
-}
-.path8 {
-  offset-path: path("M700 400  -800 800");
-  width: 7.5vw;
-  height: 7.5vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 13s;
-  animation: blob 19s both infinite;
-}
-.path8a {
-  offset-path: path("M1000 400  500 -500");
-  width: 4vw;
-  height: 4vh;
-  margin-left: 5vw;
-  background-repeat: no-repeat;
-  position: fixed;
-  animation-delay: 15s;
-  animation: blob 20s both infinite;
-}
-
-.spacer_blob {
-  position: absolute;
-  opacity: 0.7;
-  z-index: -1;
-}
-.spacer_blob2 {
-  position: absolute;
-  max-width: 100vw;
-  z-index: -1;
-}
-
-@keyframes blob {
-  to {
-    offset-distance: 100%;
-  }
-  0% {
-    opacity: 0%;
-  }
-  25% {
-    opacity: 50%;
-  }
-  50% {
-    opacity: 85%;
-  }
-  75% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 0%;
-  }
 }

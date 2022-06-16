@@ -40,25 +40,7 @@ img {
   max-width: 100%;
   /* display: block; */
   object-fit: cover;
-  height: 200px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: clamp(20rem, calc(20rem + 2vw), 22rem);
-  overflow: hidden;
-  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 1em;
-  background: #ece9e6;
-  background: linear-gradient(to bottom, #ffffff, #ece9e6);
-}
-
-.card__body {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  height: 300px;
 }
 
 .tag {
@@ -97,9 +79,31 @@ img {
   color: #fafafa;
 }
 
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: max-content;
+}
+
 .card__body h4 {
   font-size: 1.5rem;
   text-transform: capitalize;
+}
+
+.card {
+  margin-top: 17.5vh;
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  border-radius: 1em;
+  background-image: linear-gradient(
+    180deg,
+    rgb(60, 106, 190),
+    rgb(255, 255, 255)
+  );
 }
 
 .card__footer {
@@ -107,8 +111,6 @@ img {
   padding: 0.5rem;
   margin-top: auto;
   height: 100px;
-  background: #ece9e6;
-  background: linear-gradient(to bottom, #ece9e6, #ffffff);
 }
 
 .author {
@@ -147,7 +149,7 @@ h6 {
   position: relative;
   font-family: "Prompt";
   color: black;
-  font-size: clamp(0.9rem, 1.5rem, 3rem);
+  font-size: clamp(0.5rem, 1.1rem, 2.5rem);
 }
 
 /* Tooltip container */

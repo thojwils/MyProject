@@ -15,6 +15,7 @@
     <title>twilson.io</title>
 <!-- Linking -->    
 <!-- Font  -->
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
@@ -79,16 +80,45 @@
       </a>
         
       <input class="news-input" id="newsFeed" id="textfield" name="textfield" type="text" placeholder="Search for News"/>
-      <i class="fas fa-search"></i>
+      <i class="fa fa-search" aria-hidden="true"></i>
     </div>
+    
     <section class="bg">
-         <h1 class="anim-typewriter">
-           Welcome to my experimental web portfolio...
-         </h1>
+      <div class="mobile-top-nav">
+<i class="fa fa-bars" aria-hidden="true"></i>
+        <h1 class="anim-typewriter">
+             Welcome to my experimental web portfolio...
+           </h1>
+      </div>   
        </section>
           <hr class="topborderAngle blend"></hr>
   </div>
-
+<div class="toggle-mobile-top-nav">
+<ul class="menu">
+    <li>  <a href="https://www.linkedin.com/in/thojwils/" class="mobile-link" target="_blank"
+          >LinkedIn</a
+        ></li>
+    <li><a
+          href="https://drive.google.com/file/d/121c8vaNXoCmtHvLnzxH5U1-E0FHkpf_j/view?usp=sharing" class="mobile-link"
+          target="_blank"
+          >Resume</a
+        ></li>
+    <li><a href="#scrollMyProjects" class="mobile-link"
+        >Projects</a></li>
+    <li><a
+          href="/bootstrapPage.html  " class="mobile-link"
+          target="_blank"
+          >Simba's World</a
+        ></li>        
+         <li>          
+      <a
+          href="" class="mobile-link"
+          target="_blank"
+          >Coming Soon</a
+        ></li>
+ 
+  </ul>
+</div>
     <div class="blob_scope">
      
 
@@ -177,12 +207,12 @@
           <div class="carousel-content"></div>
           <div class="slideshow">
             <!-- carousel control buttons -->
-            <button class="slide-btn slide-btn-1" alt="Go to Pig Game image"></button>
-            <button class="slide-btn slide-btn-2" alt="Go to To Do List image"></button>
-            <button class="slide-btn slide-btn-3" alt="Go to Bankist Marketing image"></button>
-            <button class="slide-btn slide-btn-4" alt="Go to Bankist App image"></button>
-            <button class="slide-btn slide-btn-5" alt="Go to Mapty App image"></button>
-            <button class="slide-btn slide-btn-6" alt="Go to Forkify App image"></button>
+            <button class="slide-btn slide-btn-1" alt="Go to Pig Game image">Slide 1</button>
+            <button class="slide-btn slide-btn-2" alt="Go to To Do List image">Slide 2</button>
+            <button class="slide-btn slide-btn-3" alt="Go to Bankist Marketing image">Slide 3</button>
+            <button class="slide-btn slide-btn-4" alt="Go to Bankist App image">Slide 4</button>
+            <button class="slide-btn slide-btn-5" alt="Go to Mapty App image">Slide 5</button>
+            <button class="slide-btn slide-btn-6" alt="Go to Forkify App image">Slide 6</button>
             <!-- carousel wrapper which contains all images -->
             <div class="slideshow-wrapper">
               <div class="slide">
@@ -228,10 +258,10 @@
     </div>
     <hr class="topborder"></hr>
     <div class="footer">
-      <a href="https://signal.group/#CjQKICSkKZuB-BXHnPvEMzdE7baZ-MyK6Gq9P177qkdy0L81EhDM3El0ZgdZo2OTbB_-xYJu" alt="Open Signal"><i class="far fa-comments fa-2x"></i></a>
-      <a href="mailto:tj4wilson@gmail.com" alt="Open Gmail"><i class="far fa-envelope fa-2x" ></i></a>
-      <a href="https://www.linkedin.com/in/thojwils/" alt="Open LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-      <a href="https://github.com/thojwils" alt="Open Github"><i class="fab fa-github fa-2x"></i></a>
+      <a href="https://signal.group/#CjQKICSkKZuB-BXHnPvEMzdE7baZ-MyK6Gq9P177qkdy0L81EhDM3El0ZgdZo2OTbB_-xYJu" alt="Open Signal"><i class="far fa-comments fa-2x"></i>Signal</a>
+      <a href="mailto:tj4wilson@gmail.com" alt="Open Gmail"><i class="far fa-envelope fa-2x" ></i>Email</a>
+      <a href="https://www.linkedin.com/in/thojwils/" alt="Open LinkedIn"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a>
+      <a href="https://github.com/thojwils" alt="Open Github"><i class="fab fa-github fa-2x"></i>GitHub</a>
     </div>
     <script src="/scripts/mainBody.js"></script>
     <script src="/scripts/fetchNews.js"></script>

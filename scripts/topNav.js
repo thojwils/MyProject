@@ -34,3 +34,16 @@ window.addEventListener("scroll", (event) => {
     cloudbg.classList.add(`sticky`);
   }
 });
+
+const mobileMenuIcon = document.querySelector(`.fa-bars`);
+const mobileMenu = document.querySelector(`.toggle-mobile-top-nav`);
+
+mobileMenuIcon.addEventListener("click", function () {
+  if (mobileMenu.style.display === "none") {
+    mobileMenu.style.display = "block";
+  } else {
+    mobileMenu.style.display = "none";
+  }
+  console.log(`TEST`);
+});
+v;

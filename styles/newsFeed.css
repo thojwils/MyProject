@@ -3,15 +3,13 @@
   font-family: "Prompt";
   color: black;
   text-align: center;
-  top: 50;
-  bottom: 50;
   font-size: 1.25vw;
   float: right;
+  margin-top: 25px;
 }
+/* Small Screen menu icon */
+
 /* Magnifying Glass icon */
-.fa-magnifying-glass {
-  display: none;
-}
 
 /* ----- Rendered Newsfeed ----- */
 .news_feed_start {
@@ -184,8 +182,4 @@ h6 {
   border-width: 2px;
   border-style: solid;
   border-color: #0b112d transparent transparent transparent;
-}
-
-.fa-search {
-  display: none;
 }

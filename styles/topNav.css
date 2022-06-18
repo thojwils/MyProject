@@ -10,7 +10,6 @@ h1 {
   transform: translateX(-1.5vw);
   font-size: clamp(1rem, 2.5vw, 5rem);
   min-width: fit-content;
-  background-color: #4f6da281;
 }
 /* h1 effects */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
@@ -255,6 +254,32 @@ a {
 }
 #version:active {
   transform: scale(0.75);
+}
+
+li {
+  padding-right: 7px;
+}
+
+.menu {
+  position: fixed;
+  z-index: 100;
+  margin-top: 7vh;
+  margin-left: 5px;
+  width: 35%;
+  min-width: fit-content;
+  background-color: #7b94bb;
+  backdrop-filter: blur(25px);
+  border-radius: 2.5%;
+}
+
+.toggle-mobile-top-nav {
+  display: block;
+  left: 0;
+}
+
+.mobile-top-nav {
+  display: flex;
+  width: 95%;
 }
 
 /* sticky nav */

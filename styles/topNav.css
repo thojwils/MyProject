@@ -263,7 +263,7 @@ li {
 .menu {
   position: fixed;
   z-index: 100;
-  margin-top: 7vh;
+  margin-top: 10vh;
   margin-left: 5px;
   width: 35%;
   min-width: fit-content;

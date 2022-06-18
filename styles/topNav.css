@@ -273,7 +273,7 @@ li {
 }
 
 .toggle-mobile-top-nav {
-  display: block;
+  display: none;
   left: 0;
 }
 

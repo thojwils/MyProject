@@ -46,4 +46,3 @@ mobileMenuIcon.addEventListener("click", function () {
   }
   console.log(`TEST`);
 });
-v;

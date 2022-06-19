@@ -30,7 +30,7 @@ i {
 }
 
 /* Paragraph Headers */
-h3 {
+h2 {
   text-align: left;
   position: relative;
   font-size: clamp(1rem, 1.5rem, 3rem);
@@ -46,14 +46,14 @@ h3 {
   cursor: pointer;
 }
 
-h3:hover {
+h2:hover {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   color: #eee;
   text-shadow: 0 0 10px #c6236783;
 }
 
-h3:active {
+h2:active {
   transform: scale(0.74);
 }
 
@@ -192,7 +192,7 @@ hr {
 }
 
 /* ----- Project Section ----- */
-h2 {
+h3 {
   font-family: "Prompt";
   text-align: center;
   min-height: min-content;

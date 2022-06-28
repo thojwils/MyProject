@@ -1,6 +1,13 @@
 /* ----- News Text Input Field ----- */
-.news-input {
+@font-face {
   font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.googleapis.com/css2?family=Prompt) format("woff2");
+  font-display: swap;
+}
+
+.news-input {
   color: black;
   text-align: center;
   font-size: 1.25vw;
@@ -134,7 +141,6 @@ h5 {
   text-align: center;
   height: 40px;
   position: relative;
-  font-family: "Prompt";
   color: black;
   font-size: clamp(0.5rem, 1rem, 2rem);
   padding-top: 1vh;
@@ -145,7 +151,6 @@ h6 {
   height: 50px;
   line-height: normal;
   position: relative;
-  font-family: "Prompt";
   color: black;
   font-size: clamp(0.5rem, 1.1rem, 2.5rem);
 }

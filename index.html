@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head> 
+    <meta name="description" content="Author: T.J. Wilson,
+   Category: Web-Dev Portfolio website and associated applications">
+   <meta name="theme-color" content="#FA7268">
 <!-- Settings & external linking -->
 <link
       rel="shortcut icon"
@@ -17,28 +20,25 @@
 <!-- Font  -->
 <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <!-- Scripts -->
     <script src="https://kit.fontawesome.com/86267a3736.js" crossorigin="anonymous"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="/styles/topNav.css">
-    <link rel="stylesheet" type="text/css" href="/styles/mediaQueries.css">
-    <link rel="stylesheet" type="text/css" href="/styles/newsFeed.css">
-    <link rel="stylesheet" type="text/css" href="/styles/animatedBlobs.css">
-    <link rel="stylesheet" type="text/css" href="/styles/jokeAPI.css">
-    <link rel="stylesheet" type="text/css" href="/styles/projectCarousel.css">
-    <link rel="stylesheet" type="text/css" href="/styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/topNav.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/mediaQueries.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/newsFeed.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/animatedBlobs.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/jokeAPI.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/projectCarousel.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/footer.css">
   </head>
   <!-- Content -->
   <body>
@@ -75,9 +75,9 @@
           >Simba's World</a
         >
       <button class="jokeButton glow-on-hover" >Get a Joke! </button>
-      <a id="version" class="glow-on-hover nav_link">
+      <div href="" id="version" class="glow-on-hover nav_link">
           Version 2.2
-      </a>
+      </div>
         
       <input class="news-input" id="newsFeed" id="textfield" name="textfield" type="text" placeholder="Search for News"/>
       <i class="fa fa-search" aria-hidden="true"></i>
@@ -111,10 +111,11 @@
           >Simba's World</a
         ></li>        
          <li>          
-      <a
-          href="" class="mobile-link"
+      <div
+      href=""    
+      class="mobile-link"
           target="_blank"
-          >Coming Soon</a
+          >Coming Soon</div
         ></li>
  
   </ul>
@@ -263,10 +264,11 @@
       <a href="https://www.linkedin.com/in/thojwils/" alt="Open LinkedIn"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a>
       <a href="https://github.com/thojwils" alt="Open Github"><i class="fab fa-github fa-2x"></i>GitHub</a>
     </div>
-    <script src="/scripts/mainBody.js"></script>
-    <script src="/scripts/fetchNews.js"></script>
-    <script src="/scripts/fetchJoke.js"></script>
-    <script src="/scripts/countdownTimer.js"></script>
-    <script src="/scripts/topNav.js"></script>
+    <script src="main.js"></script>
+    <script src="/src/scripts/mainBody.js"></script>
+    <script src="/src/scripts/fetchNews.js"></script>
+    <script src="/src/scripts/fetchJoke.js"></script>
+    <script src="/src/scripts/countdownTimer.js"></script>
+    <script src="/src/scripts/topNav.js"></script>
   </body>
 </html>

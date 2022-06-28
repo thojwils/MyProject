@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.googleapis.com/css2?family=Prompt) format("woff2");
+  font-display: swap;
+}
+
 /* Carousel */
 .container {
   display: flex;

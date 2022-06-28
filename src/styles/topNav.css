@@ -98,7 +98,6 @@ a {
   flex-grow: 1;
   text-align: center;
   line-height: 1.5;
-  font-family: "Prompt";
   align-items: center;
 }
 
@@ -157,7 +156,6 @@ a {
   color: rgb(255, 254, 254);
   padding: 1vw;
   padding-top: 3vh;
-  font-family: "Prompt";
   cursor: pointer;
   background: none;
   border: none;
@@ -248,7 +246,6 @@ a {
   color: rgb(255, 254, 254);
   padding: 1vw;
   padding-top: 3vh;
-  font-family: "Prompt";
   float: right;
   cursor: pointer;
 }

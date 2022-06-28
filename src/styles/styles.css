@@ -1,14 +1,18 @@
 /* Body CSS */
-* {
+@font-face {
   font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.googleapis.com/css2?family=Prompt) format("woff2");
+  font-display: swap;
 }
 
 body {
   overflow-x: hidden;
+  margin: 0;
   min-height: fit-content;
   font-style: normal;
   font-weight: 300;
-  font-family: "Prompt";
   color: white;
   background: #0d1332;
   background-image: linear-gradient(180deg, #0d1332, black);
@@ -193,7 +197,6 @@ hr {
 
 /* ----- Project Section ----- */
 h3 {
-  font-family: "Prompt";
   text-align: center;
   min-height: min-content;
   min-width: 50vw;
@@ -219,7 +222,6 @@ h3 {
   line-height: 2vh;
   position: relative;
   top: -4.5vw;
-  font-family: "Prompt";
 }
 
 .scrollMyProjects {

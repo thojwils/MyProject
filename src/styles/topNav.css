@@ -80,7 +80,10 @@ a {
 
 /* Attention Banner */
 .banner {
-  background: #4f6ea2;
+  font-size: 4vh;
+  font-weight: 600;
+  color: #0b102c;
+  background: #e7e8e9;
   border-bottom: white;
   cursor: pointer;
 }
@@ -153,6 +156,8 @@ a {
 
 /* Joke API */
 .jokeButton {
+  font-size: clamp(0.4rem, 1.1rem, 10rem);
+  font-family: "Prompt";
   color: rgb(255, 254, 254);
   padding: 1vw;
   padding-top: 3vh;
@@ -161,6 +166,7 @@ a {
   border: none;
   text-decoration: underline;
   width: auto;
+  min-height: 70px;
 }
 .jokeButton:hover {
   color: #c62368;

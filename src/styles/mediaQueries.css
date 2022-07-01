@@ -9,7 +9,6 @@
   .banner__text,
   p,
   .paragraph_link,
-  .jokeButton,
   .banner__text,
   .material-icons {
     transform: scale(0.75);
@@ -114,7 +113,6 @@
   .banner__content,
   p,
   .paragraph_link,
-  .jokeButton,
   .banner__text {
     transform: scale(0.8);
   }

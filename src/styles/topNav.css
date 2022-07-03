@@ -155,7 +155,7 @@ a {
 /* Top Nav Links */
 
 /* Joke API */
-.jokeButton {
+/* .jokeButton {
   font-size: clamp(0.4rem, 1.1rem, 10rem);
   font-family: "Prompt";
   color: rgb(255, 254, 254);
@@ -167,7 +167,7 @@ a {
   text-decoration: underline;
   width: auto;
   min-height: 70px;
-}
+} */
 .jokeButton:hover {
   color: #c62368;
 }
@@ -251,6 +251,7 @@ a {
 #version {
   color: rgb(255, 254, 254);
   padding: 1vw;
+  margin-right: 2vw;
   padding-top: 3vh;
   float: right;
   cursor: pointer;

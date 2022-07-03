@@ -8,15 +8,17 @@
 }
 
 .news-input {
+  min-height: 4vh;
   color: black;
   text-align: center;
   font-size: 1.25vw;
   float: right;
   margin-top: 25px;
 }
-/* Small Screen menu icon */
-
-/* Magnifying Glass icon */
+.fa-search {
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
 
 /* ----- Rendered Newsfeed ----- */
 .news_feed_start {

@@ -1,16 +1,17 @@
-const bannerClose = document.querySelector(".material-icons");
 const bannerCloseAll = document.querySelector(".bannerbg");
 const versionNumber = document.getElementById("version");
 const topnav = document.querySelector(`.topnav`);
 const cloudbg = document.querySelector(`.cloudbg`);
 
-// Closing the banner (X)
-bannerClose.addEventListener(`click`, function () {
-  this.closest(".banner").remove();
-});
-bannerCloseAll.addEventListener(`click`, function () {
-  this.remove();
-});
+// Event Listener for removing topnav sticky class when scrolling down the page 700px scrollY or when Clicking on the banner (including X)
+// if (bannerCloseAll) {
+//   document.addEventListener(`scroll`, function () {
+//     bannerCloseAll.remove();
+//   });
+//   bannerCloseAll.addEventListener(`click`, function () {
+//     bannerCloseAll.remove();
+//   });
+// }
 
 // Changing the Version color on click
 versionNumber.addEventListener(`click`, function (e) {
@@ -20,14 +21,7 @@ versionNumber.addEventListener(`click`, function (e) {
   versionNumber.style.color = randomColor;
 });
 
-// Event Listener for removing topnav sticky class when scrolling down the page 700px scrollY
-if (bannerCloseAll)
-  document.addEventListener(`scroll`, function () {
-    bannerCloseAll.remove();
-  });
-
-window.addEventListener("scroll", (event) => {
-  let scrollY = this.scrollY;
+window.addEventListener("scroll", () => {
   if (this.scrollY > 700) {
     cloudbg.classList.remove(`sticky`);
   } else {

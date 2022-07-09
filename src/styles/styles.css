@@ -8,10 +8,11 @@
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin: 0;
   min-height: fit-content;
   font-style: normal;
+  display: block;
   font-weight: 300;
   color: white;
   background: #0d1332;
@@ -38,9 +39,11 @@ h2 {
   text-align: left;
   position: relative;
   font-size: clamp(1rem, 1.5rem, 3rem);
+  height: 50px;
   min-width: fit-content;
   background-color: rgba(0, 0, 0, 0.7);
   text-decoration: underline;
+  padding-top: 10px;
   padding-left: 2vw;
   padding-right: 1vw;
   border-radius: 1%;
@@ -89,7 +92,7 @@ h2:active {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-bottom: 13vh;
+  padding-bottom: 3vh;
 }
 
 /* paragraph tabs */
@@ -177,7 +180,7 @@ hr {
   backdrop-filter: blur(5px);
   border-radius: 0.75%;
   margin-top: 25px;
-  width: clamp(25vw, 55vw, 100vw);
+  width: clamp(25vw, 55vw, 75vw);
 }
 
 .float-child {

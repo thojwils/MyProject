@@ -20,7 +20,7 @@
 <!-- Font  -->
 <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="preload">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -42,19 +42,18 @@
   </head>
   <!-- Content -->
   <body>
-    <div class="bannerbg" id="removeBanner">
+    <!-- <div class="bannerbg" id="removeBanner">
     <div class="banner w3-animate-top">
       <div class="banner__content">
         <div class="banner__text">
-          <strong>Attention:</strong> This portfolio is a work in progress! If you have feedback or questions please reach out via Signal, Gmail, or LinkedIn.
+          <strong>Attention:</strong> There are active commits made to this portfolio. <br> Additional technologies used include, Babel, Webpack, Bootstrap CSS, SVG Animation, and several API integrations.
         </div>
         <button class="banner__close" type="button">
           <span class="material-icons"> close </span>
         </button>
       </div>
     </div>
-  </div>
-
+  </div> -->
   <div class="cloudbg sticky">
       <hr class="topborder"></hr>
     <div class="topnav">
@@ -131,16 +130,16 @@
         <div class="news_feed_start" id="newsFeedStart">
       </div>
     <section class="flex undernav">
-      <h2 class="h2--active--after">About Me
+      <h2 id="header1">About Me
         <i class="far fa-user"></i>
       </h2>
-      <p class="tab" style="max-height: 270px;">Hi, my name is TJ. I began learning JavaScript (+ HTML/CSS) in Summer 2020. I took on new job responsibilities related to basic JavaScript and DOM manipulation for site merchandising, marketing, UX enhancements and site optimization. This sparked my curiousity so I began taking a formal JavaScript course to better understand the fundementals of the language. Hello, world! As I worked through a comprehensive <a class="paragraph_link"
+      <p class="tab">Hi, my name is TJ. I began learning JavaScript (+ HTML/CSS) in Summer 2020. I took on new job responsibilities related to basic JavaScript and DOM manipulation for site merchandising, marketing, UX enhancements and site optimization. This sparked my curiousity so I began taking a formal JavaScript course to better understand the fundementals of the language. Hello, world! As I worked through a comprehensive <a class="paragraph_link"
           href="https://www.udemy.com/course/the-complete-javascript-course/" 
           target="_blank"
           >Udemy Course</a
         > by Jonas Schmedtmann, I then put together this portfolio site as a means to express my skills and implement some cool features. I built this from scratch so feel free to reach out to me on LinkedIn if you want to learn more or have questions/feedback.</p>
 
-      <h2>Career Path
+      <h2 id="header2">Career Path
           <i class="fas fa-briefcase"></i>
       </h2>
       <p class="tab">A quick summary of my career path so far: I went to a top ranked public business school where my focus was on marketing, sales, and digital & social analytics. After graduation, I moved to NYC to work as a site merchandiser and category specialist for macys.com. A few years later I helped them patch gaps as they moved tech operations from San Fransico to NY. In this role I managed our countdown timer execution, site testing, Q4 execution, competitive analysis and other responsibilities. In the most recent role, I have been managing an A/B testing workflow for all areas of the site funnel with an Adobe Experience Cloud tool - <a class="paragraph_link"
@@ -148,7 +147,7 @@
           >Adobe Target</a
         >. Within this role I work with developers on converting business requirements into testable features. To supplement this work, I began working through the Udemy course. I plan to keep building my programming skills by adding projects to this portfolio, leveraging more frameworks, integrating APIs, and applying clean coding principles.</p>
 
-    <h2>Counting Down
+    <h2 id="header3">Counting Down
         <i class="far fa-clock"></i>
     </h2>
     <p class="tab">The first code I had hands on experience with was a countdown timer. I have created various versions of these timers with the intention to drive urgency for major marketing events. Once I was more familiar with the script, I started changing parts of the aesthetic, altering functionality and targeting different DOM elements which helped acheive business goals. As an homage to that starting point, I included a countdown timer below. This counts down to the <a class="paragraph_link"
@@ -268,11 +267,11 @@
       <a href="https://www.linkedin.com/in/thojwils/" alt="Open LinkedIn"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a>
       <a href="https://github.com/thojwils" alt="Open Github"><i class="fab fa-github fa-2x"></i>GitHub</a>
     </div>
-    <!-- <script src="main.js"></script> -->
-    <script src="/src/scripts/mainBody.js"></script>
-    <script src="/src/scripts/fetchNews.js"></script>
-    <script src="/src/scripts/fetchJoke.js"></script>
-    <script src="/src/scripts/countdownTimer.js"></script>
-    <script src="/src/scripts/topNav.js"></script>
+    <script src="/dist/main.js"></script> 
+    <script defer src="/src/scripts/mainBody.js"></script>
+    <script defer src="/src/scripts/fetchNews.js"></script>
+    <script defer src="/src/scripts/fetchJoke.js"></script>
+    <script defer src="/src/scripts/countdownTimer.js"></script>
+    <script defer src="/src/scripts/topNav.js"></script>
   </body>
 </html>

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.googleapis.com/css2?family=Prompt) format("woff2");
+  font-display: swap;
+}
 /* Headers */
 h1 {
   color: rgb(255, 255, 255);
@@ -79,8 +86,12 @@ a {
 }
 
 /* Attention Banner */
+.bannerbg {
+  position: sticky;
+}
 .banner {
   font-size: 4vh;
+  flex: auto;
   font-weight: 600;
   color: #0b102c;
   background: #e7e8e9;
@@ -89,7 +100,7 @@ a {
 }
 
 .banner__content {
-  max-width: 80%;
+  /* max-width: 80%; */
   margin: 0 auto;
   font-size: larger;
   display: flex;
@@ -110,7 +121,7 @@ a {
   border: none;
   cursor: pointer;
   position: relative;
-  min-height: 2.5rem;
+  /* min-height: 2.5rem; */
 }
 
 /* Banner Background */
@@ -282,7 +293,7 @@ li {
 }
 
 .mobile-top-nav {
-  display: flex;
+  /* display: flex; */
   width: 95%;
 }
 
@@ -305,6 +316,5 @@ li {
 .flex {
   display: flex;
   margin-top: min(17vw);
-  margin-bottom: clamp(10vh, 17vh, 20vh);
   z-index: -1000;
 }

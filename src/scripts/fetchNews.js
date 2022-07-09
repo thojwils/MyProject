@@ -1,3 +1,4 @@
+"use strict";
 //News API
 // Global Variables
 const searchInput = document.querySelector(`.news-input`);
@@ -112,12 +113,17 @@ const fetchNews = async () => {
     // });
   }
 };
-searchInput.addEventListener(`keypress`, function (e) {
-  if (e.key === "Enter") {
-    searchTerm = searchInput.value;
-    fetchNews();
-  }
-});
+try {
+  searchInput.parentElement.addEventListener(`keypress`, function (e) {
+    if (e.key === "Enter") {
+      searchTerm = searchInput.value;
+      fetchNews();
+    }
+  });
+} catch (error) {
+  console.error(error);
+}
+
 // Run this function on input confirmation (enter button or button click (need to add a new button first))
 // Calls on input in search bar
 // newsInput.fetchNews();

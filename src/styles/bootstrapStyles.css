@@ -1,4 +1,12 @@
 /* ----- Simba's World (boostrap.css) ----- */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.googleapis.com/css2?family=Prompt) format("woff2");
+  font-display: swap;
+}
+
 .jumbotron {
   background-image: url(/backgroundImages/midtownbg.jpg);
 }

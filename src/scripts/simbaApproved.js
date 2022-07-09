@@ -11,10 +11,6 @@ const simbaApproved = function () {
     showConfirmButton: false,
     timer: 2000,
     timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    },
   });
 
   Toast.fire({
@@ -31,11 +27,10 @@ const showPosition = function () {
     );
   }, 2000);
 };
-catRescue.addEventListener(`click`, simbaApproved);
 
+catRescue.addEventListener(`click`, simbaApproved);
 // Gif toggle
 const catGif = document.querySelector(`.catGif`);
-
 //Show Gif
 const toggleSwitch = document.querySelector(`.slider`);
 let num = 0;
@@ -50,12 +45,3 @@ toggleSwitch.addEventListener(`click`, function () {
     catGif.classList.remove(`hide`);
   }
 });
-
-// Swap out if conditional contains classlist
-// if (num % 2 == 0) {
-//   catGif.classList.remove(`show`);
-//   catGif.classList.add(`hide`);
-// } else {
-//   catGif.classList.add(`show`);
-//   catGif.classList.remove(`hide`);
-// }

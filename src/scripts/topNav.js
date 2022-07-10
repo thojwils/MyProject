@@ -21,13 +21,13 @@ versionNumber.addEventListener(`click`, function (e) {
   versionNumber.style.color = randomColor;
 });
 
-window.addEventListener("scroll", () => {
-  if (this.scrollY > 700) {
-    cloudbg.classList.remove(`sticky`);
-  } else {
-    cloudbg.classList.add(`sticky`);
-  }
-});
+// window.addEventListener("scroll", () => {
+//   if (this.scrollY > 700) {
+//     cloudbg.classList.remove(`sticky`);
+//   } else {
+//     cloudbg.classList.add(`sticky`);
+//   }
+// });
 
 const mobileMenuIcon = document.querySelector(`.fa-bars`);
 const mobileMenu = document.querySelector(`.toggle-mobile-top-nav`);

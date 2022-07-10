@@ -2,6 +2,7 @@ const bannerCloseAll = document.querySelector(".bannerbg");
 const versionNumber = document.getElementById("version");
 const topnav = document.querySelector(`.topnav`);
 const cloudbg = document.querySelector(`.cloudbg`);
+const footer = document.querySelector(`.footer`);
 
 // Event Listener for removing topnav sticky class when scrolling down the page 700px scrollY or when Clicking on the banner (including X)
 // if (bannerCloseAll) {
@@ -22,10 +23,12 @@ versionNumber.addEventListener(`click`, function (e) {
 });
 
 // window.addEventListener("scroll", () => {
-//   if (this.scrollY > 700) {
+//   if (this.scrollY > 500) {
 //     cloudbg.classList.remove(`sticky`);
+//     footer.classList.add(`footer-sticky`);
 //   } else {
 //     cloudbg.classList.add(`sticky`);
+//     footer.classList.remove(`footer-sticky`);
 //   }
 // });
 
@@ -38,5 +41,4 @@ mobileMenuIcon.addEventListener("click", function () {
   } else {
     mobileMenu.style.display = "none";
   }
-  console.log(`TEST`);
 });

@@ -7,6 +7,11 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 50px);
+}
+
 body {
   /* overflow-x: hidden; */
   margin: 0;
@@ -157,9 +162,14 @@ hr {
 }
 
 /* ----- Counting Down ----- */
-#clock {
+#clockToday {
   text-align: center;
 }
+
+#clockCountdown {
+  text-align: center;
+}
+
 .time {
   letter-spacing: 0.05vw;
   font-size: 2.25vw;

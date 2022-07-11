@@ -32,3 +32,10 @@ header3.addEventListener(`click`, () => {
     accordionContent1.style.maxHeight = 0;
   }
 });
+
+//Scrolling down to projects section and adding a little bit of px height between
+const naviagtionHeight = document.querySelector(`.topnav`).offsetHeight;
+document.documentElement.style.setProperty(
+  "--scroll-padding",
+  naviagtionHeight + "px"
+);

@@ -24,7 +24,7 @@ let x = setInterval(function () {
 }, 0);
 
 var clock = new Vue({
-  el: "#clock",
+  el: "#clockToday",
   data: {
     time: "",
     date: "",

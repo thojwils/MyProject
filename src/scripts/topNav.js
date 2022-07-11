@@ -23,7 +23,7 @@ versionNumber.addEventListener(`click`, function (e) {
 });
 
 // window.addEventListener("scroll", () => {
-//   if (this.scrollY > 500) {
+//   if (this.scrollY > 300) {
 //     cloudbg.classList.remove(`sticky`);
 //     footer.classList.add(`footer-sticky`);
 //   } else {
@@ -31,6 +31,36 @@ versionNumber.addEventListener(`click`, function (e) {
 //     footer.classList.remove(`footer-sticky`);
 //   }
 // });
+
+// Debounce Function for scroll listener on Window
+function debounce(func, wait = 10, immediate = true) {
+  let timeout;
+  return function () {
+    let context = this,
+      args = arguments;
+    let later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+window.addEventListener(
+  "scroll",
+  debounce(() => {
+    const topNavLower = document.querySelector(`.bg`).classList;
+    let scrollY = this.scrollY;
+    if (scrollY > 100) {
+      topNavLower.add("is-hidden");
+    } else {
+      topNavLower.remove("is-hidden");
+    }
+  })
+);
 
 const mobileMenuIcon = document.querySelector(`.fa-bars`);
 const mobileMenu = document.querySelector(`.toggle-mobile-top-nav`);

@@ -147,6 +147,11 @@ a {
   width: 100%;
   background: none;
 }
+
+.is-hidden {
+  display: none;
+}
+
 .cloudbg {
   background-image: url("../backgroundImages/bgcloudsTop.svg");
   -webkit-background-size: cover;
@@ -293,7 +298,7 @@ li {
 }
 
 .mobile-top-nav {
-  /* display: flex; */
+  display: flex;
   width: 95%;
 }
 

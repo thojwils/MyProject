@@ -17245,7 +17245,7 @@ let x = setInterval(function () {
 }, 0);
 
 var clock = new Vue({
-  el: "#clock",
+  el: "#clockToday",
   data: {
     time: "",
     date: "",
@@ -17494,6 +17494,8 @@ try {
   \*********************************/
 /***/ (() => {
 
+"use strict";
+
 // H3 Collapse Toggle
 //      h1[0] should start open (added class on HTML element by default)
 const header1 = document.querySelector(`#header1`);
@@ -17502,7 +17504,7 @@ const header3 = document.querySelector(`#header3`);
 
 header1.addEventListener(`click`, () => {
   const accordionContent1 = header1.nextElementSibling;
-  header1.classList.toggle(`h2--active--after`);
+  header1.parentElement.classList.toggle(`h2--active--after`);
   if (header1.classList.contains(`h2--active--after`)) {
     accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
   } else {
@@ -17511,7 +17513,7 @@ header1.addEventListener(`click`, () => {
 });
 header2.addEventListener(`click`, () => {
   const accordionContent1 = header2.nextElementSibling;
-  header2.classList.toggle(`h2--active--after`);
+  header2.parentElement.classList.toggle(`h2--active--after`);
   if (header2.classList.contains(`h2--active--after`)) {
     accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
   } else {
@@ -17520,13 +17522,20 @@ header2.addEventListener(`click`, () => {
 });
 header3.addEventListener(`click`, () => {
   const accordionContent1 = header3.nextElementSibling;
-  header3.classList.toggle(`h2--active--after`);
+  header3.parentElement.classList.toggle(`h2--active--after`);
   if (header3.classList.contains(`h2--active--after`)) {
     accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
   } else {
     accordionContent1.style.maxHeight = 0;
   }
 });
+
+//Scrolling down to projects section and adding a little bit of px height between
+const naviagtionHeight = document.querySelector(`.topnav`).offsetHeight;
+document.documentElement.style.setProperty(
+  "--scroll-padding",
+  naviagtionHeight + "px"
+);
 
 
 /***/ }),
@@ -17541,6 +17550,7 @@ const bannerCloseAll = document.querySelector(".bannerbg");
 const versionNumber = document.getElementById("version");
 const topnav = document.querySelector(`.topnav`);
 const cloudbg = document.querySelector(`.cloudbg`);
+const footer = document.querySelector(`.footer`);
 
 // Event Listener for removing topnav sticky class when scrolling down the page 700px scrollY or when Clicking on the banner (including X)
 // if (bannerCloseAll) {
@@ -17558,15 +17568,48 @@ versionNumber.addEventListener(`click`, function (e) {
   const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
   //Changes the version text color
   versionNumber.style.color = randomColor;
+  return randomColor;
 });
 
-window.addEventListener("scroll", () => {
-  if (this.scrollY > 700) {
-    cloudbg.classList.remove(`sticky`);
-  } else {
-    cloudbg.classList.add(`sticky`);
-  }
-});
+// window.addEventListener("scroll", () => {
+//   if (this.scrollY > 300) {
+//     cloudbg.classList.remove(`sticky`);
+//     footer.classList.add(`footer-sticky`);
+//   } else {
+//     cloudbg.classList.add(`sticky`);
+//     footer.classList.remove(`footer-sticky`);
+//   }
+// });
+
+// Debounce Function for scroll listener on Window
+function debounce(func, wait = 10, immediate = true) {
+  let timeout;
+  return function () {
+    let context = this,
+      args = arguments;
+    let later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+window.addEventListener(
+  "scroll",
+  debounce(() => {
+    const topNavLower = document.querySelector(`.bg`).classList;
+    let scrollY = this.scrollY;
+    if (scrollY > 100) {
+      topNavLower.add("is-hidden");
+    } else {
+      topNavLower.remove("is-hidden");
+    }
+  })
+);
 
 const mobileMenuIcon = document.querySelector(`.fa-bars`);
 const mobileMenu = document.querySelector(`.toggle-mobile-top-nav`);
@@ -17577,7 +17620,6 @@ mobileMenuIcon.addEventListener("click", function () {
   } else {
     mobileMenu.style.display = "none";
   }
-  console.log(`TEST`);
 });
 
 

@@ -63,6 +63,19 @@ window.addEventListener(
   })
 );
 
+window.addEventListener(
+  "scroll",
+  debounce(() => {
+    const topBorder = document.querySelector(`.topborderAngle`).classList;
+    let scrollY = this.scrollY;
+    if (scrollY > 100) {
+      topBorder.add("is-hidden");
+    } else {
+      topBorder.remove("is-hidden");
+    }
+  })
+);
+
 const trigger = document.querySelector(`.fa-bars`);
 const target = document.querySelector(`.toggle-mobile-top-nav`);
 const toggleDisplay = (target, trigger) => {

@@ -76,6 +76,8 @@
     color: #ffffff;
     float: left;
     align-items: center;
+    padding-bottom: 10px;
+    margin-top: -10px;
   }
   .glow-on-hover {
     display: none;

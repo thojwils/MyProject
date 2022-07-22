@@ -290,7 +290,7 @@ li {
   min-width: fit-content;
   background-color: #7b94bb;
   backdrop-filter: blur(25px);
-  border-radius: 0 0 70px 0px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .toggle-mobile-top-nav {

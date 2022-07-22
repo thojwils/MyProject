@@ -14,7 +14,9 @@
 .hero {
   width: 100%;
   max-width: 30vw;
-  height: auto;
+  max-height: 30vw;
+  border-radius: 55%;
+  border: 10px groove rgb(141, 133, 133);
 }
 
 .card-img-top {

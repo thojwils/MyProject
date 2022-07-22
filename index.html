@@ -26,7 +26,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-<!-- Scripts -->
+<!-- CSS Scripts -->
     <script src="https://kit.fontawesome.com/86267a3736.js" crossorigin="anonymous"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
@@ -39,6 +39,13 @@
     <link rel="stylesheet" type="text/css" href="/src/styles/jokeAPI.css">
     <link rel="stylesheet" type="text/css" href="/src/styles/projectCarousel.css">
     <link rel="stylesheet" type="text/css" href="/src/styles/footer.css">
+    <!-- JavaScript Scripts -->
+    <script src="/dist/main.js"></script> 
+    <script defer src="/src/scripts/mainBody.js"></script>
+    <script defer src="/src/scripts/fetchNews.js"></script>
+    <script defer src="/src/scripts/fetchJoke.js"></script>
+    <script defer src="/src/scripts/countdownTimer.js"></script>
+    <script defer src="/src/scripts/topNav.js"></script>
   </head>
   <!-- Content -->
   <body>
@@ -69,7 +76,7 @@
       <a href="#scrollMyProjects" class="glow-on-hover nav_link"
         >Projects</a>
       <a
-          href="/bootstrapPage.html  " class="glow-on-hover nav_link"
+          href="/SimbasWorld.html  " class="glow-on-hover nav_link"
           target="_blank"
           >Simba's World</a
         >
@@ -85,10 +92,10 @@
       <input class="news-input" id="newsFeed" id="textfield" name="textfield" type="text" placeholder="Search for News"/>
       <i class="fa fa-search" aria-hidden="true"></i>
     </div>
-    
-    <section class="bg">
       <div class="mobile-top-nav">
 <i class="fa fa-bars" aria-hidden="true"></i>
+    <section class="bg">
+    
         <h1 class="anim-typewriter">
              Welcome to my experimental web portfolio...
            </h1>
@@ -109,7 +116,7 @@
     <li><a href="#scrollMyProjects" class="mobile-link"
         >Projects</a></li>
     <li><a
-          href="/bootstrapPage.html  " class="mobile-link"
+          href="/SimbasWorld.html  " class="mobile-link"
           target="_blank"
           >Simba's World</a
         ></li>        
@@ -267,11 +274,5 @@
       <a href="https://www.linkedin.com/in/thojwils/" alt="Open LinkedIn"><i class="fab fa-linkedin fa-2x"></i>LinkedIn</a>
       <a href="https://github.com/thojwils" alt="Open Github"><i class="fab fa-github fa-2x"></i>GitHub</a>
     </div>
-    <script src="/dist/main.js"></script> 
-    <script defer src="/src/scripts/mainBody.js"></script>
-    <script defer src="/src/scripts/fetchNews.js"></script>
-    <script defer src="/src/scripts/fetchJoke.js"></script>
-    <script defer src="/src/scripts/countdownTimer.js"></script>
-    <script defer src="/src/scripts/topNav.js"></script>
   </body>
 </html>

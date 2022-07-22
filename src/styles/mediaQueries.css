@@ -11,7 +11,7 @@
   .paragraph_link,
   .banner__text,
   .material-icons {
-    transform: scale(.75);
+    transform: scale(0.75);
   }
   a,
   #version,
@@ -76,16 +76,12 @@
     color: #ffffff;
     float: left;
     align-items: center;
-    transform: scale(1.5);
   }
   .glow-on-hover {
     display: none;
   }
   .fa-search {
     display: none;
-  }
-  .anim-typewriter {
-    font-size: larger;
   }
 }
 
@@ -127,7 +123,7 @@
   button,
   .glow-on-hover,
   .nav_link {
-    transform: scale(.8);
+    transform: scale(0.8);
   }
   .fab fa-github fa-2x {
     transform: scale(0.9);

@@ -277,29 +277,36 @@ a {
 }
 
 li {
-  padding-right: 7px;
+  padding: 10px;
+  margin-left: 3vw;
 }
 
 .menu {
   position: fixed;
   z-index: 100;
-  margin-top: 10vh;
-  margin-left: 5px;
-  width: 35%;
+  margin-top: 50px;
+  padding: 15px;
+  width: 30%;
   min-width: fit-content;
   background-color: #7b94bb;
   backdrop-filter: blur(25px);
-  border-radius: 2.5%;
+  border-radius: 0 0 70px 0px;
 }
 
 .toggle-mobile-top-nav {
-  display: none;
+  top: 0;
   left: 0;
 }
 
 .mobile-top-nav {
   display: flex;
   width: 95%;
+}
+
+.open {
+  transform: rotate(90deg);
+  transition: transform 0.5s linear;
+  transform-origin: 60% 40% 0;
 }
 
 /* sticky nav */

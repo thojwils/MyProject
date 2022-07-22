@@ -63,13 +63,26 @@ window.addEventListener(
   })
 );
 
-const mobileMenuIcon = document.querySelector(`.fa-bars`);
-const mobileMenu = document.querySelector(`.toggle-mobile-top-nav`);
+const trigger = document.querySelector(`.fa-bars`);
+const target = document.querySelector(`.toggle-mobile-top-nav`);
+const toggleDisplay = (target, trigger) => {
+  if (!target || !trigger) return;
 
-mobileMenuIcon.addEventListener("click", function () {
-  if (mobileMenu.style.display === "none") {
-    mobileMenu.style.display = "block";
-  } else {
-    mobileMenu.style.display = "none";
-  }
-});
+  // let defaultDisplay = window
+  //   .getComputedStyle(target)
+  //   .getPropertyValue("display");
+  trigger.addEventListener("click", () => {
+    target.style.display = target.style.display == "none" ? "block" : "none";
+  });
+};
+
+// if (!trigger.classList.contains("open")) {
+//   // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
+//   console.log("Add class");
+//   // trigger.style.color = "#c62368";
+//   trigger.classList.add("open");
+// } else {
+//   // trigger.style.color = "#ffffff";
+//   trigger.classList.remove("open");
+//   console.log("Remove class");
+// }

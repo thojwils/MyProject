@@ -78,17 +78,17 @@ window.addEventListener(
 
 const trigger = document.querySelector(`.fa-bars`);
 const target = document.querySelector(`.toggle-mobile-top-nav`);
-const toggleDisplay = (target, trigger) => {
+let defaultDisplay = window
+  .getComputedStyle(target)
+  .getPropertyValue("display");
+const toggleDisplay = function () {
   if (!target || !trigger) return;
 
-  // let defaultDisplay = window
-  //   .getComputedStyle(target)
-  //   .getPropertyValue("display");
-  trigger.addEventListener("click", () => {
-    target.style.display = target.style.display == "none" ? "block" : "none";
-  });
+  target.style.display =
+    target.style.display == defaultDisplay ? "block" : defaultDisplay;
 };
 
+trigger.addEventListener("click", toggleDisplay);
 // if (!trigger.classList.contains("open")) {
 //   // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
 //   console.log("Add class");

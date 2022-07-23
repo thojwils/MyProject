@@ -14,28 +14,32 @@ const jokeAlert = function JSalert() {
   });
 };
 // When "Get Joke" is clicked we will fetch a new joke
-const newJoke = jokeButton.addEventListener(
-  `click`,
-  //Using async allows us to load a new joke as we await our Fetch
-  async function fetchJoke() {
-    jokeSetup = jokeDelivery = "";
-    const response = await fetch(
-      `https://v2.jokeapi.dev/joke/Any?safe-mode`,
-      {}
-    )
-      .then((data) => data.json())
-      .then((data) => {
-        // console.log(data.type);
-        if (data.type === "twopart") {
-          // alert(data.setup);
-          jokeSetup = data.setup;
-          jokeDelivery = data.delivery;
-          // alert(data.delivery);
-        } else {
-          jokeSetup = data.joke;
-          // alert(data.joke);
-        }
-      });
-    jokeAlert();
-  }
-);
+if (jokeButton) {
+  const newJoke = jokeButton.addEventListener(
+    `click`,
+    //Using async allows us to load a new joke as we await our Fetch
+    async function fetchJoke() {
+      jokeSetup = jokeDelivery = "";
+      const response = await fetch(
+        `https://v2.jokeapi.dev/joke/Any?safe-mode`,
+        {}
+      )
+        .then((data) => data.json())
+        .then((data) => {
+          // console.log(data.type);
+          if (data.type === "twopart") {
+            // alert(data.setup);
+            jokeSetup = data.setup;
+            jokeDelivery = data.delivery;
+            // alert(data.delivery);
+          } else {
+            jokeSetup = data.joke;
+            // alert(data.joke);
+          }
+        });
+      jokeAlert();
+    }
+  );
+} else {
+  console.log(`Increase screen width > 600px to use JokeAPI feature.`);
+}

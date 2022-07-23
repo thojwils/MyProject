@@ -55,7 +55,7 @@ window.addEventListener(
   debounce(() => {
     const topNavLower = document.querySelector(`.bg`).classList;
     let scrollY = this.scrollY;
-    if (scrollY > 100) {
+    if (scrollY > 200) {
       topNavLower.add("is-hidden");
     } else {
       topNavLower.remove("is-hidden");
@@ -68,7 +68,7 @@ window.addEventListener(
   debounce(() => {
     const topBorder = document.querySelector(`.topborderAngle`).classList;
     let scrollY = this.scrollY;
-    if (scrollY > 100) {
+    if (scrollY > 200) {
       topBorder.add("is-hidden");
     } else {
       topBorder.remove("is-hidden");
@@ -88,14 +88,23 @@ const toggleDisplay = function () {
     target.style.display == defaultDisplay ? "block" : defaultDisplay;
 };
 
-trigger.addEventListener("click", toggleDisplay);
-// if (!trigger.classList.contains("open")) {
-//   // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
-//   console.log("Add class");
-//   // trigger.style.color = "#c62368";
-//   trigger.classList.add("open");
-// } else {
-//   // trigger.style.color = "#ffffff";
-//   trigger.classList.remove("open");
-//   console.log("Remove class");
-// }
+const toggleAnimation = function () {
+  if (!trigger.classList.contains("open-mobile-menu-animation")) {
+    // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
+    console.log("Add class");
+    trigger.style.color = "#fa7268";
+    trigger.classList.add("open-mobile-menu-animation");
+    trigger.classList.remove("close-mobile-menu-animation");
+  } else {
+    trigger.style.color = "#ffffff";
+
+    trigger.classList.remove("open-mobile-menu-animation");
+    trigger.classList.add("close-mobile-menu-animation");
+    console.log("Remove class");
+  }
+};
+
+trigger.addEventListener("click", () => {
+  toggleDisplay();
+  toggleAnimation();
+});

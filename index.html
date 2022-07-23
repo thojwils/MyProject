@@ -90,7 +90,6 @@
       </a>
     
       <input class="news-input" id="newsFeed" id="textfield" name="textfield" type="text" placeholder="Search for News"/>
-      <i class="fa fa-search" aria-hidden="true"></i>
     </div>
       <div class="mobile-top-nav">
 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -163,8 +162,8 @@
         >100th anniversary of JavaScript</a
       >, initially created in 1995 (which is also my birth year!).</p>
 
-        <div class="float-container">
-          <div class="float-child">
+        <div class="clock-countdown">
+          <div class="clock-countdown-child">
           <div id="clockToday">
             <div class="text">Today's Time & Date</div>
             <div class="time">{{ time }}</div>
@@ -172,10 +171,10 @@
 
         </div>
       </div>
-      <div class="float-child">  
+      <div class="clock-countdown-child">  
         <div id="clockCountdown">
           <div class="text">JavaScript's 100th Birthday</div>
-        <span id="countdownTimer"></span>
+        <span class="time" id="countdownTimer"></span>
         <div class="date">FRI 12/04/2995</div>
       </div>
     </div>
@@ -203,15 +202,17 @@
     <div class="spacer layer2">
       <div class="container">
         <h3 class="scrollMyProjects" id="scrollMyProjects">Projects
-          <div class="projectWrapper">
-          <a href="projects/pigGame/index.html" target="_blank" id="projectWrapper_1">Pig Game</a>
-          <a href="projects/todoList/index.html" target="_blank" id="projectWrapper_2">To Do List</a>
-          <a href="projects/bankistMarketing/index.html" target="_blank" id="projectWrapper_3">Bankist Marketing</a>
-          <a href="projects/bankistApp/index.html" target="_blank" id="projectWrapper_4">Bankist App</a>
-          <a href="projects/maptyApp/index.html" target="_blank" id="projectWrapper_5">Mapty App</a>
-          <a href="https://forkify-v2.netlify.app/" target="_blank" id="projectWrapper_6">Forkify App</a>
+         <div class="projectWrapper">
+          <a class="individual-projects" href="projects/pigGame/index.html" target="_blank" id="projectWrapper_1">Pig Game</a>
+          <a class="individual-projects"href="projects/todoList/index.html" target="_blank" id="projectWrapper_2">To Do List</a>
+          <a class="individual-projects"href="projects/bankistMarketing/index.html" target="_blank" id="projectWrapper_3">Bankist Marketing</a>
+          <a class="individual-projects"href="projects/bankistApp/index.html" target="_blank" id="projectWrapper_4">Bankist App</a>
+          <a class="individual-projects"href="projects/maptyApp/index.html" target="_blank" id="projectWrapper_5">Mapty App</a>
+          <a class="individual-projects"href="https://forkify-v2.netlify.app/" target="_blank" id="projectWrapper_6">Forkify App</a>
         </div>
         </h3>
+         
+   
       
         <div class="content" >
           <!-- The content which is placed at the center of the carousel -->

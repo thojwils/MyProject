@@ -10,12 +10,12 @@ const jokeAlert = function JSalert() {
     text: `${jokeSetup}
     .....
     ${jokeDelivery}`,
-    button: "haha",
+    button: "Close",
   });
 };
 // When "Get Joke" is clicked we will fetch a new joke
 if (jokeButton) {
-  const newJoke = jokeButton.addEventListener(
+  jokeButton.addEventListener(
     `click`,
     //Using async allows us to load a new joke as we await our Fetch
     async function fetchJoke() {

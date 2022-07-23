@@ -18,7 +18,7 @@
   max-width: 1300px;
   position: relative;
   padding-top: 25%;
-  padding-bottom: 4vw;
+  padding-bottom: 8vw;
 }
 
 /* ----- carousel content stylings ----- */
@@ -59,6 +59,7 @@
   position: relative;
   /* you can change the animation settings from below */
   animation: slideshow 20s infinite;
+  margin-bottom: 5;
 }
 /* define width and height for images*/
 .slide {

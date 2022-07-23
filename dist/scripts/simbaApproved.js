@@ -1,22 +1,18 @@
 "use strict";
 
-var catRescue = document.querySelector(".simba-approved");
+const catRescue = document.querySelector(`.simba-approved`);
 
-var simbaApproved = function simbaApproved() {
+const simbaApproved = function () {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   }
 
-  var Toast = Swal.mixin({
+  const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
     showConfirmButton: false,
     timer: 2000,
-    timerProgressBar: true,
-    didOpen: function didOpen(toast) {
-      toast.addEventListener("mouseenter", Swal.stopTimer);
-      toast.addEventListener("mouseleave", Swal.resumeTimer);
-    }
+    timerProgressBar: true
   });
   Toast.fire({
     imageUrl: "/simbaPics/simba_stretch_thumbnail.jpg",
@@ -25,34 +21,27 @@ var simbaApproved = function simbaApproved() {
   });
 };
 
-var showPosition = function showPosition() {
-  setTimeout(function () {
+const showPosition = function () {
+  setTimeout(() => {
     window.open("https://www.google.com/search?q=cat+rescue+shelters+near+me", "_blank");
   }, 2000);
 };
 
-catRescue.addEventListener("click", simbaApproved); // Gif toggle
+catRescue.addEventListener(`click`, simbaApproved); // Gif toggle
 
-var catGif = document.querySelector(".catGif"); //Show Gif
+const catGif = document.querySelector(`.catGif`); //Show Gif
 
-var toggleSwitch = document.querySelector(".slider");
-var num = 0;
-toggleSwitch.addEventListener("click", function () {
+const toggleSwitch = document.querySelector(`.slider`);
+let num = 0;
+toggleSwitch.addEventListener(`click`, function () {
   num++;
   console.log(num);
 
   if (num % 2 == 0) {
-    catGif.classList.remove("show");
-    catGif.classList.add("hide");
+    catGif.classList.remove(`show`);
+    catGif.classList.add(`hide`);
   } else {
-    catGif.classList.add("show");
-    catGif.classList.remove("hide");
+    catGif.classList.add(`show`);
+    catGif.classList.remove(`hide`);
   }
-}); // Swap out if conditional contains classlist
-// if (num % 2 == 0) {
-//   catGif.classList.remove(`show`);
-//   catGif.classList.add(`hide`);
-// } else {
-//   catGif.classList.add(`show`);
-//   catGif.classList.remove(`hide`);
-// }
+});

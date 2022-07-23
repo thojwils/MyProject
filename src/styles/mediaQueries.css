@@ -66,7 +66,7 @@
 
 @media only screen and (max-width: 600px) {
   .flex {
-    margin-top: max(15vh);
+    margin-top: max(7vh);
   }
   #version {
     display: none;
@@ -80,9 +80,6 @@
     margin-top: -10px;
   }
   .glow-on-hover {
-    display: none;
-  }
-  .fa-search {
     display: none;
   }
 }
@@ -118,7 +115,7 @@
   p,
   .paragraph_link,
   .banner__text {
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
   }
   a,
   #version,
@@ -151,9 +148,6 @@
 @media screen and (min-width: 876px) {
   .news-input {
     display: flex;
-  }
-  .fa.fa-search {
-    display: none;
   }
 }
 

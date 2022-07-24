@@ -33,7 +33,7 @@ section {
 /* Icons */
 i {
   padding: 0.5vw;
-  padding-left: 2vw;
+  padding-left: clamp(1vw, 2vw, 3vw);
   justify-content: space-between;
   display: flex;
 }

@@ -76,6 +76,22 @@ window.addEventListener(
   })
 );
 
+window.addEventListener(
+  "scroll",
+  debounce(() => {
+    const topBackground = document.querySelector(`.backgroundimage-main`);
+    const topNavBackground = document.querySelector(`.topnav`);
+    let scrollY = this.scrollY;
+    if (scrollY > 200) {
+      topBackground.classList.remove("cloudbg");
+      topNavBackground.style.background = "rgba(11, 17, 44, 0.8)";
+    } else {
+      topBackground.classList.add("cloudbg");
+      topNavBackground.style.background = "";
+    }
+  })
+);
+
 const trigger = document.querySelector(`.fa-bars`);
 const target = document.querySelector(`.toggle-mobile-top-nav`);
 let defaultDisplay = window

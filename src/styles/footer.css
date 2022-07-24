@@ -16,9 +16,11 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: clamp(20px, 50px, 70px);
   width: 100%;
   min-height: 150px;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .footer-sticky {

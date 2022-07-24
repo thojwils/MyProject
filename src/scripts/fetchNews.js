@@ -9,6 +9,16 @@ let articles = "";
 // Bing News API
 const imageQualityWarning = function () {};
 
+function findPos(obj) {
+  var curtop = 0;
+  if (obj.offsetParent) {
+    do {
+      curtop += obj.offsetTop;
+    } while ((obj = obj.offsetParent));
+    return [curtop];
+  }
+}
+
 const options = {
   method: "GET",
   headers: {
@@ -118,6 +128,7 @@ try {
     if (e.key === "Enter") {
       searchTerm = searchInput.value;
       fetchNews();
+      window.scroll(0, findPos(document.getElementById("newsFeedStart")));
     }
   });
 } catch (error) {

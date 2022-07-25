@@ -3,7 +3,6 @@
 @media screen and (min-width: 360px) {
   h1,
   h2,
-  h3,
   h4,
   .banner__content,
   .banner__text,
@@ -109,13 +108,12 @@
 @media screen and (min-width: 801px) {
   h1,
   h2,
-  h3,
   h4,
   .banner__content,
   p,
   .paragraph_link,
   .banner__text {
-    /* transform: scale(0.8); */
+    transform: scale(0.8);
   }
   a,
   #version,
@@ -165,7 +163,6 @@
 
 @media screen and (min-width: 1501px) {
   .tab,
-  h3,
   .nav_link,
   .jokeButton,
   .banner__text,

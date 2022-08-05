@@ -17,3 +17,13 @@ describe("Filter function", () => {
     expect(filterByTerm(input, "link")).toEqual(output);
   });
 });
+
+// describe("Clock/Timer", () => {
+//   test("it should get today's time and date and countdown to fixed date", () => {
+//     // Check if there is a time counting
+//     document.querySelector("#clockToday span");
+//     // Check if countdown timer is countring down
+
+//     expect(2).toEqual(2);
+//   });
+// });

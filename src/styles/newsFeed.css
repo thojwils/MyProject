@@ -47,7 +47,7 @@ img {
   max-width: 100%;
   /* display: block; */
   object-fit: cover;
-  height: 300px;
+  height: 200px;
 }
 
 .tag {
@@ -100,7 +100,7 @@ img {
 }
 
 .card {
-  margin-top: 17.5vh;
+  margin-top: 37.5vh;
   display: flex;
   flex-direction: column;
   width: clamp(20rem, calc(20rem + 2vw), 22rem);
@@ -117,7 +117,7 @@ img {
   display: flex;
   padding: 0.5rem;
   margin-top: auto;
-  height: 100px;
+  height: 120px;
 }
 
 .author {

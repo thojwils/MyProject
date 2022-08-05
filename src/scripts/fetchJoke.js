@@ -1,5 +1,6 @@
 //JokeAPI
 const jokeButton = document.querySelector(".jokeButton");
+const mobileJoke = document.querySelector(".mobile-joke-button");
 // Defining the joke text as a placeholder
 let jokeSetup = "";
 let jokeDelivery = "";
@@ -13,33 +14,38 @@ const jokeAlert = function JSalert() {
     button: "Close",
   });
 };
-// When "Get Joke" is clicked we will fetch a new joke
-if (jokeButton) {
-  jokeButton.addEventListener(
-    `click`,
-    //Using async allows us to load a new joke as we await our Fetch
-    async function fetchJoke() {
-      jokeSetup = jokeDelivery = "";
-      const response = await fetch(
-        `https://v2.jokeapi.dev/joke/Any?safe-mode`,
-        {}
-      )
-        .then((data) => data.json())
-        .then((data) => {
-          // console.log(data.type);
-          if (data.type === "twopart") {
-            // alert(data.setup);
-            jokeSetup = data.setup;
-            jokeDelivery = data.delivery;
-            // alert(data.delivery);
-          } else {
-            jokeSetup = data.joke;
-            // alert(data.joke);
-          }
-        });
+
+const fetchJoke = async function () {
+  jokeSetup = jokeDelivery = "";
+  await fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`, {})
+    .then((data) => data.json())
+    .then((data) => {
+      // console.log(data.type);
+      if (data.type === "twopart") {
+        // alert(data.setup);
+        jokeSetup = data.setup;
+        jokeDelivery = data.delivery;
+        // alert(data.delivery);
+      } else {
+        jokeSetup = data.joke;
+        // alert(data.joke);
+      }
       jokeAlert();
-    }
-  );
-} else {
-  console.log(`Increase screen width > 600px to use JokeAPI feature.`);
+    });
+};
+
+if (jokeButton.getAttribute("listener") !== "true") {
+  jokeButton.addEventListener("click", function (e) {
+    fetchJoke();
+    const elementClicked = e.target;
+    elementClicked.setAttribute("listener", "true");
+  });
+}
+
+if (mobileJoke.getAttribute("listener") !== "true") {
+  mobileJoke.addEventListener("click", function (e) {
+    fetchJoke();
+    const elementClickedMobile = e.target;
+    elementClickedMobile.setAttribute("listener", "true");
+  });
 }

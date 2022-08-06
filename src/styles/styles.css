@@ -240,4 +240,9 @@ h3 {
 .mobile-joke-button {
   text-decoration: underline;
   cursor: pointer;
+  font-size: clamp(0.4rem, 1.1rem, 10rem);
+}
+
+.mobile-joke-button:hover {
+  color: #c62368;
 }

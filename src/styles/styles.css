@@ -53,7 +53,7 @@ h2 {
   border-radius: 1%;
   transform: scale(0.75);
   backdrop-filter: blur(20px);
-  min-width: 25.5%;
+  min-width: clamp(20.5%, 22%, 25%);
   cursor: pointer;
 }
 
@@ -224,7 +224,7 @@ h3 {
 }
 
 .individual-projects {
-  font-size: clamp(1.25vw, 1.5vw, 2.5vw);
+  font-size: clamp(1.5vw, 2vw, 2.5vw);
   padding: 1vh;
   white-space: nowrap;
 }

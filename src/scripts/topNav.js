@@ -3,6 +3,7 @@ const versionNumber = document.getElementById("version");
 const topnav = document.querySelector(`.topnav`);
 const cloudbg = document.querySelector(`.cloudbg`);
 const footer = document.querySelector(`.footer`);
+const newsInput = document.querySelector(`#newsFeed`);
 
 // Event Listener for removing topnav sticky class when scrolling down the page 700px scrollY or when Clicking on the banner (including X)
 // if (bannerCloseAll) {
@@ -14,12 +15,40 @@ const footer = document.querySelector(`.footer`);
 //   });
 // }
 
-// Changing the Version color on click
+// Array of Search Terms
+var searchTerms = [
+  "tech",
+  "computer science",
+  "JavaScript",
+  "programming",
+  "computer vision",
+  "cybersecurity",
+  "business",
+  "finance",
+  "marketing",
+  "data",
+  "economics",
+  "politics",
+  "philosophy",
+];
+
+// function for generating a random search term
+const generateRandomNumber = function () {
+  var randomNumber = Math.floor(Math.random() * searchTerms.length);
+  // console.log(randomNumber);
+  return randomNumber;
+};
+generateRandomNumber();
+
+// Changing the Version and Search Input color on click
 versionNumber.addEventListener(`click`, function (e) {
   e.preventDefault;
   const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  const randomNumber = Math.floor(Math.random() * searchTerms.length);
   //Changes the version text color
   versionNumber.style.color = randomColor;
+  newsInput.style.color = randomColor;
+  newsInput.value = searchTerms[randomNumber];
   return randomColor;
 });
 

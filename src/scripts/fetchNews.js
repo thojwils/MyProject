@@ -2,6 +2,7 @@
 //News API
 // Global Variables
 const searchInput = document.querySelector(`.news-input`);
+const newsFeed = document.querySelector("#newsFeed");
 const dateToday = new Date();
 let searchTerm = ""; // How should I capture this parameter from the input of the searchInput field? I need this to read from the event listener (enter submit).
 let articles = "";
@@ -134,9 +135,14 @@ try {
 } catch (error) {
   console.error(error);
 }
+newsFeed.addEventListener("click", function () {
+  if (document.activeElement === newsFeed) {
+    newsFeed.placeholder = "";
+  }
+});
 
 // Run this function on input confirmation (enter button or button click (need to add a new button first))
-// Calls on input in search bar
+// Calls on input in search bars
 // newsInput.fetchNews();
 
 //Check for response to be there.

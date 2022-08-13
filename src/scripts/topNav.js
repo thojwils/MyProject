@@ -113,7 +113,7 @@ window.addEventListener(
     let scrollY = this.scrollY;
     if (scrollY > 200) {
       topBackground.classList.remove("cloudbg");
-      topNavBackground.style.background = "rgba(11, 17, 44, 0.8)";
+      topNavBackground.style.background = "rgba(11, 17, 44, .95)";
     } else {
       topBackground.classList.add("cloudbg");
       topNavBackground.style.background = "";
@@ -142,7 +142,6 @@ const toggleAnimation = function () {
     trigger.classList.remove("close-mobile-menu-animation");
   } else {
     trigger.style.color = "#ffffff";
-
     trigger.classList.remove("open-mobile-menu-animation");
     trigger.classList.add("close-mobile-menu-animation");
     console.log("Remove class");

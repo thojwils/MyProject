@@ -102,20 +102,20 @@ h2:active {
 /* paragraph tabs */
 .tab {
   text-indent: 40px;
-  max-width: 70%;
+  max-width: clamp(70%, 80%, 95%);
   text-align: center;
+  margin-top: 2px;
 }
 
 /* Paragraph text */
 p {
   font-size: clamp(0.75rem, 1.5rem, 3rem);
   text-align: left;
-  width: 100%;
   padding-left: 1vw;
   padding-right: 1vw;
   /* padding-bottom: 3vh;
   padding-top: 3vh; */
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(20px);
   z-index: 1;
   border-radius: 1%;
@@ -126,7 +126,7 @@ p {
   margin-top: -2.5rem;
 }
 p:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(5px);
 }
 

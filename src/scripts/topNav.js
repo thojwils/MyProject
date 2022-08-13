@@ -150,8 +150,8 @@ const toggleAnimation = function () {
     // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
     console.log("Add class");
     trigger.style.color = "#fa7268";
-    trigger.style.backgroundColor = "#ffffff11";
-    trigger.style.backgroundFilter = "blur(10px)";
+    trigger.style.backgroundColor = "#ffffff80";
+    trigger.style.backgroundFilter = "blur(20px)";
     trigger.classList.add("open-mobile-menu-animation");
     trigger.classList.remove("close-mobile-menu-animation");
   } else {

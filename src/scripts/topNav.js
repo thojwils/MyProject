@@ -79,44 +79,56 @@ function debounce(func, wait = 10, immediate = true) {
   };
 }
 
-window.addEventListener(
-  "scroll",
-  debounce(() => {
-    const topNavLower = document.querySelector(`.bg`).classList;
-    let scrollY = this.scrollY;
-    if (scrollY > 200) {
-      topNavLower.add("is-hidden");
-    } else {
-      topNavLower.remove("is-hidden");
-    }
-  })
-);
+// window.addEventListener(
+//   "scroll",
+//   debounce(() => {
+//     const topNavLower = document.querySelector(`.bg`).classList;
+//     let scrollY = this.scrollY;
+//     if (scrollY > 200) {
+//       topNavLower.add("is-hidden");
+//     } else {
+//       topNavLower.remove("is-hidden");
+//     }
+//   })
+// );
 
-window.addEventListener(
-  "scroll",
-  debounce(() => {
-    const topBorder = document.querySelector(`.topborderAngle`).classList;
-    let scrollY = this.scrollY;
-    if (scrollY > 200) {
-      topBorder.add("is-hidden");
-    } else {
-      topBorder.remove("is-hidden");
-    }
-  })
-);
+// window.addEventListener(
+//   "scroll",
+//   debounce(() => {
+//     const topBorder = document.querySelector(`.topborderAngle`).classList;
+//     let scrollY = this.scrollY;
+//     if (scrollY > 200) {
+//       topBorder.add("is-hidden");
+//     } else {
+//       topBorder.remove("is-hidden");
+//     }
+//   })
+// );
 
 window.addEventListener(
   "scroll",
   debounce(() => {
     const topBackground = document.querySelector(`.backgroundimage-main`);
-    const topNavBackground = document.querySelector(`.topnav`);
+    const topNavBackground = document.querySelector(`.bg`);
+    const topNav = document.querySelector(`.topnav`);
+    const topBorder = document.querySelector(`.topborder`);
+    const topBorder2 = document.querySelector(`.topborderAngle`);
+
     let scrollY = this.scrollY;
     if (scrollY > 200) {
       topBackground.classList.remove("cloudbg");
+      topNavBackground.classList.add("hide");
+      topNav.classList.add("blur");
       topNavBackground.style.background = "rgba(11, 17, 44, .95)";
+      topBorder.classList.add("hide");
+      topBorder2.classList.add("hide");
     } else {
       topBackground.classList.add("cloudbg");
+      topNavBackground.classList.remove("hide");
+      topNav.classList.remove("blur");
       topNavBackground.style.background = "";
+      topBorder.classList.remove("hide");
+      topBorder2.classList.remove("hide");
     }
   })
 );
@@ -138,10 +150,14 @@ const toggleAnimation = function () {
     // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
     console.log("Add class");
     trigger.style.color = "#fa7268";
+    trigger.style.backgroundColor = "#ffffff11";
+    trigger.style.backgroundFilter = "blur(10px)";
     trigger.classList.add("open-mobile-menu-animation");
     trigger.classList.remove("close-mobile-menu-animation");
   } else {
     trigger.style.color = "#ffffff";
+    trigger.style.backgroundColor = "";
+    trigger.style.backgroundFilter = "blur(0px)";
     trigger.classList.remove("open-mobile-menu-animation");
     trigger.classList.add("close-mobile-menu-animation");
     console.log("Remove class");

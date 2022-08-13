@@ -170,9 +170,14 @@ a {
 /* Line Divider */
 .topborderAngle {
   width: 115%;
+  position: relative;
 }
 .topborder {
   position: relative;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
 }
 /* Top Nav Links */
 
@@ -290,7 +295,7 @@ li {
 .menu {
   position: fixed;
   z-index: 100;
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 15px;
   width: 30%;
   min-width: fit-content;
@@ -307,19 +312,30 @@ li {
 
 .mobile-top-nav {
   display: flex;
+  position: fixed;
   width: 95%;
+  padding-left: 10px;
+  padding-top: 10px;
+  z-index: 10001;
 }
 
 .open-mobile-menu-animation {
   transform: rotate(90deg);
   transition: transform 0.25s linear;
-  transform-origin: 65% 30% 0;
+  transform-origin: 60% 50% 0;
 }
 
 .close-mobile-menu-animation {
   transform: rotate(0deg);
   transition: transform 0.25s linear;
-  transform-origin: 65% 30% 0;
+  transform-origin: 60% 50% 0;
+}
+
+.fa-bars {
+  border-radius: 10%;
+  background-color: "";
+  color: #ffffff11;
+  z-index: 10001;
 }
 
 /* sticky nav */
@@ -342,4 +358,8 @@ li {
   display: flex;
   margin-top: min(17vw);
   z-index: -1000;
+}
+
+.hide {
+  display: none;
 }

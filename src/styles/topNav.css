@@ -144,10 +144,6 @@ a {
   top: 0;
   z-index: 1000;
 }
-
-.undernav {
-  filter: blur(0.1px);
-}
 /* Title Background */
 .bg {
   width: 100%;

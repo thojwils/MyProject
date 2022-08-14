@@ -2,6 +2,7 @@
 // Global Variables
 
 const searchInput = document.querySelector(`.news-input`);
+const newsFeed = document.querySelector("#newsFeed");
 const dateToday = new Date();
 let searchTerm = ""; // How should I capture this parameter from the input of the searchInput field? I need this to read from the event listener (enter submit).
 
@@ -9,6 +10,18 @@ let articles = ""; // API URL Request
 // Bing News API
 
 const imageQualityWarning = function () {};
+
+function findPos(obj) {
+  var curtop = 0;
+
+  if (obj.offsetParent) {
+    do {
+      curtop += obj.offsetTop;
+    } while (obj = obj.offsetParent);
+
+    return [curtop];
+  }
+}
 
 const options = {
   method: "GET",
@@ -99,12 +112,19 @@ try {
     if (e.key === "Enter") {
       searchTerm = searchInput.value;
       fetchNews();
+      window.scroll(0, findPos(document.getElementById("newsFeedStart")));
     }
   });
 } catch (error) {
   console.error(error);
-} // Run this function on input confirmation (enter button or button click (need to add a new button first))
-// Calls on input in search bar
+}
+
+newsFeed.addEventListener("click", function () {
+  if (document.activeElement === newsFeed) {
+    newsFeed.placeholder = "";
+  }
+}); // Run this function on input confirmation (enter button or button click (need to add a new button first))
+// Calls on input in search bars
 // newsInput.fetchNews();
 //Check for response to be there.
 // const renderNews = function render() {

@@ -1,3 +1,4 @@
+"use strict";
 //JokeAPI
 const jokeButton = document.querySelector(".jokeButton");
 const mobileJoke = document.querySelector(".mobile-joke-button");

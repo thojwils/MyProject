@@ -2,36 +2,39 @@
 //      h1[0] should start open (added class on HTML element by default)
 
 const header1 = document.querySelector(`#header1`);
-const header2 = document.querySelector(`#header2`);
-const header3 = document.querySelector(`#header3`);
-header1.addEventListener(`click`, header1 => {
+header1.addEventListener(`click`, () => {
   const accordionContent1 = header1.nextElementSibling;
-  header1.classList.toggle(`h2--active--after`);
 
-  if (header1.classList.contains(`h2--active--after`)) {
+  if (!header1.classList.contains(`extend-text`)) {
+    header1.classList.add(`extend-text`);
     accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
   } else {
     accordionContent1.style.maxHeight = 0;
+    header1.classList.remove(`extend-text`);
   }
 });
-header2.addEventListener(`click`, header2 => {
+const header2 = document.querySelector(`#header2`);
+header2.addEventListener(`click`, () => {
   const accordionContent1 = header2.nextElementSibling;
-  header2.classList.toggle(`h2--active--after`);
 
-  if (header2.classList.contains(`h2--active--after`)) {
+  if (!header2.classList.contains(`extend-text`)) {
+    header2.classList.add(`extend-text`);
     accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
   } else {
     accordionContent1.style.maxHeight = 0;
+    header2.classList.remove(`extend-text`);
   }
 });
-header3.addEventListener(`click`, header3 => {
+const header3 = document.querySelector(`#header3`);
+header3.addEventListener(`click`, () => {
   const accordionContent1 = header3.nextElementSibling;
-  header3.classList.toggle(`h2--active--after`);
 
-  if (header3.classList.contains(`h2--active--after`)) {
+  if (!header3.classList.contains(`extend-text`)) {
+    header3.classList.add(`extend-text`);
     accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
   } else {
     accordionContent1.style.maxHeight = 0;
+    header3.classList.remove(`extend-text`);
   }
 }); //Scrolling down to projects section and adding a little bit of px height between
 

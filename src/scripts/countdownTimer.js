@@ -1,3 +1,4 @@
+"use strict";
 // Countdown Timer
 // Set the date we're counting down to
 let countDownDate = new Date("Dec 3, 2095 23:29:59").getTime();

@@ -1,6 +1,5 @@
-"use strict";
+"use strict"; //JokeAPI
 
-//JokeAPI
 const jokeButton = document.querySelector(".jokeButton");
 const mobileJoke = document.querySelector(".mobile-joke-button"); // Defining the joke text as a placeholder
 

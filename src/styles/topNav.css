@@ -312,26 +312,27 @@ li {
   width: 95%;
   padding-left: 10px;
   padding-top: 10px;
-  z-index: 10001;
+  z-index: 10002;
 }
 
 .open-mobile-menu-animation {
   transform: rotate(90deg);
   transition: transform 0.25s linear;
   transform-origin: 60% 50% 0;
+  z-index: 10002;
 }
 
 .close-mobile-menu-animation {
   transform: rotate(0deg);
   transition: transform 0.25s linear;
   transform-origin: 60% 50% 0;
+  z-index: 10002;
 }
 
 .fa-bars {
   border-radius: 10%;
-  background-color: "";
-  color: #ffffff11;
-  z-index: 10001;
+  /* color: #ffffff11; */
+  z-index: 10002;
 }
 
 /* sticky nav */

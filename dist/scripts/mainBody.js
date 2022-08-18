@@ -15,25 +15,25 @@ header1.addEventListener(`click`, () => {
 });
 const header2 = document.querySelector(`#header2`);
 header2.addEventListener(`click`, () => {
-  const accordionContent1 = header2.nextElementSibling;
+  const accordionContent2 = header2.nextElementSibling;
 
   if (!header2.classList.contains(`extend-text`)) {
     header2.classList.add(`extend-text`);
-    accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
+    accordionContent2.style.maxHeight = accordionContent2.scrollHeight + "px";
   } else {
-    accordionContent1.style.maxHeight = 0;
+    accordionContent2.style.maxHeight = 0;
     header2.classList.remove(`extend-text`);
   }
 });
 const header3 = document.querySelector(`#header3`);
 header3.addEventListener(`click`, () => {
-  const accordionContent1 = header3.nextElementSibling;
+  const accordionContent3 = header3.nextElementSibling;
 
   if (!header3.classList.contains(`extend-text`)) {
     header3.classList.add(`extend-text`);
-    accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
+    accordionContent3.style.maxHeight = accordionContent3.scrollHeight + "px";
   } else {
-    accordionContent1.style.maxHeight = 0;
+    accordionContent3.style.maxHeight = 0;
     header3.classList.remove(`extend-text`);
   }
 }); //Scrolling down to projects section and adding a little bit of px height between

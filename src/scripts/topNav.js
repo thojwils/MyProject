@@ -146,22 +146,31 @@ let defaultDisplay = window
 //     target.style.display == "block" ? defaultDisplay : "block";
 // };
 
-const toggleAnimation = function (trigger, target) {
-  if (!trigger.classList.contains("open-mobile-menu-animation")) {
-    // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
-    // console.log("Add class");
+const toggleOpen = function () {
+  target.classList.add("open-mobile-menu-animation");
+  target.classList.remove("close-mobile-menu-animation");
+};
+
+const toggleClose = function () {
+  target.classList.add("close-mobile-menu-animation");
+  target.classList.remove("open-mobile-menu-animation");
+};
+
+const toggleAnimation = function () {
+  if (target.style.display === defaultDisplay) {
+    target.style.zIndex = "10005";
+    target.style.display = "block";
     trigger.style.color = "#fa7268";
     trigger.style.backgroundColor = "#ffffff80";
     trigger.style.backgroundFilter = "blur(20px)";
-    target.classList.add("open-mobile-menu-animation");
-    target.classList.remove("close-mobile-menu-animation");
+    toggleOpen();
   } else {
+    target.style.zIndex = "-1";
+    target.style.display = "none";
     trigger.style.color = "#ffffff";
     trigger.style.backgroundColor = "";
     trigger.style.backgroundFilter = "blur(0px)";
-    target.classList.remove("open-mobile-menu-animation");
-    target.classList.add("close-mobile-menu-animation");
-    // console.log("Remove class");
+    toggleClose();
   }
 };
 

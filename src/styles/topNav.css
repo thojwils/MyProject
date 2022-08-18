@@ -298,7 +298,7 @@ li {
   background-color: #7b94bb;
   backdrop-filter: blur(25px);
   border-radius: 5px 5px 5px 5px;
-  /* background-color: rgb(0, 18, 32, 0.75); */
+  background-color: rgba(4, 33, 54, 0.75);
 }
 
 .toggle-mobile-top-nav {
@@ -316,19 +316,18 @@ li {
 }
 
 .open-mobile-menu-animation {
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   transition: transform 0.25s linear;
-  transform-origin: 60% 50% 0;
+  transform-origin: center;
   z-index: 10002;
 }
 
 .close-mobile-menu-animation {
-  transform: rotate(0deg);
+  /* transform: rotate(90deg); */
   transition: transform 0.25s linear;
-  transform-origin: 60% 50% 0;
+  transform-origin: center;
   z-index: 10002;
 }
-
 .fa-bars {
   border-radius: 10%;
   /* color: #ffffff11; */

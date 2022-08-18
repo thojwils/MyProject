@@ -114,32 +114,31 @@ window.addEventListener("scroll", debounce(() => {
 }));
 const trigger = document.querySelector(`.fa-bars`);
 const target = document.querySelector(`.toggle-mobile-top-nav`);
-let defaultDisplay = window.getComputedStyle(target).getPropertyValue("display");
+let defaultDisplay = window.getComputedStyle(target).getPropertyValue("display"); // const toggleDisplay = function () {
+//   if (!target || !trigger) return;
+//   target.style.display =
+//     target.style.display == "block" ? defaultDisplay : "block";
+// };
 
-const toggleDisplay = function () {
-  if (!target || !trigger) return;
-  target.style.display = target.style.display == defaultDisplay ? "block" : defaultDisplay;
-};
-
-const toggleAnimation = function () {
+const toggleAnimation = function (trigger, target) {
   if (!trigger.classList.contains("open-mobile-menu-animation")) {
     // If the mobile menu is open, I want to change the color of the trigger and rotate 90deg
     // console.log("Add class");
     trigger.style.color = "#fa7268";
     trigger.style.backgroundColor = "#ffffff80";
     trigger.style.backgroundFilter = "blur(20px)";
-    trigger.classList.add("open-mobile-menu-animation");
-    trigger.classList.remove("close-mobile-menu-animation");
+    target.classList.add("open-mobile-menu-animation");
+    target.classList.remove("close-mobile-menu-animation");
   } else {
     trigger.style.color = "#ffffff";
     trigger.style.backgroundColor = "";
     trigger.style.backgroundFilter = "blur(0px)";
-    trigger.classList.remove("open-mobile-menu-animation");
-    trigger.classList.add("close-mobile-menu-animation"); // console.log("Remove class");
+    target.classList.remove("open-mobile-menu-animation");
+    target.classList.add("close-mobile-menu-animation"); // console.log("Remove class");
   }
 };
 
 trigger.addEventListener("click", () => {
-  toggleDisplay();
+  // toggleDisplay();
   toggleAnimation();
 });

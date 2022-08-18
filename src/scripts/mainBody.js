@@ -1,4 +1,5 @@
 "use strict";
+
 // H3 Collapse Toggle
 const header1 = document.querySelector(`#header1`);
 const header2 = document.querySelector(`#header2`);
@@ -15,9 +16,9 @@ const toggleHeight = function (el) {
   }
 };
 
-header1.addEventListener(`click`, toggleHeight(header1));
-header2.addEventListener(`click`, toggleHeight(header2));
-header3.addEventListener(`click`, toggleHeight(header3));
+header1.addEventListener(`click`, toggleHeight(accordionContent1));
+header2.addEventListener(`click`, toggleHeight(accordionContent2));
+header3.addEventListener(`click`, toggleHeight(accordionContent3));
 
 //Scrolling down to projects section and adding a little bit of px height between
 const naviagtionHeight = document.querySelector(`.topnav`).offsetHeight;

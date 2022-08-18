@@ -1,42 +1,23 @@
 "use strict"; // H3 Collapse Toggle
-//      h1[0] should start open (added class on HTML element by default)
 
 const header1 = document.querySelector(`#header1`);
-header1.addEventListener(`click`, () => {
-  const accordionContent1 = header1.nextElementSibling;
-
-  if (!header1.classList.contains(`extend-text`)) {
-    header1.classList.add(`extend-text`);
-    accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
-  } else {
-    accordionContent1.style.maxHeight = 0;
-    header1.classList.remove(`extend-text`);
-  }
-});
 const header2 = document.querySelector(`#header2`);
-header2.addEventListener(`click`, () => {
-  const accordionContent2 = header2.nextElementSibling;
-
-  if (!header2.classList.contains(`extend-text`)) {
-    header2.classList.add(`extend-text`);
-    accordionContent2.style.maxHeight = accordionContent2.scrollHeight + "px";
-  } else {
-    accordionContent2.style.maxHeight = 0;
-    header2.classList.remove(`extend-text`);
-  }
-});
 const header3 = document.querySelector(`#header3`);
-header3.addEventListener(`click`, () => {
-  const accordionContent3 = header3.nextElementSibling;
+const accordionContent1 = header1.nextElementSibling;
+const accordionContent2 = header2.nextElementSibling;
+const accordionContent3 = header3.nextElementSibling;
 
-  if (!header3.classList.contains(`extend-text`)) {
-    header3.classList.add(`extend-text`);
-    accordionContent3.style.maxHeight = accordionContent3.scrollHeight + "px";
+const toggleHeight = function (el) {
+  if (!el.classList.contains("extend-text")) {
+    el.style.maxHeight = el.scrollHeight + "px";
   } else {
-    accordionContent3.style.maxHeight = 0;
-    header3.classList.remove(`extend-text`);
+    el.style.maxHeight = 0;
   }
-}); //Scrolling down to projects section and adding a little bit of px height between
+};
+
+header1.addEventListener(`click`, toggleHeight(header1));
+header2.addEventListener(`click`, toggleHeight(header2));
+header3.addEventListener(`click`, toggleHeight(header3)); //Scrolling down to projects section and adding a little bit of px height between
 
 const naviagtionHeight = document.querySelector(`.topnav`).offsetHeight;
 document.documentElement.style.setProperty("--scroll-padding", naviagtionHeight + "px");

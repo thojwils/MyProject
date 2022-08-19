@@ -318,14 +318,12 @@ li {
 .open-mobile-menu-animation {
   /* transform: rotate(90deg); */
   transition: transform 0.25s linear;
-  transform-origin: center;
   z-index: 10002;
 }
 
 .close-mobile-menu-animation {
-  /* transform: rotate(90deg); */
+  /* transform: rotate(-90deg); */
   transition: transform 0.25s linear;
-  transform-origin: center;
   z-index: 10002;
 }
 .fa-bars {

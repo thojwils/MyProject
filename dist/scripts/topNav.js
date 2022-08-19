@@ -111,44 +111,35 @@ window.addEventListener("scroll", debounce(() => {
     topBorder.classList.remove("hide");
     topBorder2.classList.remove("hide");
   }
-}));
-const trigger = document.querySelector(`.fa-bars`);
-const target = document.querySelector(`.toggle-mobile-top-nav`);
-let defaultDisplay = window.getComputedStyle(target).getPropertyValue("display"); // const toggleDisplay = function () {
-//   if (!target || !trigger) return;
-//   target.style.display =
-//     target.style.display == "block" ? defaultDisplay : "block";
-// };
+})); // Click Event for mobile nav button | with animation
+
+const triggerMenu = document.querySelector(`.fa-bars`);
+const targetMenuOpen = document.querySelector(`.toggle-mobile-top-nav`);
 
 const toggleOpen = function () {
-  target.classList.add("open-mobile-menu-animation");
-  target.classList.remove("close-mobile-menu-animation");
+  triggerMenu.classList.toggle("open-mobile-menu-animation");
 };
 
 const toggleClose = function () {
-  target.classList.add("close-mobile-menu-animation");
-  target.classList.remove("open-mobile-menu-animation");
+  triggerMenu.classList.toggle("close-mobile-menu-animation");
 };
 
 const toggleAnimation = function () {
-  if (target.style.display === defaultDisplay) {
-    target.style.zIndex = "10005";
-    target.style.display = "block";
-    trigger.style.color = "#fa7268";
-    trigger.style.backgroundColor = "#ffffff80";
-    trigger.style.backgroundFilter = "blur(20px)";
+  if (triggerMenu.style.display === "none") {
+    targetMenuOpen.style.zIndex = "10005";
+    targetMenuOpen.style.display = "block";
+    triggerMenu.style.color = "#fa7268";
+    triggerMenu.style.backgroundColor = "#ffffff80";
+    triggerMenu.style.backgroundFilter = "blur(20px)";
     toggleOpen();
   } else {
-    target.style.zIndex = "-1";
-    target.style.display = "none";
-    trigger.style.color = "#ffffff";
-    trigger.style.backgroundColor = "";
-    trigger.style.backgroundFilter = "blur(0px)";
+    targetMenuOpen.style.zIndex = "-1";
+    targetMenuOpen.style.display = "none";
+    triggerMenu.style.color = "#ffffff";
+    triggerMenu.style.backgroundColor = "";
+    triggerMenu.style.backgroundFilter = "blur(0px)";
     toggleClose();
   }
 };
 
-trigger.addEventListener("click", () => {
-  // toggleDisplay();
-  toggleAnimation();
-});
+triggerMenu.addEventListener("click", toggleAnimation());

@@ -115,30 +115,21 @@ window.addEventListener("scroll", debounce(() => {
 
 const triggerMenu = document.querySelector(`.fa-bars`);
 const targetMenuOpen = document.querySelector(`.toggle-mobile-top-nav`);
-
-const toggleOpen = function () {
-  triggerMenu.classList.toggle("open-mobile-menu-animation");
-};
-
-const toggleClose = function () {
-  triggerMenu.classList.toggle("close-mobile-menu-animation");
-};
+targetMenuOpen.style.display = "none";
 
 const toggleAnimation = function () {
-  if (triggerMenu.style.display === "none") {
+  if (targetMenuOpen.style.display === "none") {
     targetMenuOpen.style.zIndex = "10005";
     targetMenuOpen.style.display = "block";
     triggerMenu.style.color = "#fa7268";
     triggerMenu.style.backgroundColor = "#ffffff80";
     triggerMenu.style.backgroundFilter = "blur(20px)";
-    toggleOpen();
   } else {
     targetMenuOpen.style.zIndex = "-1";
     targetMenuOpen.style.display = "none";
     triggerMenu.style.color = "#ffffff";
     triggerMenu.style.backgroundColor = "";
     triggerMenu.style.backgroundFilter = "blur(0px)";
-    toggleClose();
   }
 };
 

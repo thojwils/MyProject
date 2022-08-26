@@ -137,32 +137,26 @@ window.addEventListener(
 
 // Click Event for mobile nav button | with animation
 const triggerMenu = document.querySelector(`.fa-bars`);
-const targetMenuOpen = document.querySelector(`.toggle-mobile-top-nav`);
-
-const toggleOpen = function () {
-  triggerMenu.classList.toggle("open-mobile-menu-animation");
-};
-
-const toggleClose = function () {
-  triggerMenu.classList.toggle("close-mobile-menu-animation");
-};
+const targetMenuOpen = document.querySelector(`.menu`);
 
 const toggleAnimation = function () {
-  if (triggerMenu.style.display === "none") {
-    targetMenuOpen.style.zIndex = "10005";
+  if (targetMenuOpen.style.display === "none") {
+    // console.log("open");
     targetMenuOpen.style.display = "block";
+    triggerMenu.classList.add("open-mobile-menu-animation");
+    triggerMenu.classList.remove("close-mobile-menu-animation");
     triggerMenu.style.color = "#fa7268";
     triggerMenu.style.backgroundColor = "#ffffff80";
     triggerMenu.style.backgroundFilter = "blur(20px)";
-    toggleOpen();
   } else {
-    targetMenuOpen.style.zIndex = "-1";
+    // console.log("close");
     targetMenuOpen.style.display = "none";
+    triggerMenu.classList.remove("open-mobile-menu-animation");
+    triggerMenu.classList.add("close-mobile-menu-animation");
     triggerMenu.style.color = "#ffffff";
     triggerMenu.style.backgroundColor = "";
     triggerMenu.style.backgroundFilter = "blur(0px)";
-    toggleClose();
   }
 };
 
-triggerMenu.addEventListener("click", toggleAnimation());
+triggerMenu.addEventListener("click", toggleAnimation);

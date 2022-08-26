@@ -316,16 +316,17 @@ li {
 }
 
 .open-mobile-menu-animation {
-  /* transform: rotate(90deg); */
+  transform: rotate(90deg);
   transition: transform 0.25s linear;
-  z-index: 10002;
+  transform-origin: 60% 50% 0;
 }
 
 .close-mobile-menu-animation {
-  /* transform: rotate(-90deg); */
+  transform: rotate(0deg);
   transition: transform 0.25s linear;
-  z-index: 10002;
+  transform-origin: 60% 50% 0;
 }
+
 .fa-bars {
   border-radius: 10%;
   /* color: #ffffff11; */

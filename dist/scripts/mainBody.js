@@ -19,6 +19,9 @@ const toggleClass = function (el) {
   el.classList.toggle("tab-open");
 };
 
+header1.addEventListener(`click`, toggleHeight(header1));
+header2.addEventListener(`click`, toggleHeight(header2));
+header3.addEventListener(`click`, toggleHeight(header3));
 header1.addEventListener(`click`, () => {
   toggleHeight(accordionContent1);
   toggleClass(header1);

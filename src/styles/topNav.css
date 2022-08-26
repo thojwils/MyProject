@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Prompt";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.googleapis.com/css2?family=Prompt) format("woff2");
@@ -13,7 +13,7 @@ h1 {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
-  font-family: "Roboto";
+  font-family: "Roboto Mono";
   transform: translateX(-1.5vw);
   font-size: clamp(1rem, 2.5vw, 5rem);
   min-width: fit-content;
@@ -47,7 +47,8 @@ h1 {
 /* Links */
 a {
   font-size: clamp(0.4rem, 1.1rem, 10rem);
-  font-family: "Prompt";
+  font-family: "Roboto";
+  font-weight: 100;
 }
 
 .nav_link {

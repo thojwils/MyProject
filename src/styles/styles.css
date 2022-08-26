@@ -1,8 +1,8 @@
 /* Body CSS */
 @font-face {
-  font-family: "Prompt";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   src: url(https://fonts.googleapis.com/css2?family=Prompt) format("woff2");
   font-display: swap;
 }
@@ -40,6 +40,8 @@ i {
 
 /* Paragraph Headers */
 h2 {
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
   text-align: left;
   position: relative;
   font-size: clamp(1rem, 1.5rem, 3rem);
@@ -184,6 +186,8 @@ hr {
 }
 
 .clock-countdown {
+  font-family: "Roboto Mono";
+  text-transform: uppercase;
   padding: 1vw;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
@@ -230,6 +234,7 @@ h3 {
 }
 
 .scrollMyProjects {
+  font-family: "Roboto Mono";
   background-color: rgba(112, 103, 103, 0.25);
   backdrop-filter: blur(5px);
   font-weight: bold;

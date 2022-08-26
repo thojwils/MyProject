@@ -1,40 +1,42 @@
 "use strict";
 // H3 Collapse Toggle
-const header1 = document.querySelector(`#header1`);
-const header2 = document.querySelector(`#header2`);
-const header3 = document.querySelector(`#header3`);
+const header1 = document.querySelector("#header1");
+const header2 = document.querySelector("#header2");
+const header3 = document.querySelector("#header3");
 const accordionContent1 = header1.nextElementSibling;
 const accordionContent2 = header2.nextElementSibling;
 const accordionContent3 = header3.nextElementSibling;
 
 // Toggle header IDs to add px scroll height to match the height of the text block
 
-header1.addEventListener("click", function () {
-  accordionContent1.classList.toggle("tab-open");
-  if (accordionContent1.classList.contains("tab-open")) {
-    accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
-  } else {
-    accordionContent1.style.maxHeight = "0px";
-  }
-});
+if (document.readyState === "complete") {
+  header1.addEventListener("click", function () {
+    accordionContent1.classList.toggle("tab-open");
+    if (accordionContent1.classList.contains("tab-open")) {
+      accordionContent1.style.maxHeight = accordionContent1.scrollHeight + "px";
+    } else {
+      accordionContent1.style.maxHeight = "0px";
+    }
+  });
 
-header2.addEventListener("click", function () {
-  accordionContent2.classList.toggle("tab-open");
-  if (accordionContent2.classList.contains("tab-open")) {
-    accordionContent2.style.maxHeight = accordionContent2.scrollHeight + "px";
-  } else {
-    accordionContent2.style.maxHeight = "0px";
-  }
-});
+  header2.addEventListener("click", function () {
+    accordionContent2.classList.toggle("tab-open");
+    if (accordionContent2.classList.contains("tab-open")) {
+      accordionContent2.style.maxHeight = accordionContent2.scrollHeight + "px";
+    } else {
+      accordionContent2.style.maxHeight = "0px";
+    }
+  });
 
-header3.addEventListener("click", function () {
-  accordionContent3.classList.toggle("tab-open");
-  if (accordionContent3.classList.contains("tab-open")) {
-    accordionContent3.style.maxHeight = accordionContent3.scrollHeight + "px";
-  } else {
-    accordionContent3.style.maxHeight = "0px";
-  }
-});
+  header3.addEventListener("click", function () {
+    accordionContent3.classList.toggle("tab-open");
+    if (accordionContent3.classList.contains("tab-open")) {
+      accordionContent3.style.maxHeight = accordionContent3.scrollHeight + "px";
+    } else {
+      accordionContent3.style.maxHeight = "0px";
+    }
+  });
+}
 
 // const toggleClass = function (el) {
 //   el.classList.toggle("tab-open");

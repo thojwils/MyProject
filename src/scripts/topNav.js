@@ -139,24 +139,26 @@ window.addEventListener(
 const triggerMenu = document.querySelector(`.fa-bars`);
 const targetMenuOpen = document.querySelector(`.menu`);
 
-const toggleAnimation = function () {
-  if (targetMenuOpen.style.display === "none") {
-    // console.log("open");
-    targetMenuOpen.style.display = "block";
-    triggerMenu.classList.add("open-mobile-menu-animation");
-    triggerMenu.classList.remove("close-mobile-menu-animation");
-    triggerMenu.style.color = "#fa7268";
-    triggerMenu.style.backgroundColor = "#ffffff80";
-    triggerMenu.style.backgroundFilter = "blur(20px)";
-  } else {
-    // console.log("close");
-    targetMenuOpen.style.display = "none";
-    triggerMenu.classList.remove("open-mobile-menu-animation");
-    triggerMenu.classList.add("close-mobile-menu-animation");
-    triggerMenu.style.color = "#ffffff";
-    triggerMenu.style.backgroundColor = "";
-    triggerMenu.style.backgroundFilter = "blur(0px)";
-  }
-};
+if (document.readyState === "complete") {
+  const toggleAnimation = function () {
+    if (targetMenuOpen.style.display === "none") {
+      console.log("open");
+      targetMenuOpen.style.display = "block";
+      triggerMenu.classList.add("open-mobile-menu-animation");
+      triggerMenu.classList.remove("close-mobile-menu-animation");
+      triggerMenu.style.color = "#fa7268";
+      triggerMenu.style.backgroundColor = "#ffffff80";
+      triggerMenu.style.backgroundFilter = "blur(20px)";
+    } else {
+      console.log("close");
+      targetMenuOpen.style.display = "none";
+      triggerMenu.classList.remove("open-mobile-menu-animation");
+      triggerMenu.classList.add("close-mobile-menu-animation");
+      triggerMenu.style.color = "#ffffff";
+      triggerMenu.style.backgroundColor = "";
+      triggerMenu.style.backgroundFilter = "blur(0px)";
+    }
+  };
 
-triggerMenu.addEventListener("click", toggleAnimation);
+  triggerMenu.addEventListener("click", toggleAnimation);
+}

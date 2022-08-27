@@ -3,37 +3,28 @@
 <html lang="en">
   <head> 
     <meta name="description" content="Author: T.J. Wilson,
-   Category: Web-Dev Portfolio website and associated applications">
-   <meta name="theme-color" content="#FA7268">
-<!-- Settings & external linking -->
-<link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="simbaPics/favicon-32x32.png"
-    />
-<!-- Document Settings -->
+   Category: Frontend Web Portfolio">
+    <meta name="theme-color" content="#FA7268">
+
+    <!-- Document Settings -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>twilson.io</title>
-<!-- Linking -->    
-<!-- Font  -->
-<!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<!-- <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="preload"> -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="preconnect"
-    />
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
-<!-- CSS Scripts -->
-    <script defer src="https://kit.fontawesome.com/86267a3736.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
-    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <link rel="stylesheet" type="text/css" href="/src/styles/styles.css">
+    
+    <!-- Favicon for homepage -->
+        <link
+          rel="shortcut icon"
+          type="image/x-icon"
+          href="simbaPics/favicon-32x32.png"
+        />
+      
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/src/styles/mainBody.css">
     <link rel="stylesheet" type="text/css" href="/src/styles/topNav.css">
     <link rel="stylesheet" type="text/css" href="/src/styles/mediaQueries.css">
     <link rel="stylesheet" type="text/css" href="/src/styles/newsFeed.css">
@@ -41,6 +32,11 @@
     <link async rel="stylesheet" type="text/css" href="/src/styles/jokeAPI.css">
     <link async rel="stylesheet" type="text/css" href="/src/styles/projectCarousel.css">
     <link async rel="stylesheet" type="text/css" href="/src/styles/footer.css">
+
+    <!-- Font Scripts -->
+    <script defer src="https://kit.fontawesome.com/86267a3736.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <!-- JavaScript Scripts -->
     <script defer src="/dist/main.js"></script> 
     <script defer src="/src/scripts/mainBody.js"></script>
@@ -49,20 +45,9 @@
     <script defer src="/src/scripts/countdownTimer.js"></script>
     <script defer src="/src/scripts/topNav.js"></script>
   </head>
-  <!-- Content -->
+
+  <!-- Rendered Content -->
   <body>
-    <!-- <div class="bannerbg" id="removeBanner">
-    <div class="banner w3-animate-top">
-      <div class="banner__content">
-        <div class="banner__text">
-          <strong>Attention:</strong> There are active commits made to this portfolio. <br> Additional technologies used include, Babel, Webpack, Bootstrap CSS, SVG Animation, and several API integrations.
-        </div>
-        <button class="banner__close" type="button">
-          <span class="material-icons"> close </span>
-        </button>
-      </div>
-    </div>
-  </div> -->
   <div class="backgroundimage-main cloudbg sticky">
       <hr class="topborder"></hr>
       <div class="topnav">
@@ -86,7 +71,7 @@
       </a>
 
   <div id="version" class="glow-on-hover nav_link">
-          Version 2.4
+          Version 2.5
       </div>
     
       <input class="news-input" id="newsFeed" id="textfield" name="textfield" type="text" placeholder="Search for News"/>
@@ -126,6 +111,9 @@
  
   </ul>
 </div>
+<div class="main--body--content">
+
+
     <div class="blob_scope">
      
 
@@ -171,7 +159,7 @@
         <div id="clockCountdown">
           <div class="text">JavaScript's 100th Birthday</div>
         <span class="time" id="countdownTimer"></span>
-        <div class="date">FRI 12/04/2995</div>
+        <div class="date">FRI 12/04/2095</div>
       </div>
     </div>
   </section>    
@@ -263,6 +251,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <hr class="topborder"></hr>
     <div class="footer">

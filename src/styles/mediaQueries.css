@@ -174,4 +174,7 @@
   .paragraph_link {
     font-size: 1.25vw;
   }
+  .main--body--content {
+    transform: scale(0.85);
+  }
 }

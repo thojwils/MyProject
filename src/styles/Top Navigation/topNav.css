@@ -156,7 +156,7 @@ a {
 }
 
 .cloudbg {
-  background-image: url("../backgroundImages/bgcloudsTop.svg");
+  background-image: url("/src/Images/Clouds/bgcloudsTop.svg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -83,7 +83,7 @@ h2:active {
 
 /* ----- Paragraph Section ----- */
 .layer2 {
-  background-image: url("../backgroundImages/layer2.svg");
+  background-image: url("/src/Images/SVG\ Wavy/layer2.svg");
 }
 
 .paragraph_link {

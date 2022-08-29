@@ -9,7 +9,7 @@
 /* ----- Joke Modal ----- */
 /* This is rendered when user clicks "Get a Joke" button (connected to JokeAPI) */
 .swal-modal {
-  background-image: url("../backgroundImages/portfoliobg.png");
+  background-image: url("/src/Images/Joke\ Modal/portfoliobg.webp");
   border: 3px solid white;
   width: 50vw;
 }

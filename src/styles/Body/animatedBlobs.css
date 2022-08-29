@@ -1,10 +1,10 @@
 /* ----- Animated Blobs ----- */
 .blob {
-  background-image: url("../backgroundImages/blob.svg");
+  background-image: url("/src/Images/SVG\ Blobs/blob.svg");
 }
 
 .blob2 {
-  background-image: url("../backgroundImages/blob2.svg");
+  background-image: url("/src/Images/SVG\ Blobs/blob2.svg");
 }
 
 .path1 {

@@ -7,10 +7,6 @@
   font-display: swap;
 }
 
-.jumbotron {
-  background-image: url(/backgroundImages/midtownbg.jpg);
-}
-
 .hero {
   width: 100%;
   max-width: 30vw;
@@ -37,7 +33,7 @@
 
 .catGif {
   opacity: 1;
-  background-image: url(/simbaPics/simba_leo_playing.gif);
+  background-image: url(/src/Images/simbaPics/simba_leo_playing.gif);
   height: 640px;
   width: 480px;
   margin-top: 10px;

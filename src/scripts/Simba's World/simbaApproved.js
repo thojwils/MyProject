@@ -14,7 +14,7 @@ const simbaApproved = function () {
   });
 
   Toast.fire({
-    imageUrl: "/simbaPics/simba_stretch_thumbnail.jpg",
+    imageUrl: "/src/Images/simbaPics/simba_stretch_thumbnail.jpg",
     icon: "success",
     title: "Simba meows in approval. <br> New tab opening in Google!",
   });

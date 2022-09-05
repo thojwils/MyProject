@@ -23,6 +23,12 @@
       }
     ],
     "meta-charset-utf-8": "off",
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
   }
 }

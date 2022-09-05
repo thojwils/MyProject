@@ -162,6 +162,7 @@
   }
   h2 {
     background-color: rgba(0, 0, 0, 0);
+    -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
   }
 }

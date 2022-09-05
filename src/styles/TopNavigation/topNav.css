@@ -88,6 +88,7 @@ a {
 
 /* Attention Banner */
 .bannerbg {
+  position: -webkit-sticky;
   position: sticky;
 }
 .banner {
@@ -131,6 +132,7 @@ a {
 
 /* Top Nav */
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
   z-index: 9999;
 }
@@ -295,6 +297,8 @@ li {
   margin-top: 40px;
   padding: 15px;
   width: 30%;
+  min-width: -webkit-fill-available;
+  min-width: -moz-fit-content;
   min-width: fit-content;
   background-color: #7b94bb;
   backdrop-filter: blur(25px);

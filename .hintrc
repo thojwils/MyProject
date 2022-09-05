@@ -7,7 +7,9 @@
       "default",
       {
         "ignore": [
-          "backdrop-filter"
+          "backdrop-filter",
+          "min-width: fit-content",
+          "min-height: auto"
         ]
       }
     ],
@@ -15,9 +17,12 @@
       "default",
       {
         "ignore": [
-          "img[loading]"
+          "img[loading]",
+          "meta[name=theme-color]"
         ]
       }
-    ]
+    ],
+    "meta-charset-utf-8": "off",
+    "no-inline-styles": "off"
   }
 }

@@ -21,9 +21,14 @@
   min-height: 150px;
   padding-left: 2vw;
   padding-right: 2vw;
+  text-align: center;
 }
 
 .footer-sticky {
   position: fixed;
   width: 100%;
+}
+
+.footer-icons {
+  padding: 1vw;
 }

@@ -1,14 +1,14 @@
-/* ----- Media Queries ----- */
+/* ---- Media Queries ---- */
 /* Ordered from smallest to largest screen size */
 @media screen and (min-width: 360px) {
   h1,
   h2,
   h4,
-  .banner__content,
-  .banner__text,
+  .banner-content,
+  .banner-text,
   p,
-  .paragraph_link,
-  .banner__text,
+  .paragraph-link,
+  .banner-text,
   .material-icons {
     transform: scale(0.75);
   }
@@ -16,7 +16,7 @@
   #version,
   button,
   .glow-on-hover,
-  .nav_link {
+  .nav-link {
     transform: scale(0.7);
   }
   .fab fa-github fa-2x {
@@ -29,11 +29,11 @@
     transform: scale(0.65);
     margin-top: -5px;
   }
-  .news_feed_start {
+  .news-feed-start {
     transform: scale(0.85);
     margin-left: 2.5px;
   }
-  .news_container {
+  .news-container {
     margin-top: 0.5vh;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
@@ -57,7 +57,7 @@
 }
 
 @media only screen and (max-width: 530px) {
-  .nav_link .jokeButton #version {
+  .nav-link .jokeButton #version {
     font-size: smaller;
     padding: none;
   }
@@ -94,7 +94,7 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .nav_link {
+  .nav-link {
     font-size: 16px;
   }
 }
@@ -110,23 +110,23 @@
   h1,
   h2,
   h4,
-  .banner__content,
+  .banner-content,
   p,
-  .paragraph_link,
-  .banner__text {
+  .paragraph-link,
+  .banner-text {
     transform: scale(0.8);
   }
   a,
   #version,
   button,
   .glow-on-hover,
-  .nav_link {
+  .nav-link {
     transform: scale(0.8);
   }
   .fab fa-github fa-2x {
     transform: scale(0.9);
   }
-  .news_feed_start {
+  .news-feed-start {
     transform: scale(0.95);
     margin-left: 1px;
     overflow-x: scroll;
@@ -169,13 +169,13 @@
 
 @media screen and (min-width: 1501px) {
   .tab,
-  .nav_link,
+  .nav-link,
   .jokeButton,
-  .banner__text,
-  .paragraph_link {
+  .banner-text,
+  .paragraph-link {
     font-size: 1.25vw;
   }
-  .main--body--content {
+  .main-body-content {
     transform: scale(0.85);
   }
 }

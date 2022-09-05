@@ -51,7 +51,7 @@ a {
   font-weight: 100;
 }
 
-.nav_link {
+.nav-link {
   font-size: clamp(0.4rem, 1.1rem, 10rem);
   padding: 1vw;
   padding-top: 3vh;
@@ -101,7 +101,7 @@ a {
   cursor: pointer;
 }
 
-.banner__content {
+.banner-content {
   /* max-width: 80%; */
   margin: 0 auto;
   font-size: larger;
@@ -109,7 +109,7 @@ a {
   align-items: center;
 }
 
-.banner__text {
+.banner-text {
   font-size: clamp(0.1rem, 1.25rem, 10rem);
   flex-grow: 1;
   text-align: center;
@@ -117,7 +117,7 @@ a {
   align-items: center;
 }
 
-.banner__close {
+.banner-close {
   inherits: none;
   background: none;
   border: none;

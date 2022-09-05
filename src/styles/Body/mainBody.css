@@ -15,6 +15,7 @@ html {
 body {
   /* overflow-x: hidden; */
   margin: 0;
+  min-height: -moz-fit-content;
   min-height: fit-content;
   font-style: normal;
   display: block;
@@ -86,7 +87,7 @@ h2:active {
   background-image: url("/src/Images/SVG\ Wavy/layer2.svg");
 }
 
-.paragraph_link {
+.paragraph-link {
   text-transform: uppercase;
   /* inherits: unset;
   font-size: clamp(0.75rem, 1.5rem, 3rem); */
@@ -133,7 +134,7 @@ p:hover {
 }
 
 /* Text Links */
-.text_link {
+.text-link {
   inherits: none;
   margin: none;
   padding: none;

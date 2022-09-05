@@ -9,7 +9,13 @@
         "ignore": [
           "backdrop-filter",
           "min-width: fit-content",
-          "min-height: auto"
+          "min-height: auto",
+          "aspect-ratio",
+          "scroll-behavior",
+          "offset-path",
+          "offset-path: path(\"M0 300 0 -600\")",
+          "offset-path: path(\"M100 0  400 -700\")",
+          "offset-distance"
         ]
       }
     ],
@@ -30,5 +36,11 @@
         "label": "off"
       }
     ]
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 15.6",
+    "not safari <= 15.6"
+  ]
 }

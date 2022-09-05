@@ -77,17 +77,17 @@ const fetchNews = async () => {
         // </div>`
         `<div onclick="window.open('${
           articles[i].url
-        }')" class="news_container" id="${i}">
+        }')" class="news-container" id="${i}">
   <div class="card">
-    <div class="card__header">
+    <div class="card-header">
      <div class="tooltip">
      <span class="tooltiptext">Images appear blurry from API. There is a better API that is premium and has high quality images. Using this as a way to show hover text :)</span>
      <img src="${
        articles[i].image.thumbnail.contentUrl
-     }" alt="" onmousehover="imageQualityWarning" class="card__image" width="600">
+     }" alt="" onmousehover="imageQualityWarning" class="card-image" width="600">
      </div>  
     </div>
-    <div class="card__body">
+    <div class="card-body">
     <div>
     <span id="left" class="tag tag-blue">${
       articles[i].category ? articles[i].category : "Uncategorized"
@@ -100,9 +100,9 @@ const fetchNews = async () => {
           : articles[i].name
       }</h6>
     </div>
-    <div class="card__footer">
+    <div class="card-footer">
       <div class="user">
-        <div class="author__info">
+        <div class="author-info">
           <h5>Source: <strong>${articles[i].provider[0].name}</strong></h5>
           <small>${time}</small>
         </div>

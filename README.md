@@ -1,11 +1,20 @@
-# My Web Dev Portfolio
+# twilson.io
 
-Hello! Welcome to my personal web dev portfolio.
+Hello my name is TJ. Welcome to my personal web dev portfolio.
 
-This pulls on knowledge from tutorials and a Udemy Course by Jonas Schmedtmann as well as many fantastic content creators 👨‍💻
-https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649675#overview
+I'm a New York based self taught developer and have been using this portfolio as a means to showcase implementing cool and useful features learned in my time programming with HTML, CSS, and JavaScript. As well as many other beneficial web based technologies to improve Google Web Vital Scores, bundle & compile time, reducing dead code, applying clean coding principles, and other optimizations to consistently improve both the developer and user experience.
 
 If you have feedback, feel free to submit an issue here: https://gitlab.com/thojwils/portfolio/-/issues
+
+## Authors
+
+- [@thojwils](https://github.com/thojwils)
+
+## Acknowledgements
+
+- [The Complete JavaScript Course 2022 by Jonas Schmedtmann](https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649675#overview)
+- [Free Code Camp](https://www.freecodecamp.org/)
+- Many incredible content creators providing quality resources for free!
 
 ---
 
@@ -24,6 +33,8 @@ Key rendered components are:
 3. Footer
 
 CSS
+Class Syntax: "abc-def"
+ID Syntax: camelCase
 Stylesheets seperated into:
 
 1. Top Navigation
@@ -31,6 +42,7 @@ Stylesheets seperated into:
 3. Footer
 
 JavaScript
+Variable Syntax: camelCase
 
 1. Top Navigation
 2. Body

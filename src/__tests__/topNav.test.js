@@ -14,7 +14,20 @@ describe("Filter function", () => {
 
     const output = [{ id: 3, url: "https://www.link3.dev" }];
 
-    expect(filterByTerm(input, "link")).toEqual(output);
+    expect(filterByTerm(input, "tech")).toEqual(output);
+  });
+});
+
+const linkedIn = document.getElementById("goToLinkedIn");
+
+function clickTopNavID(el) {
+  document.getElementById(`${el}`);
+  console.log(el);
+}
+
+describe("Click topnav elements", () => {
+  test("clicking LinkedIn should open new tab to my LinkedIn", () => {
+    expect(clickTopNavID(linkedIn)).toEqual(output);
   });
 });
 

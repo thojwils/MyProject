@@ -13,8 +13,6 @@
           "aspect-ratio",
           "scroll-behavior",
           "offset-path",
-          "offset-path: path(\"M0 300 0 -600\")",
-          "offset-path: path(\"M100 0  400 -700\")",
           "offset-distance"
         ]
       }

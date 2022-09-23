@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,29 +17,45 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <title>To Do List</title>
+    <!-- Font Scripts -->
+    <link rel="stylesheet" href="./todo.css" />
+    <link rel="stylesheet" href="./mediaQueriesTodo.css" />
+    <!-- JavaScript Scripts -->
+    <script defer src="./todo.js"></script>
+    <script defer src="./fetchUserName.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"
+    ></script>
   </head>
   <body>
-    <header>
-      <h1>TJ's To Do List</h1>
-    </header>
-    <form>
-      <input type="text" class="todo-input" />
-      <button class="todo-button" type="submit">
-        <i class="fas fa-plus-square"></i>
-      </button>
-      <div class="select">
-        <select name="todos" class="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
+    <div class="todo-content">
+      <header>
+        <h1 class="todo-title">User Todo List</h1>
+      </header>
+      <div class="name-filter-container">
+        <button type="button" class="todo-list-button" id="userNameButton">
+          Add Your Name!
+        </button>
+        <div class="select filter-container">
+          <select title="Filter By" name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
       </div>
-    </form>
-    <div class="todo-container">
-      <ul class="todo-list"></ul>
+      <div class="add-todo-container">
+        <form>
+          <input type="text" class="todo-input" />
+          <button class="todo-button" type="submit">
+            Add Todo <i class="fas fa-plus-square"></i>
+          </button>
+        </form>
+      </div>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
     </div>
-    <script src="./app.js"></script>
   </body>
 </html>

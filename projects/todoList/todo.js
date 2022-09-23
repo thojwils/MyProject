@@ -85,11 +85,14 @@ function filterTodo(e) {
 function saveLocalTodos(todo) {
   //Check---Hey Do I already have things in there?
   let todos;
-  if (localStorage.getItem("todos") === null) {
+  if (localStorage.getItem("todosList") === null) {
     todos = [];
   } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
+    todos = JSON.parse(localStorage.getItem("todosList"));
   }
+  // todos.push(todo);
+  // localStorage.setItem("todosList", JSON.stringify(todos));
+  // rendering todo list by looping over todos
   todos.forEach(function (todo) {
     //Todo DIV
     const todoDiv = document.createElement("div");

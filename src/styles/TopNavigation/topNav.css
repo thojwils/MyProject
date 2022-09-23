@@ -144,7 +144,6 @@ a {
   padding-bottom: 5px;
   justify-content: space-around;
   min-height: auto;
-  top: 0;
   z-index: 1000;
 }
 /* Title Background */
@@ -307,7 +306,6 @@ li {
 }
 
 .toggle-mobile-top-nav {
-  top: 0;
   left: 0;
 }
 

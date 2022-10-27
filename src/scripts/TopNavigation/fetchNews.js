@@ -4,12 +4,10 @@
 const searchInput = document.querySelector(`.news-input`);
 const newsFeed = document.querySelector("#newsFeed");
 const dateToday = new Date();
-let searchTerm = ""; // How should I capture this parameter from the input of the searchInput field? I need this to read from the event listener (enter submit).
+let searchTerm = "";
 let articles = "";
 // API URL Request
 // Bing News API
-const imageQualityWarning = function () {};
-
 function findPos(obj) {
   var curtop = 0;
   if (obj.offsetParent) {
@@ -33,7 +31,7 @@ const fetchNews = async () => {
     const res = await fetch(
       "https://bing-news-search1.p.rapidapi.com/news/search?" +
         `q=${searchTerm}` +
-        `&freshness=Day&textFormat=Raw&safeSearch=Strict`,
+        `&freshness=Week&textFormat=Raw&safeSearch=Strict`,
       options
     );
     // News API Version
@@ -49,23 +47,36 @@ const fetchNews = async () => {
     const data = await res.json();
     const articles = data.value;
     //Time for calc hours since post
-
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 3; i++) {
       console.log(articles[i]);
       // console.log([articles[i].title, articles[i].url]);
       // const news = [articles[i].title, articles[i].url];
       const start = new Date(dateToday).getTime();
-      const endDate = articles[i].datePublished;
+      const endDate = articles[i].datePublished
+        ? articles[i].datePublished
+        : "Article not dated.";
       const end = new Date(endDate).getTime();
       const milliseconds = Math.abs(end - start).toString();
       const seconds = parseInt(milliseconds / 1000);
       const minutes = parseInt(seconds / 60);
       const hours = parseInt(minutes / 60);
-      const time =
-        hours > 0
-          ? (hours % 24) + " hour's ago"
-          : (minutes % 60) + " minute's ago";
+      let time;
+      if (endDate != "Article not dated.") {
+        //true block
+        time =
+          hours > 0
+            ? (hours % 24) + " hour's ago"
+            : (minutes % 60) + " minute's ago";
+        //false block
+      } else {
+        time = "Article not dated.";
+      }
       const newsFeed = document.querySelector(`#newsFeedStart`);
+      // Check if response is ok
+      if (!res.ok) {
+        throw new Error();
+      }
+
       newsFeed.insertAdjacentHTML(
         `afterbegin`,
         // Swap out with actual news references once styling is in place
@@ -84,7 +95,7 @@ const fetchNews = async () => {
      <span class="tooltiptext">Images appear blurry from API. There is a better API that is premium and has high quality images. Using this as a way to show hover text :)</span>
      <img src="${
        articles[i].image.thumbnail.contentUrl
-     }" alt="" onmousehover="imageQualityWarning" class="card-image" width="600">
+     }" alt="" class="card-image" width="600">
      </div>  
     </div>
     <div class="card-body">

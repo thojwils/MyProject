@@ -5,6 +5,7 @@ Hello my name is TJ. Welcome to my personal web dev portfolio.
 I'm a New York based self taught developer and have been using this portfolio as a means to showcase implementing cool and useful features learned in my time programming with HTML, CSS, and JavaScript. As well as many other beneficial web based technologies to improve Google Web Vital Scores, bundle & compile time, reducing dead code, applying clean coding principles, and other optimizations to consistently improve both the developer and user experience.
 
 If you have feedback, feel free to submit an issue here: https://gitlab.com/thojwils/portfolio/-/issues
+Website is hosted by Netlify: https://app.netlify.com/
 
 ## Authors
 

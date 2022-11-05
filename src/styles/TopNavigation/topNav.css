@@ -272,18 +272,6 @@ a {
     background-position: 0 0;
   }
 }
-/* Version */
-#version {
-  color: rgb(255, 254, 254);
-  padding: 1vw;
-  margin-right: 2vw;
-  padding-top: 3vh;
-  float: right;
-  cursor: pointer;
-}
-#version:active {
-  transform: scale(0.75);
-}
 
 li {
   padding: 10px;

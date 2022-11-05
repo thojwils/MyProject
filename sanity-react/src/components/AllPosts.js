@@ -34,14 +34,14 @@ export default function AllPosts() {
         <h3 className='text-lg text-gray-700 flex justify-center mb-12'>
           Tech Resource Repository. Feel free to blog about topics of interest.
         </h3>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center'>
+        <div className='md:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center items-stretch'>
           {allPostsData &&
             allPostsData.map((post, index) => (
               <Link to={"/" + post.slug.current} key={post.slug.current}>
-                <div>
+                <div className='flex h-full'>
                   <span key={index}>
                     <img
-                      className='rounded-t-lg'
+                      className='flex h-full rounded-t-lg'
                       src={post.mainImage.asset.url}
                       alt=''
                     />

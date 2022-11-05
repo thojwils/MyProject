@@ -16,7 +16,7 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  gap: clamp(20px, 50px, 70px);
+  gap: clamp(10px, 40px, 70px);
   width: 100%;
   min-height: 150px;
   padding-left: 2vw;
@@ -31,4 +31,18 @@
 
 .footer-icons {
   padding: 1vw;
+}
+
+/* Version */
+#version {
+  color: rgb(white);
+  padding: 1vw;
+  max-height: 4vh;
+  margin-right: 2vw;
+  padding-top: 4vh;
+  float: right;
+  cursor: pointer;
+}
+#version:active {
+  transform: scale(0.75);
 }

@@ -1420,7 +1420,7 @@
     "css-selector-tokenizer" "^0.7.0"
     "cssnano" "^4.1.10"
     "icss-utils" "^2.1.0"
-    "loader-utils" "1.1.0"
+    "loader-utils" "1.4.2"
     "lodash.camelcase" "^4.3.0"
     "object-assign" "^4.1.1"
     "postcss" "^5.0.6"

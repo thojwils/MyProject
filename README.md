@@ -38,14 +38,11 @@ Class Syntax: "abc-def"
 ID Syntax: camelCase
 Stylesheets seperated into:
 
-1. Top Navigation
-2. Body
-3. Footer
+1.  Top Navigation
+2.  Body
+3.  Footer
 
 JavaScript
 Variable Syntax: camelCase
 
-1. Top Navigation
-2. Body
-3. Simba's World
-4. Other
+Components: 1. Top Navigation 2. Body 3. Simba's World 4. Other

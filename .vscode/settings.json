@@ -1,4 +1,13 @@
 {
   "git.ignoreLimitWarning": true,
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.sortImports": true
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace"
+  }
 }

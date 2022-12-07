@@ -7,11 +7,13 @@ import AllPosts from "./components/AllPosts";
 import OnePost from "./components/OnePost";
 import About from "./components/About";
 import Error from "./components/Error";
+import Header from "./components/Header";
 
 function App() {
   return (
     <BrowserRouter>
       <div>
+        <Header />
         <Routes>
           <Route path='/' element={<AllPosts />} />
           <Route path='/:slug' element={<OnePost />} />

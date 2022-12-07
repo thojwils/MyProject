@@ -40,21 +40,38 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div>
-      <div>
-        <h2>{postData.title}</h2>
-        <div>
+    <div className='bg-blue-100 px-8 py-8 mt-5'>
+      <div className='max-w mx-auto bg-white rounded-xl shadow-md w-full py-4'>
+        <h1 className='cursive text-center text-3xl md:text-6xl font-bold'>
+          {postData.title}
+        </h1>
+        <div className=' grid md:flex items-center p-4 mx-auto'>
           <img
-            // authoImage null when no img exists, how do we hanlde when user does not have authoImage
-            src={urlFor(postData.authorImage).width(100).url()}
-            alt={`Author: ${postData.name}`}
+            className='flex-start'
+            src={urlFor(postData.mainImage).width(800).url()}
+            alt=''
           />
-          <h4>{postData.name}</h4>
+          <div className='flex-end'>
+            <img
+              // authoImage null when no img exists, how do we hanlde when user does not have authoImage
+              className={
+                postData.authorImage
+                  ? "block p-4 mx-5 flex-grow justify-center w-full"
+                  : "hidden"
+              }
+              src={urlFor(postData.authorImage).width(400).url()}
+              alt={`Author: ${postData.name}`}
+            />
+            <h4 className='text-center font-bold block p-4 mx-5 flex-grow justify-center w-full text-2xl'>
+              Written By: {postData.name}
+            </h4>
+          </div>
         </div>
       </div>
-      <img src={urlFor(postData.mainImage).width(200).url()} alt='' />
-      <div>
-        <PortableText value={postData.body} />
+      <div className='max-w mx-auto my-5 bg-white rounded-xl shadow-md overflow-hidden'>
+        <div className='px-5 my-5 text-center'>
+          <PortableText value={postData.body} />
+        </div>
       </div>
     </div>
   );

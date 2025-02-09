@@ -1,4 +1,4 @@
-# twilson.io
+# twilson.ai
 
 Hello my name is TJ. Welcome to my personal web dev portfolio.
 
